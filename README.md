@@ -1,4 +1,4 @@
-# WebShop
+# PizzaBox: WebShop 
 
 ## Project Description:  
 
@@ -8,7 +8,7 @@
 
 ##### The website will include front-end design with HTML, CSS, Bootstrap, and JavaScript functionality, while in back-end, PHP and MySQL database will provide data and connection from client to server and vice versa.  
 
-##### What needs to be saved in the database are as follows: 
+##### We divided the project in following entites: 
 
 ## 1. Customer:  
 
