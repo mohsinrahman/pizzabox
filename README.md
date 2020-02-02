@@ -24,7 +24,6 @@ The menu provides a list in (Categories) different types of pizza, for example f
 The number of orders received. The information shall include the Order ID, ID, Date, Time and Type of Order and Shipping. 
 
 6. Order details:
-
 The order details would provide the details of the order sent and by whom has it been sent. For example the information about the customer such as Customer ID and Product ID, Order ID, and Quantity.
 
  
