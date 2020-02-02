@@ -26,4 +26,5 @@ The number of orders received. The information shall include the Order ID, ID, D
 6. Order details:
 The order details would provide the details of the order sent and by whom has it been sent. For example the information about the customer such as Customer ID and Product ID, Order ID, and Quantity.
 
+
  --------------------------------------------------------------------------------------------------------------------------------
