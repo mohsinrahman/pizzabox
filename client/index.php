@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="Pizzabox-heroSection">
-        <div class="Pizzabox-heroSection-menu"></div>
+        <div class="Pizzabox-heroSection-menu">menu</div>
     </div>
     <div class="Pizzabox-ourStory"></div>
     <div class="Pizzabox-WeekSpecial"></div>
