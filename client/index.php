@@ -15,7 +15,64 @@
     <div class="Pizzabox-heroSection">
         <div class="Pizzabox-heroSection-menu">home</div>
     </div>
-    <div class="Pizzabox-ourStory"></div>
+
+        <section class="pizza">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="title">
+                            <h1 class="text-center text-danger ">Our Story</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-6 row no-gutters">
+                        <div class="col-md-6">
+                            <div class="col-12">
+                                <img src="images/img6.jpg" width="400px" class="img-fluid h-100" alt="">
+                            </div>
+                            <div class="col-12">
+                                <img src="images/img5.jpg" width="400px" class="img-fluid h-100 mt-2" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="images/img3.jpg" width="400px" class="img-fluid h-100 pt-5" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="box-right">
+                            <div class="title">
+                                <h2>Welcome</h2>
+                            </div>
+                            <div class="text">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis dolor
+                                    sunt reprehenderit quae nemo at excepturi necessitatibus totam, voluptatum id
+                                    voluptatem, ea veniam iusto laboriosam ipsum alias iure placeat.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste delectus, illum
+                                    impedit tenetur ex possimus eum aliquam nisi quidem animi rem reiciendis,
+                                    consequuntur commodi aspernatur ab neque, ad voluptatem. Velit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="E">
+                                <img src="images/sign.png" alt="">
+                            </div><br>
+                            <div class="User d-flex align-items-center">
+                                <img src="images/chef1.jpg" width="50" height="50" class="rounded-circle"></span>
+                                <div class="mx-3">
+                                    <span class="d-block">John Conery</span>
+                                    <small class="d-block">Master Chef</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
     <div class="Pizzabox-WeekSpecial"></div>
     <div class="Pizzabox-stunningThings"></div>
     <div class="Pizzabox-video"></div>
