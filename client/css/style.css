@@ -1,0 +1,91 @@
+
+.Pizzabox-heroSection{
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0,0.5)), url(/images/heroimage.jpeg);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-position: center;
+    background-size:cover;  
+}
+.Pizzabox-heroSection-bg{
+    width: 100%;
+    position: absolute;
+    top: 0%;   
+}
+.Pizzabox-heroSection-email, .Pizzabox-heroSection-opening, .Pizzabox-heroSection-menu, .Pizzabox-heroSection-content {
+    color: #ffffff;
+    font-family: "josefin Sans", sans-serif;
+}
+
+.Pizzabox-heroSection-content h3{
+    color:#DD0808;
+    font-family: "order pizza";
+    font-size: 60px;
+}
+.Pizzabox-heroSection-content h5{
+    font-size: 48px;
+}
+.Pizzabox-heroSection-content button{
+    height: 40px;
+    background: #DD0808;
+    color: #ffffff;
+    border: 0;
+}
+.Pizzabox-ourStory h3{
+    font-family: "Order Pizza";
+    color: #DD0808;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.Pizzabox-ourStory-content{
+    margin-top: 50px;
+    font-family: "josefin Sans", sans-serif;
+}
+.Pizzabox-ourStory-img1, .Pizzabox-ourStory-img2{
+    margin-left: 15px;
+    padding-top: 15px;
+}
+.Pizzabox-ourStory-content-welcome{
+    margin-top: 60px;  
+}
+.Pizzabox-ourStory-content-welcome h5{
+    font-size: 48px;  
+}
+.Pizzabox-ourStory-content-welcome p{
+    color: #a1a1a1;    
+}
+.Pizzabox-ourStory-img3{
+    margin-top: 106px;
+}
+.Pizzabox-ourStory-content-sign{
+     width: 150px;
+}
+.Pizzabox-ourStory-content-chef{
+    border-radius: 50%;
+    margin-top: 25px;
+    width: 150px;
+}
+.Pizzabox-ourStory-content-name h6{
+    position: absolute;;
+    bottom: 0px;
+    left: 0;
+}
+.Pizzabox-ourStory-content-name h4{
+    position: absolute;;
+    bottom:30px;
+    left: 0;
+}
+
+
+/* // Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {  }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {  }
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { }
