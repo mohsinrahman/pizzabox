@@ -80,28 +80,7 @@
 
              </div>
          </div>
-         <div class="col-lg-6">
-           <div class="Pizzabox-ourStory-content-welcome">
-                <h5>Welcome to PizzaBox</h5>
-                <p>Quisque sit amet turpis etipsum elementum facilis. Quisque sed placerat libero. Pellentesque nec tellu
-                    sollicitudin, sollicitudin ligula non, tristique nibh Donec vitae turpis sagittis, cursus nunc ac, aliquet.
-                    Donec viverra vel massa aaugue consequat posuere sem, eu ornares viverra veleso massa at  posuere. Aliquam 
-                    et fringilla au. Quisque sit amet turpis etipsum elementum facilis.Quisque sed placerat libero. Pellentesque
-                    nec tellu sollicitudin, sollicitudin ligula non, tristique nibh  Donec vitae turpis sagittis, cursus nunc ac, aliquet.
-                    Donec viverra vel massa aaugue consequat posuere sem, eu ornares viverra veleso massa at posuere. Aliquam et fringilla au.
-                </p>
-                <img  class="Pizzabox-ourStory-content-sign" src="images/sign.png" alt="Sign">
-                <div class="row">
-                    <div class="col-lg-4">
-                    <img class="Pizzabox-ourStory-content-chef" src="images/chef1.jpg" alt="Chef">
-                    </div>
-                    <div class="col-lg-8 Pizzabox-ourStory-content-name">
-                     <h4>John Conery</h4>
-                     <h6>Master Chef</h6>
-                    </div>
-                </div>
-            </div>
-         </div>
+         
         </div>
 
     </div>
