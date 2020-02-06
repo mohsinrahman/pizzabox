@@ -109,6 +109,18 @@
   
 
     </div>
+    <div class="Pizzabox-stunningThings"><div class="Pizzabox-stunningThings"><div class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">       
+                 <div class="comfort h5">
+                      <h5>Fore Your Comfort</h5> 
+                      <div class="font h2">
+                          <h2>Stunning Things</h2>
+                      </div>
+                </div>
+            </div>
+        </div>
                <div class="row justify-content-between py-5">
                         <div class="col-md-3">
                             <div>
