@@ -109,114 +109,102 @@
   
 
     </div>
+               <div class="row justify-content-between py-5">
+                        <div class="col-md-3">
+                            <div>
+                                <div class="parent bg-white text-center p-3">
+                                    <div class="image-Hover1">
+                                        <!-- <img src="images/restaurant.svg" width="80" height="30" class="img-fluid" alt=""> -->
+                                    </div>
+                                    <div class="title-box">
+                                        <b> High Quality Foods</b>
+                                    </div>
+                                    <div class="description text-justify">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum.
+                                    </div>
+                                </div>
+                                <div class="parent bg-white text-center p-3 my-3">
+                                    <div class="image-Hover6">
+                                        <!-- <img src="images/coffee-alt.svg" width="80" height="30" class="img-fluid" alt=""> -->
+                                    </div>
+                                    <div class="title-box">
+                                        <b> High Quality Coffee</b>
+                                    </div>
+                                    <div class="description text-justify">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum.
+                                    </div>
+                                </div>
+                                <div class="parent bg-white text-center p-3">
+                                    <div class="image-Hover5">
+                                        <!-- <img src="images/soup-bowl.svg" width="80" height="30" class="img-fluid" alt=""> -->
+                                    </div>
+                                    <div class="title-box">
+                                        <b> BestSoap</b>
+                                    </div>
+                                    <div class="description text-justify">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div>
+                                <div class="parent bg-white text-center p-3 mb-3">
+                                    <div class="image-Hover4">
+                                        <!-- <img src="images/pizza.svg" width="80" height="30" class="img-fluid" alt=""> -->
+                                    </div>
+                                    <div class="title-box">
+                                        <b>Inspiring Recipes</b>
+                                    </div>
+                                    <div class="description text-justify">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum.
+                                    </div>
+                                </div>
+                                <div class="img-box">
+                                    <img src="images/lady2.png" class="img-fluid height-full" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div>
+                                <div class="parent bg-white text-center p-3">
+                                    <div class="image-Hover2">
+                                        <!-- <img src="images/soft-drinks.svg" width="80" height="30" class="img-fluid" alt=""> -->
 
+                                    </div>
+                                    <div class="title-box">
+                                        <b> High Quality Foods</b>
+                                    </div>
+                                    <div class="description text-justify">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum.
+                                    </div>
+                                </div>
+                                <div class="parent bg-white text-center p-3 my-3">
+                                    <div class="image-Hover1">
+                                        <!-- <img src="images/restaurant.svg" width="80" height="30" class="img-fluid" alt=""> -->
+                                    </div>
+                                    <div class="title-box">
+                                        <b>salutary Meals</b>
+                                    </div>
+                                    <div class="description text-justify">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum.
+                                    </div>
+                                </div>
+                                <div class="parent bg-white text-center p-3">
+                                    <div class="image-Hover3">
+                                        <!-- <img src="images/spoon-and-fork.svg" width="80" height="30" class="img-fluid" alt=""> -->
+                                    </div>
+                                    <div class="title-box">
+                                        <b> Express Delivery</b>
+                                    </div>
+                                    <div class="description text-justify">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <div class="Pizzabox-stunningThings"><div class="Pizzabox-stunningThings"><div class="bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">       
-                 <div class="comfort h5">
-                      <h5>Fore Your Comfort</h5> 
-                      <div class="font h2">
-                          <h2>Stunning Things</h2>
-                      </div>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-between py-5">
-           <div class="col-md-3">
-               <div>
-                   <div class="bg-white text-center p-3">
-                    <div>
-                        <img src="images/restaurant.svg" width="80" height="30" class="img-fluid" alt="">
-                    </div>
-                    <div class="title-box">
-                      <b> High Quality Foods</b>
-                    </div>
-                    <div class="description text-justify">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum. 
-                    </div>
-                   </div>
-                   <div class="bg-white text-center p-3 my-5">
-                    <div>
-                        <img src="images/coffee-alt.svg" width="80" height="30" class="img-fluid" alt="">
-                    </div>
-                    <div class="title-box">
-                    <b> High Quality Coffee</b>
-                    </div>
-                    <div class="description text-justify">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum. 
-                    </div>
-                   </div>
-                   <div class="bg-white text-center p-3">
-                    <div>
-                        <img src="images/soup-bowl.svg" width="80" height="30" class="img-fluid" alt="">
-                    </div>
-                    <div class="title-box">
-                    <b> BestSoap</b>
-                    </div>
-                    <div class="description text-justify">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum. 
-                    </div>
-                   </div>
-               </div>
-           </div>
-           <div class="col-md-3">
-            <div>
-                <div class="bg-white text-center p-3 mb-5">
-                 <div>
-                    <img src="images/pizza.svg" width="80" height="30" class="img-fluid" alt="">
-                </div>
-                 <div class="title-box">
-                 <b>Inspiring Recipes</b>
-                 </div>
-                 <div class="description text-justify">
-                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum. 
-                 </div>
-                </div>
-                <div class="img-box">
-                    <img src="images/lady2.jpg" class="img-fluid height-full" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div>
-                <div class="bg-white text-center p-3">
-                 <div>
-                    <img src="images/soft-drinks.svg" width="80" height="30" class="img-fluid" alt="">
-                </div>
-                 <div class="title-box">
-                 <b> High Quality Foods</b>
-                 </div>
-                 <div class="description text-justify">
-                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum. 
-                 </div>
-                </div>
-                <div class="bg-white text-center p-3 my-5">
-                 <div>
-                    <img src="images/restaurant.svg" width="80" height="30" class="img-fluid" alt="">
-                </div>
-                 <div class="title-box">
-                 <b>salutary Meals</b>
-                 </div>
-                 <div class="description text-justify">
-                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum. 
-                 </div>
-                </div>
-                <div class="bg-white text-center p-3">
-                 <div>
-                    <img src="images/spoon-and-fork.svg" width="80" height="30" class="img-fluid" alt="">
-                </div>
-                 <div class="title-box">
-                 <b> Express Delivery</b>
-                 </div>
-                 <div class="description text-justify">
-                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum. 
-                 </div>
-                </div>
-            </div>
-        </div>  
-        </div> 
     <div class="Pizzabox-video"></div>
    
    
