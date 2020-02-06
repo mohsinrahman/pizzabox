@@ -93,6 +93,20 @@
     height: 100px;
 }
 
+.comfort h5{
+    font-family: "Order Pizza";
+    color: #DD0808;
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+.font h2{
+    font-family: "josefin Sans";
+    text-align: center;
+    margin-top: 50px;
+}
+
 
 /* // Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {  }
