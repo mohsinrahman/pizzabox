@@ -228,6 +228,39 @@ body {
    
 }
 
+.title{
+    font-family: "Order Pizza";
+    color: #DD0808;
+    text-align: center;
+    margin-top: 60px;
+}
+.title-card{
+    font-family: "josefin Sans";
+    text-align: left;
+    margin-top: 30px;
+}
+.floating-box{
+    float: left;
+    width: 80px;
+    height:80px;
+    margin: 10px;
+
+}
+.our-menu{
+    font-family: "josefin Sans";
+    text-align: center;
+    margin-top: 10px;
+}
+.color{
+    color: #DD0808;
+    float: right;
+}
+.btn{
+    float: right;
+}
+
+
+
 
 
 
