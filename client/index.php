@@ -258,7 +258,90 @@
     <div class="Pizzabox-video"></div>
    
    
-    <div class="Pizzabox-menu">
+        <div class="container">
+        <h6 class="title">discover</h6>
+        <div class="our-menu"> <h1>our menu</h1> </div>
+        <div class="row">
+            <div class="col-md-5">
+                <h2 class="title-card">Breakfest</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="floating-box "src="images/menu-img1.jpg" alt="">
+                        <h5 class="sub-title"> Western Sunrise <div class="color"> 20.00 kr </div></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius
+                            assumenda odit architecto veniam dignissimos</p>
+                            <a href="#" class="btn btn-danger">add to card</a>
+                    </div>
+                </div> <br>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="floating-box"src="images/menu-img2.jpg" alt="">
+                        <h5 class="sub-title"> Western Sunrise<div class="color"> 30.00 kr </div></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius
+                            assumenda odit architecto veniam dignissimos</p>
+                            <a href="#" class="btn btn-danger">add to card</a>
+                    </div>
+                </div><br>
+                <h2 class="title-card">Dinner</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="floating-box "src="images/pizza-4-600x600.png" alt="">
+                        <h5 class="sub-title"> Western Sunrise<div class="color"> 20.00 kr </div></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius
+                            assumenda odit architecto veniam dignissimos</p>
+                            <a href="#" class="btn btn-danger">add to card</a>
+                    </div>
+                </div><br>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="floating-box"src="images/heroimage.jpeg" alt="">
+                        <h5 class="sub-title"> Western Sunrise<div class="color"> 40.00 kr </div></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius
+                            assumenda odit architecto veniam dignissimos</p>
+                            <a href="#" class="btn btn-danger">add to card</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <h2 class="title-card">Lunch</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="floating-box "src="images/menu-img3.jpg" alt="">
+                        <h5 class="sub-title"> Western Sunrise<div class="color"> 50.00 kr </div></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius
+                            assumenda odit architecto veniam dignissimos</p>
+                            <a href="#" class="btn btn-danger">add to card</a>
+                    </div>
+                </div><br>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="floating-box"src="images/photo-1576050346559-8a547f531dcb.jpeg" alt="">
+                        <h5 class="sub-title"> Western Sunrise<div class="color"> 35.00 kr </div></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius
+                            assumenda odit architecto veniam dignissimos</p>
+                            <a href="#" class="btn btn-danger">add to card</a>
+                    </div>
+                </div><br>
+                <h2 class="title-card">Desert</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="floating-box "src="images/menu-img1.jpg" alt="">
+                        <h5 class="sub-title"> Western Sunrise<div class="color"> 18.00 kr </div></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius
+                            assumenda odit architecto veniam dignissimos</p>
+                            <a href="#" class="btn btn-danger">add to card</a>
+                    </div>
+                </div><br>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="floating-box "src="images/menu-img2.jpg" alt="">
+                        <h5 class="sub-title"> Western Sunrise<div class="color"> 25.00 kr </div></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius
+                            assumenda odit architecto veniam dignissimos</p>
+                            <a href="#" class="btn btn-danger">add to card</a>
+                    </div>
+                </div>
+            </div>
 
        <div class="pizzabox-menue-disover"></div> 
 
