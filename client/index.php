@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
-  
     <title>Pizza Box</title>
+    
 </head>
 <body>
     <div class="Pizzabox-heroSection">
@@ -23,7 +23,7 @@
             <div class="Pizzabox-heroSection-opening">
                 <div class="row">
                     <div class="col-lg-8">
-                    Opening Hours: 8:00am - 11:30PM
+                    Opening Hours: 8:00am - 11:30pm
                     </div>
                     
                     <div class="col-lg-4"> 
@@ -107,7 +107,7 @@
     </div>
 
 
-        <section class="pizza">
+<!--         <section class="pizza">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -161,14 +161,186 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
 
     <div class="Pizzabox-WeekSpecial"></div>
+
+
     <div class="Pizzabox-stunningThings"></div>
-    <div class="Pizzabox-video"></div>
-    <div class="Pizzabox-menu"></div>
-    <div class="Pizzabox-contactUs"></div>
+
+
+    <div class="Pizzabox-video">
+        <div class="Pizzabox-video-area row">
+            <div class="col-lg-12">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/EnEE8jnZYho" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>  
+        <div class="Pizzabox-video-text row ">
+            <div class="col-lg-12">
+                <h5>Best Place of Gothenburg</h5>
+            </div>
+         </div>
+    </div>
+
+
+
+
+    <div class="Pizzabox-menu">
+
+    <h5 class="text-center">Discover</h5>
+    <h3 class="text-center mt-3">OUR MENU</h3>
+    <div class="container">
+   <div class="row">
+        <div class="col-lg-6">
+        <h6 class="mt-5">Breakfast</h6>
+        <div class="card mt-5 p-2">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img src="images/menu-img2.jpg" width="100" alt="breakfast">
+                        </div>
+                        <div class="col-lg-9">
+                         <p>Western Sunrise <span>20.00kr</span></p>
+                         <p>Two fried  eggs with cheese & two breakfast meats made to perfection</p>
+                         <button class="">ADD TO CART</button>
+                        </div>
+                    </div>
+        </div> <!-- Card end -->
+        <div class="card mt-5 p-2">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img src="images/menu-img2.jpg" width="100" alt="breakfast">
+                        </div>
+                        <div class="col-lg-9">
+                         <p>Western Sunrise <span>20.00kr</span></p>
+                         <p>Two fried  eggs with cheese & two breakfast meats made to perfection</p>
+                         <button class="">ADD TO CART</button>
+                        </div>
+                    </div>
+        </div> <!-- card end -->
+        </div>  
+        <div class="col-lg-6">
+        <h6 class="mt-5">Lunch</h6>
+        <div class="card mt-5 p-2">
+                    <div class="row">
+                        <div class="col-lg-3">
+                        <img src="images/menu-img2.jpg" alt="breakfast" width="100">
+                        </div>
+                        <div class="col-lg-9">
+                        <p>Western Sunrise <span>20.00kr</span></p>
+                         <p>Two fried  eggs with cheese & two breakfast meats made to perfection</p>
+                         <button class="">ADD TO CART</button>
+                        </div>
+                    </div>
+        </div> <!-- card end -->
+        <div class="card mt-5 p-2">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img src="images/menu-img2.jpg" width="100" alt="breakfast">
+                        </div>
+                        <div class="col-lg-9">
+                         <p>Western Sunrise <span>30.00kr</span></p>
+                         <p>Two fried  eggs with cheese & two breakfast meats made to perfection</p>
+                         <button class="">ADD TO CART</button>
+                        </div>
+                    </div>
+        </div> <!-- card end -->
+
+        </div>  
+        </div>              
+   
+   <div class="row">
+        <div class="col-lg-6">
+        <h6 class="mt-5">Dinner</h6>
+        <div class="card mt-5 p-2">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img src="images/menu-img2.jpg" width="100" alt="breakfast">
+                        </div>
+                        <div class="col-lg-9">
+                         <p>Western Sunrise <span>20.00kr</span></p>
+                         <p>Two fried  eggs with cheese & two breakfast meats made to perfection</p>
+                         <button class="">ADD TO CART</button>
+                        </div>
+                    </div>
+        </div> <!-- Card end -->
+        <div class="card mt-5 p-2">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img src="images/menu-img2.jpg" width="100" alt="breakfast">
+                        </div>
+                        <div class="col-lg-9">
+                         <p>Western Sunrise <span>20.00kr</span></p>
+                         <p>Two fried  eggs with cheese & two breakfast meats made to perfection</p>
+                         <button class="">ADD TO CART</button>
+                        </div>
+                    </div>
+        </div> <!-- card end -->
+        </div>  
+        <div class="col-lg-6">
+        <h6 class="mt-5">Desert</h6>
+        <div class="card mt-5 p-2">
+                    <div class="row">
+                        <div class="col-lg-3">
+                        <img src="images/menu-img1.jpg" alt="breakfast" width="100">
+                        </div>
+                        <div class="col-lg-9">
+                        <p>Western Sunrise <span>20.00kr</span></p>
+                         <p>Two fried  eggs with cheese & two breakfast meats made to perfection</p>
+                         <button class="">ADD TO CART</button>
+                        </div>
+                    </div>
+        </div> <!-- card end -->
+        <div class="card mt-5 p-2">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img src="images/menu-img1.jpg" width="100" alt="breakfast">
+                        </div>
+                        <div class="col-lg-9">
+                         <p>Western Sunrise <span>20.00kr</span></p>
+                         <p>Two fried  eggs with cheese & two breakfast meats made to perfection</p>
+                         <button class="">ADD TO CART</button>
+                        </div>
+                    </div>
+        </div> <!-- card end -->
+
+        </div>  
+        </div>              
+   </div>
+   </div>
+    </div>
+    </div>
+
+
+    <div class="Pizzabox-contactUs mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                        <h5>We deliver on correct time</h5>
+                        <p class="mt-3">Come & Experience Our Best of</p>
+                        <p>World Class Cousine.</p>
+            </div>
+            <div class="col-lg-4">
+                        <button>CONTACT US</button>
+            </div>
+        </div>
+    </div>
+    <div class="Pizzabox-contactUs-map">
+        <div class="row">
+            <div class="col-lg-6">
+                        <h5>Contact Us</h5>
+                        <p>Pizza Box, Götgatan 143</p>
+                        <p>+46 705 5055 00</p>
+                        <p>info@pizzabox.se</p>
+                        <p class="newsletter mt-4">Newsletter</p>
+                        <input type="email">
+            </div>
+            <div class="col-lg-6">
+            <div id="googleMap" style="width:100%;height:400px;"></div>
+            </div>
+        </div>
+    </div>
 
     <div class="Pizzabox-footer"></div>
 
@@ -182,7 +354,7 @@
                                 <span class="text-white">All rights reserved</span>
                             </div>
                             <div class="center">
-                                <img src="images/pizzagreen.jpg" width="80" height="80" alt="">
+                                <img src="images/pizzagreen.svg" width="50" height="50" alt="">
                             </div>
                             <div class="right">
                                 <span class="text-white mx-2 text-danger">Terms & Conditions</span>
@@ -198,5 +370,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+    <script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(57.708870,11.974560),
+  zoom:13,
+  styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+]
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHndWQc8CEtL0itRV03I2jeE1xc9xP0V4&callback=myMap"></script>
 </body>
 </html>
