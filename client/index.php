@@ -106,7 +106,45 @@
 
     </div>
 
-  
+    <div class="Pizzabox-WeekSpecial">
+
+        <div class="row Pizzabox-WeekSpecial-content">
+            <div class="col-lg-12 text-center justify-content-center mt-5 d-flex flex-column">
+
+                <div>  
+                <h3 class="pt-5">Amazing Delicious</h3>
+                <h5 class="pt-5">This Week's Special</h5>
+                </div>
+
+            <div class="col-lg-12 justify-content-center">
+                
+            <div class="d-flex flex-row justify-content-center">
+                
+                <div class="d-flex flex-column justify-content-center">
+                
+               
+                <img class="Pizzabox-ourStory-img1" src="images/offer-img1.jpg" width="450" alt="img">
+               
+                <div class="justify-content-center" style="width: 300px; height: 200px; background: white;">
+                <button class="mt-5">ORDER NOW</button>
+                </div>
+                
+                </div>
+
+                <div class="d-flex flex-column justify-content-center">
+               
+                <img class="Pizzabox-ourStory-img2" src="images/offer-img2.jpg" width="450" alt="img">
+                <div class="justify-content-center" style="width: 300px; height: 200px; background: white;"> 
+                <button class="mt-5">ORDER NOW</button>
+                </div>
+
+                </div>
+
+
+                </div>
+            </div>
+        </div>
+
 
     </div>
 

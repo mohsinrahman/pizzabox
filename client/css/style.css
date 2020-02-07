@@ -78,20 +78,52 @@
 }
 
 .Pizzabox-WeekSpecial{
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.Pizzabox-WeekSpecial-content{
     background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0,0.5)), url(/images/heroimage.jpeg);
     width: 100%;
     height: 100vh;
     position: relative;
     background-position: center;
     background-size:cover;  
+    font-family: "josefin Sans", sans-serif;  
+}
+
+.Pizzabox-WeekSpecial-content h3{
+    font-family: "order pizza";
+    color:#DD0808;
+    font-size: 30px;
+}
+
+.Pizzabox-WeekSpecial-content h5{
+    font-size: 30px;
+    color:rgb(255, 255, 255);
+    
+}
+
+.Pizzabox-WeekSpecial-content-img{
+    height: 100px;
+    width: 200px;
+}
+
+.Pizzabox-WeekSpecial-content button{
+    height: 40px;
+    background: #DD0808;
+    color: #ffffff;
+    border: 0;
+}
+
+.Pizzabox-WeekSpecial-content-price{
+    background-color: #ffffff;
+    width: 200px;
    
 }
 
-.Pizzabox-WeekSpecial-Offer{
-    background: white;
-    width: 100px;
-    height: 100px;
-}
+
+
 
 
 /* // Small devices (landscape phones, 576px and up)*/
