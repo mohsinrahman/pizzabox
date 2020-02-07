@@ -1,4 +1,6 @@
-
+body {
+    overflow-x: hidden;
+}
 .Pizzabox-heroSection{
     background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0,0.5)), url(/images/heroimage.jpeg);
     width: 100%;
@@ -76,6 +78,146 @@
     bottom:30px;
     left: 0;
 }
+.height-full {
+    height: 409px;
+}
+.parent {
+    border-bottom: 2px solid #f8f9fa;
+}
+.parent:hover {
+    border-bottom: 2px solid #f31311;
+}
+.image-Hover1 {
+    width: 130px;
+    height: 62px;
+    background: url("/client/images/restaurant.svg") center no-repeat;
+    display: inline-block;
+    background-size: contain;
+    /* transition: all 0.6s ease; */
+}
+.parent:hover .image-Hover1 {
+    width: 62px;
+    height: 62px;
+    background: url("/client/images/restaurant.png") no-repeat;
+    background-size: contain;
+}
+.image-Hover2 {
+    width: 130px;
+    height: 62px;
+    background: url("/client/images/soft-drinks.svg") center no-repeat;
+    display: inline-block;
+    background-size: contain;
+    /* transition: all 0.6s ease; */
+}
+.parent:hover .image-Hover2 {
+    width: 62px;
+    height: 62px;
+    background: url("/client/images/soft-drinks.png") no-repeat;
+    background-size: contain;
+}
+.image-Hover3 {
+    width: 130px;
+    height: 62px;
+    background: url("/client/images/spoon-and-fork.svg") center no-repeat;
+    display: inline-block;
+    background-size: contain;
+    /* transition: all 0.6s ease; */
+}
+.parent:hover .image-Hover3 {
+    width: 62px;
+    height: 62px;
+    background: url("/client/images/spoon-and-fork.png") no-repeat;
+    background-size: contain;
+}
+.image-Hover4 {
+    width: 130px;
+    height: 62px;
+    background: url("/client/images/pizza.svg") center no-repeat;
+    display: inline-block;
+    background-size: contain;
+    /* transition: all 0.6s ease; */
+}
+.parent:hover .image-Hover4 {
+    width: 62px;
+    height: 62px;
+    background: url("/client/images/pizza.png") no-repeat;
+    background-size: contain;
+}
+.image-Hover5 {
+    width: 130px;
+    height: 62px;
+    background: url("/client/images/soup-bowl.svg") center no-repeat;
+    display: inline-block;
+    background-size: contain;
+    /* transition: all 0.6s ease; */
+}
+.parent:hover .image-Hover5 {
+    width: 62px;
+    height: 62px;
+    background: url("/client/images/soup-bowl.png") no-repeat;
+    background-size: contain;
+}
+.image-Hover6 {
+    width: 130px;
+    height: 62px;
+    background: url("/client/images/coffee-alt.svg") center no-repeat;
+    display: inline-block;
+    background-size: contain;
+ 
+}
+.parent:hover .image-Hover6 {
+    width: 62px;
+    height: 62px;
+    background: url("/client/images/coffee-alt.png") no-repeat;
+    background-size: contain;
+}
+.Pizzabox-WeekSpecial{
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.Pizzabox-WeekSpecial-content{
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0,0.5)), url(/images/heroimage.jpeg);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-position: center;
+    background-size:cover;  
+    font-family: "josefin Sans", sans-serif;  
+}
+
+.Pizzabox-WeekSpecial-content h3{
+    font-family: "order pizza";
+    color:#DD0808;
+    font-size: 30px;
+}
+
+.Pizzabox-WeekSpecial-content h5{
+    font-size: 30px;
+    color:rgb(255, 255, 255);
+    
+}
+
+.Pizzabox-WeekSpecial-content-img{
+    height: 100px;
+    width: 200px;
+}
+
+.Pizzabox-WeekSpecial-content button{
+    height: 40px;
+    background: #DD0808;
+    color: #ffffff;
+    border: 0;
+}
+
+.Pizzabox-WeekSpecial-content-price{
+    background-color: #ffffff;
+    width: 200px;
+   
+}
+
+
+
 
 
 /* // Small devices (landscape phones, 576px and up)*/

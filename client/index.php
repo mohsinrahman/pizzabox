@@ -106,68 +106,165 @@
 
     </div>
 
+    <div class="Pizzabox-WeekSpecial">
 
-        <section class="pizza">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="title">
-                            <h1 class="text-center text-danger ">Our Story</h1>
-                        </div>
-                    </div>
+        <div class="row Pizzabox-WeekSpecial-content">
+            <div class="col-lg-12 text-center justify-content-center mt-5 d-flex flex-column">
+
+                <div>  
+                <h3 class="pt-5">Amazing Delicious</h3>
+                <h5 class="pt-5">This Week's Special</h5>
                 </div>
-                <div class="row">
 
-                    <div class="col-md-6 row no-gutters">
-                        <div class="col-md-6">
-                            <div class="col-12">
-                                <img src="images/img6.jpg" width="400px" class="img-fluid h-100" alt="">
-                            </div>
-                            <div class="col-12">
-                                <img src="images/img5.jpg" width="400px" class="img-fluid h-100 mt-2" alt="">
+            <div class="col-lg-12 justify-content-center">
+                
+            <div class="d-flex flex-row justify-content-center">
+                
+                <div class="d-flex flex-column justify-content-center">
+                
+               
+                <img class="Pizzabox-ourStory-img1" src="images/offer-img1.jpg" width="450" alt="img">
+               
+                <div class="justify-content-center" style="width: 300px; height: 200px; background: white;">
+                <button class="mt-5">ORDER NOW</button>
+                </div>
+                
+                </div>
+
+                <div class="d-flex flex-column justify-content-center">
+               
+                <img class="Pizzabox-ourStory-img2" src="images/offer-img2.jpg" width="450" alt="img">
+                <div class="justify-content-center" style="width: 300px; height: 200px; background: white;"> 
+                <button class="mt-5">ORDER NOW</button>
+                </div>
+
+                </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="Pizzabox-stunningThings"><div class="Pizzabox-stunningThings"><div class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">       
+                 <div class="comfort h5">
+                      <h5>Fore Your Comfort</h5> 
+                      <div class="font h2">
+                          <h2>Stunning Things</h2>
+                      </div>
+                </div>
+            </div>
+        </div>
+               <div class="row justify-content-between py-5">
+                        <div class="col-md-3">
+                            <div>
+                                <div class="parent bg-white text-center p-3">
+                                    <div class="image-Hover1">
+                                        <!-- <img src="images/restaurant.svg" width="80" height="30" class="img-fluid" alt=""> -->
+                                    </div>
+                                    <div class="title-box">
+                                        <b> High Quality Foods</b>
+                                    </div>
+                                    <div class="description text-justify">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum.
+                                    </div>
+                                </div>
+                                <div class="parent bg-white text-center p-3 my-3">
+                                    <div class="image-Hover6">
+                                        <!-- <img src="images/coffee-alt.svg" width="80" height="30" class="img-fluid" alt=""> -->
+                                    </div>
+                                    <div class="title-box">
+                                        <b> High Quality Coffee</b>
+                                    </div>
+                                    <div class="description text-justify">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum.
+                                    </div>
+                                </div>
+                                <div class="parent bg-white text-center p-3">
+                                    <div class="image-Hover5">
+                                        <!-- <img src="images/soup-bowl.svg" width="80" height="30" class="img-fluid" alt=""> -->
+                                    </div>
+                                    <div class="title-box">
+                                        <b> BestSoap</b>
+                                    </div>
+                                    <div class="description text-justify">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum.
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <img src="images/img3.jpg" width="400px" class="img-fluid h-100 pt-5" alt="">
+                        <div class="col-md-3">
+                            <div>
+                                <div class="parent bg-white text-center p-3 mb-3">
+                                    <div class="image-Hover4">
+                                        <!-- <img src="images/pizza.svg" width="80" height="30" class="img-fluid" alt=""> -->
+                                    </div>
+                                    <div class="title-box">
+                                        <b>Inspiring Recipes</b>
+                                    </div>
+                                    <div class="description text-justify">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum.
+                                    </div>
+                                </div>
+                                <div class="img-box">
+                                    <img src="images/lady2.png" class="img-fluid height-full" alt="">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="box-right">
-                            <div class="title">
-                                <h2>Welcome</h2>
-                            </div>
-                            <div class="text">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis dolor
-                                    sunt reprehenderit quae nemo at excepturi necessitatibus totam, voluptatum id
-                                    voluptatem, ea veniam iusto laboriosam ipsum alias iure placeat.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste delectus, illum
-                                    impedit tenetur ex possimus eum aliquam nisi quidem animi rem reiciendis,
-                                    consequuntur commodi aspernatur ab neque, ad voluptatem. Velit.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </p>
-                            </div>
-                            <div class="E">
-                                <img src="images/sign.png" alt="">
-                            </div><br>
-                            <div class="User d-flex align-items-center">
-                                <img src="images/chef1.jpg" width="50" height="50" class="rounded-circle"></span>
-                                <div class="mx-3">
-                                    <span class="d-block">John Conery</span>
-                                    <small class="d-block">Master Chef</small>
+                        <div class="col-md-3">
+                            <div>
+                                <div class="parent bg-white text-center p-3">
+                                    <div class="image-Hover2">
+                                        <!-- <img src="images/soft-drinks.svg" width="80" height="30" class="img-fluid" alt=""> -->
+
+                                    </div>
+                                    <div class="title-box">
+                                        <b> High Quality Foods</b>
+                                    </div>
+                                    <div class="description text-justify">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum.
+                                    </div>
+                                </div>
+                                <div class="parent bg-white text-center p-3 my-3">
+                                    <div class="image-Hover1">
+                                        <!-- <img src="images/restaurant.svg" width="80" height="30" class="img-fluid" alt=""> -->
+                                    </div>
+                                    <div class="title-box">
+                                        <b>salutary Meals</b>
+                                    </div>
+                                    <div class="description text-justify">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum.
+                                    </div>
+                                </div>
+                                <div class="parent bg-white text-center p-3">
+                                    <div class="image-Hover3">
+                                        <!-- <img src="images/spoon-and-fork.svg" width="80" height="30" class="img-fluid" alt=""> -->
+                                    </div>
+                                    <div class="title-box">
+                                        <b> Express Delivery</b>
+                                    </div>
+                                    <div class="description text-justify">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum.
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-
-    <div class="Pizzabox-WeekSpecial"></div>
-    <div class="Pizzabox-stunningThings"></div>
     <div class="Pizzabox-video"></div>
-    <div class="Pizzabox-menu"></div>
+   
+   
+    <div class="Pizzabox-menu">
+
+       <div class="pizzabox-menue-disover"></div> 
+
+       <div class="pizzabox-menue-list"></div>
+
+    </div>
     <div class="Pizzabox-contactUs"></div>
 
     <div class="Pizzabox-footer"></div>
