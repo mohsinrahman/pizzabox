@@ -201,11 +201,7 @@
 
    
    
-
-
-
-
-
+       <!-- pizzabox-menu-->
     <div class="Pizzabox-video">
         <div class="Pizzabox-video-area row">
             <div class="col-lg-12">
@@ -221,135 +217,100 @@
          </div>
     </div>
 
-
-
-
-    <div class="Pizzabox-menu">
-
-    <h5 class="text-center">Discover</h5>
-    <h3 class="text-center mt-3">OUR MENU</h3>
-    <div class="container">
-   <div class="row">
-        <div class="col-lg-6">
-        <h6 class="mt-5">Breakfast</h6>
-        <div class="card mt-5 p-2">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <img src="images/menu-img2.jpg" width="100" alt="breakfast">
-                        </div>
-                        <div class="col-lg-9">
-                         <p>Western Sunrise <span>20.00kr</span></p>
-                         <p>Two fried  eggs with cheese & two breakfast meats made to perfection</p>
-                         <button class="">ADD TO CART</button>
-                        </div>
+<div class="container" >
+        <h6 class="title">discover</h6>
+        <div class="our-menu"> <h1>our menu</h1> </div>
+        <div class="row" >
+            <div class="col-md-6">
+                <h2 class="title-card">Breakfest</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="floating-box "src="images/menu-img1.jpg" alt="">
+                        <h5 class="sub-title"> Western Sunrise <div class="color"> 20.00 kr </div></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius
+                            assumenda odit architecto veniam dignissimos</p>
+                            <a href="#" class="btn btn-outline-danger"><img class="logo" src="images/cart-alt.svg" alt=""><small> add to card</small> </a>
                     </div>
-        </div> <!-- Card end -->
-        <div class="card mt-5 p-2">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <img src="images/menu-img2.jpg" width="100" alt="breakfast">
-                        </div>
-                        <div class="col-lg-9">
-                         <p>Western Sunrise <span>20.00kr</span></p>
-                         <p>Two fried  eggs with cheese & two breakfast meats made to perfection</p>
-                         <button class="">ADD TO CART</button>
-                        </div>
+                </div> <br>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="floating-box"src="images/menu-img2.jpg" alt="">
+                        <h5 class="sub-title"> Western Sunrise<div class="color"> 30.00 kr </div></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius
+                            assumenda odit architecto veniam dignissimos</p>
+                            <a href="#" class="btn btn-outline-danger"><img class="logo" src="images/cart-alt.svg" alt=""><small> add to card</small> </a>
+                            
                     </div>
-        </div> <!-- card end -->
-        </div>  
-        <div class="col-lg-6">
-        <h6 class="mt-5">Lunch</h6>
-        <div class="card mt-5 p-2">
-                    <div class="row">
-                        <div class="col-lg-3">
-                        <img src="images/menu-img2.jpg" alt="breakfast" width="100">
-                        </div>
-                        <div class="col-lg-9">
-                        <p>Western Sunrise <span>20.00kr</span></p>
-                         <p>Two fried  eggs with cheese & two breakfast meats made to perfection</p>
-                         <button class="">ADD TO CART</button>
-                        </div>
+                </div><br>
+                <h2 class="title-card">Dinner</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="floating-box "src="images/pizza-4-600x600.png" alt="">
+                        <h5 class="sub-title"> Western Sunrise<div class="color"> 20.00 kr </div></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius
+                            assumenda odit architecto veniam dignissimos</p>
+                            <a href="#" class="btn btn-outline-danger"><img class="logo" src="images/cart-alt.svg" alt=""><small> add to card</small> </a>
+                           
                     </div>
-        </div> <!-- card end -->
-        <div class="card mt-5 p-2">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <img src="images/menu-img2.jpg" width="100" alt="breakfast">
-                        </div>
-                        <div class="col-lg-9">
-                         <p>Western Sunrise <span>30.00kr</span></p>
-                         <p>Two fried  eggs with cheese & two breakfast meats made to perfection</p>
-                         <button class="">ADD TO CART</button>
-                        </div>
+                </div><br>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="floating-box"src="images/heroimage.jpeg" alt="">
+                        <h5 class="sub-title"> Western Sunrise<div class="color"> 40.00 kr </div></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius
+                            assumenda odit architecto veniam dignissimos</p>
+                            <a href="#" class="btn btn-outline-danger"><img class="logo" src="images/cart-alt.svg" alt=""><small> add to card</small> </a>
+                        
                     </div>
-        </div> <!-- card end -->
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2 class="title-card">Lunch</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="floating-box "src="images/menu-img3.jpg" alt="">
+                        <h5 class="sub-title"> Western Sunrise<div class="color"> 50.00 kr </div></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius
+                            assumenda odit architecto veniam dignissimos</p>
+                            <a href="#" class="btn btn-outline-danger"><img class="logo" src="images/cart-alt.svg" alt=""><small> add to card</small> </a>
+                       
+                    </div>
+                </div><br>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="floating-box"src="images/photo-1576050346559-8a547f531dcb.jpeg" alt="">
+                        <h5 class="sub-title"> Western Sunrise<div class="color"> 35.00 kr </div></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius
+                            assumenda odit architecto veniam dignissimos</p>
+                            <a href="#" class="btn btn-outline-danger"><img class="logo" src="images/cart-alt.svg" alt=""><small> add to card</small> </a>
+                           
+                    </div>
+                </div><br>
+                <h2 class="title-card">Desert</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="floating-box "src="images/menu-img1.jpg" alt="">
+                        <h5 class="sub-title"> Western Sunrise<div class="color"> 18.00 kr </div></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius
+                            assumenda odit architecto veniam dignissimos</p>
+                            <a href="#" class="btn btn-outline-danger"><img class="logo" src="images/cart-alt.svg" alt=""><small> add to card</small> </a>
 
-        </div>  
-        </div>              
-   
-   <div class="row">
-        <div class="col-lg-6">
-        <h6 class="mt-5">Dinner</h6>
-        <div class="card mt-5 p-2">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <img src="images/menu-img2.jpg" width="100" alt="breakfast">
-                        </div>
-                        <div class="col-lg-9">
-                         <p>Western Sunrise <span>20.00kr</span></p>
-                         <p>Two fried  eggs with cheese & two breakfast meats made to perfection</p>
-                         <button class="">ADD TO CART</button>
-                        </div>
                     </div>
-        </div> <!-- Card end -->
-        <div class="card mt-5 p-2">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <img src="images/menu-img2.jpg" width="100" alt="breakfast">
-                        </div>
-                        <div class="col-lg-9">
-                         <p>Western Sunrise <span>20.00kr</span></p>
-                         <p>Two fried  eggs with cheese & two breakfast meats made to perfection</p>
-                         <button class="">ADD TO CART</button>
-                        </div>
+                </div><br>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="floating-box "src="images/menu-img2.jpg" alt="">
+                        <h5 class="sub-title"> Western Sunrise<div class="color"> 25.00 kr </div></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius
+                            assumenda odit architecto veniam dignissimos</p>
+                            <a href="#" class="btn btn-outline-danger"><img class="logo" src="images/cart-alt.svg" alt=""><small> add to card</small> </a>
+                          
                     </div>
-        </div> <!-- card end -->
-        </div>  
-        <div class="col-lg-6">
-        <h6 class="mt-5">Desert</h6>
-        <div class="card mt-5 p-2">
-                    <div class="row">
-                        <div class="col-lg-3">
-                        <img src="images/menu-img1.jpg" alt="breakfast" width="100">
-                        </div>
-                        <div class="col-lg-9">
-                        <p>Western Sunrise <span>20.00kr</span></p>
-                         <p>Two fried  eggs with cheese & two breakfast meats made to perfection</p>
-                         <button class="">ADD TO CART</button>
-                        </div>
-                    </div>
-        </div> <!-- card end -->
-        <div class="card mt-5 p-2">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <img src="images/menu-img1.jpg" width="100" alt="breakfast">
-                        </div>
-                        <div class="col-lg-9">
-                         <p>Western Sunrise <span>20.00kr</span></p>
-                         <p>Two fried  eggs with cheese & two breakfast meats made to perfection</p>
-                         <button class="">ADD TO CART</button>
-                        </div>
-                    </div>
-        </div> <!-- card end -->
+                </div>
+            </div>
+        </div>
 
-        </div>  
-        </div>              
-   </div>
-   </div>
-    </div>
-    </div>
-
-
+    
     <div class="Pizzabox-contactUs mt-5">
         <div class="row">
             <div class="col-lg-8">
