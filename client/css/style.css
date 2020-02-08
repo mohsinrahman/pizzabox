@@ -358,6 +358,13 @@ body {
   font-weight: bold;
 }
 
+.logo{
+    float: left;
+    width: 30px;
+    height:30px;
+}  
+
+
 /* // Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
 }
