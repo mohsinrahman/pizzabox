@@ -307,7 +307,7 @@ body {
 }
 .title-card{
     font-family: "josefin Sans";
-    text-align: left;
+    text-align: center;
     margin-top: 30px;
 }
 .floating-box{
@@ -329,6 +329,13 @@ body {
 .btn{
     float: right;
 }
+
+.logo{
+    float: left;
+    width: 30px;
+    height:30px;
+}  
+
 
 
 
@@ -357,12 +364,6 @@ body {
 .newsletter {
   font-weight: bold;
 }
-
-.logo{
-    float: left;
-    width: 30px;
-    height:30px;
-}  
 
 
 /* // Small devices (landscape phones, 576px and up)*/
