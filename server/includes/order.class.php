@@ -7,7 +7,7 @@ class Order {
   
       public function __construct() {
   
-          $this->db = new Database(); ///obj create
+          $this->db = new Database(); 
 
       }
       
@@ -19,11 +19,6 @@ class Order {
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
-        if (empty($result)){
-            throw new Exception("No orders found", 404);
-            exit;
-        }
-
         return $result;
     }
     public function orderInsert ($orderID, $id, $shippingfType, $date){
@@ -34,23 +29,23 @@ class Order {
 
     public function getAllOrdersByUser($userID) {
             
-        try{
-
-            $query = $this->db->link->prepare
-            (" SELECT OrderID FROM Orders 
-            WHERE Category='$userID';");
+    
+            $sql=" SELECT OrderID FROM Orders 
+            WHERE Category='$userID';";
+            $query = $this->db->link->prepare($sql);
             $query->execute();
             $query->setFetchMode(PDO::FETCH_OBJ);
             $result = $query->fetchAll();
-            if (empty($result)) {
-                return false;
-            }
+           
             return $result;
     
-        }catch(Exception $e) {
-            echo $e->getMessage();
-    
-        }
+   
     }
 }
 
+
+$o=new Order();
+$result = $o->getAllOrders();
+
+echo json_encode($result);
+?>
