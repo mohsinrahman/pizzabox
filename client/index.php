@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
-  
     <title>Pizza Box</title>
+    
 </head>
 <body>
     <div class="Pizzabox-heroSection">
@@ -23,7 +23,7 @@
             <div class="Pizzabox-heroSection-opening">
                 <div class="row">
                     <div class="col-lg-8">
-                    Opening Hours: 8:00am - 11:30PM
+                    Opening Hours: 8:00am - 11:30pm
                     </div>
                     
                     <div class="col-lg-4"> 
@@ -108,63 +108,7 @@
 
     <div class="Pizzabox-WeekSpecial">
 
-        <div class="row Pizzabox-WeekSpecial-content">
-            <div class="col-lg-12 text-center justify-content-center mt-5 d-flex flex-column">
 
-                <div>  
-                <h3 class="pt-5">Amazing Delicious</h3>
-                <h5 class="pt-5">This Week's Special</h5>
-                </div>
-
-            <div class="col-lg-12 justify-content-center">
-                
-            <div class="d-flex flex-row justify-content-center">
-                
-                <div class="d-flex flex-column justify-content-center">
-                
-               
-                <img class="Pizzabox-ourStory-img1" src="images/offer-img1.jpg" width="450" alt="img">
-               
-                <div class="justify-content-center" style="width: 300px; height: 200px; background: white;">
-                <button class="mt-5">ORDER NOW</button>
-                </div>
-                
-                </div>
-
-                <div class="d-flex flex-column justify-content-center">
-               
-                <img class="Pizzabox-ourStory-img2" src="images/offer-img2.jpg" width="450" alt="img">
-                <div class="justify-content-center" style="width: 300px; height: 200px; background: white;"> 
-                <button class="mt-5">ORDER NOW</button>
-                </div>
-
-                </div>
-
-
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-    <div class="Pizzabox-stunningThings"><div class="Pizzabox-stunningThings"><div class="bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">       
-                 <div class="comfort h5">
-                      <h5>Fore Your Comfort</h5> 
-                      <div class="font h2">
-                          <h2>Stunning Things</h2>
-                      </div>
-                </div>
-            </div>
-        </div>
-               <div class="row justify-content-between py-5">
-                        <div class="col-md-3">
-                            <div>
-                                <div class="parent bg-white text-center p-3">
-                                    <div class="image-Hover1">
-                                        <!-- <img src="images/restaurant.svg" width="80" height="30" class="img-fluid" alt=""> -->
                                     </div>
                                     <div class="title-box">
                                         <b> High Quality Foods</b>
@@ -255,19 +199,147 @@
                         </div>
                     </div>
 
-    <div class="Pizzabox-video"></div>
    
    
-    <div class="Pizzabox-menu">
-
-       <div class="pizzabox-menue-disover"></div> 
-
-       <div class="pizzabox-menue-list"></div>
-
+       <!-- pizzabox-menu-->
+    <div class="Pizzabox-video">
+        <div class="Pizzabox-video-area row">
+            <div class="col-lg-12">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/EnEE8jnZYho" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>  
+        <div class="Pizzabox-video-text row ">
+            <div class="col-lg-12">
+                <h5>Best Place of Gothenburg</h5>
+            </div>
+         </div>
     </div>
-    <div class="Pizzabox-contactUs"></div>
 
-    <div class="Pizzabox-footer"></div>
+<div class="container" >
+        <h6 class="title">discover</h6>
+        <div class="our-menu"> <h1>our menu</h1> </div>
+        <div class="row" >
+            <div class="col-md-6">
+                <h2 class="title-card">Breakfest</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="floating-box "src="images/menu-img1.jpg" alt="">
+                        <h5 class="sub-title"> Western Sunrise <div class="color"> 20.00 kr </div></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius
+                            assumenda odit architecto veniam dignissimos</p>
+                            <a href="#" class="btn btn-outline-danger"><img class="logo" src="images/cart-alt.svg" alt=""><small> add to card</small> </a>
+                    </div>
+                </div> <br>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="floating-box"src="images/menu-img2.jpg" alt="">
+                        <h5 class="sub-title"> Western Sunrise<div class="color"> 30.00 kr </div></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius
+                            assumenda odit architecto veniam dignissimos</p>
+                            <a href="#" class="btn btn-outline-danger"><img class="logo" src="images/cart-alt.svg" alt=""><small> add to card</small> </a>
+                            
+                    </div>
+                </div><br>
+                <h2 class="title-card">Dinner</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="floating-box "src="images/pizza-4-600x600.png" alt="">
+                        <h5 class="sub-title"> Western Sunrise<div class="color"> 20.00 kr </div></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius
+                            assumenda odit architecto veniam dignissimos</p>
+                            <a href="#" class="btn btn-outline-danger"><img class="logo" src="images/cart-alt.svg" alt=""><small> add to card</small> </a>
+                           
+                    </div>
+                </div><br>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="floating-box"src="images/heroimage.jpeg" alt="">
+                        <h5 class="sub-title"> Western Sunrise<div class="color"> 40.00 kr </div></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius
+                            assumenda odit architecto veniam dignissimos</p>
+                            <a href="#" class="btn btn-outline-danger"><img class="logo" src="images/cart-alt.svg" alt=""><small> add to card</small> </a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2 class="title-card">Lunch</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="floating-box "src="images/menu-img3.jpg" alt="">
+                        <h5 class="sub-title"> Western Sunrise<div class="color"> 50.00 kr </div></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius
+                            assumenda odit architecto veniam dignissimos</p>
+                            <a href="#" class="btn btn-outline-danger"><img class="logo" src="images/cart-alt.svg" alt=""><small> add to card</small> </a>
+                       
+                    </div>
+                </div><br>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="floating-box"src="images/photo-1576050346559-8a547f531dcb.jpeg" alt="">
+                        <h5 class="sub-title"> Western Sunrise<div class="color"> 35.00 kr </div></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius
+                            assumenda odit architecto veniam dignissimos</p>
+                            <a href="#" class="btn btn-outline-danger"><img class="logo" src="images/cart-alt.svg" alt=""><small> add to card</small> </a>
+                           
+                    </div>
+                </div><br>
+                <h2 class="title-card">Desert</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="floating-box "src="images/menu-img1.jpg" alt="">
+                        <h5 class="sub-title"> Western Sunrise<div class="color"> 18.00 kr </div></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius
+                            assumenda odit architecto veniam dignissimos</p>
+                            <a href="#" class="btn btn-outline-danger"><img class="logo" src="images/cart-alt.svg" alt=""><small> add to card</small> </a>
+
+                    </div>
+                </div><br>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="floating-box "src="images/menu-img2.jpg" alt="">
+                        <h5 class="sub-title"> Western Sunrise<div class="color"> 25.00 kr </div></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius
+                            assumenda odit architecto veniam dignissimos</p>
+                            <a href="#" class="btn btn-outline-danger"><img class="logo" src="images/cart-alt.svg" alt=""><small> add to card</small> </a>
+                          
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+    <div class="Pizzabox-contactUs mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                        <h5>We deliver on correct time</h5>
+                        <p class="mt-3">Come & Experience Our Best of</p>
+                        <p>World Class Cousine.</p>
+            </div>
+            <div class="col-lg-4">
+                        <button>CONTACT US</button>
+            </div>
+        </div>
+    </div>
+    <div class="Pizzabox-contactUs-map">
+        <div class="row">
+            <div class="col-lg-6">
+                        <h5>Contact Us</h5>
+                        <p>Pizza Box, Götgatan 143</p>
+                        <p>+46 705 5055 00</p>
+                        <p>info@pizzabox.se</p>
+                        <p class="newsletter mt-4">Newsletter</p>
+                        <input type="email">
+            </div>
+            <div class="col-lg-6">
+            <div id="googleMap" style="width:100%;height:400px;"></div>
+            </div>
+        </div>
+    </div>
+       
+   
 
     <div class="footer py-2 bg-dark">
             <div class="container">
@@ -279,7 +351,7 @@
                                 <span class="text-white">All rights reserved</span>
                             </div>
                             <div class="center">
-                                <img src="images/pizzagreen.jpg" width="80" height="80" alt="">
+                                <img src="images/pizzagreen.svg" width="50" height="50" alt="">
                             </div>
                             <div class="right">
                                 <span class="text-white mx-2 text-danger">Terms & Conditions</span>
@@ -295,5 +367,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+    <script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(57.708870,11.974560),
+  zoom:13,
+  styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+]
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHndWQc8CEtL0itRV03I2jeE1xc9xP0V4&callback=myMap"></script>
 </body>
 </html>
