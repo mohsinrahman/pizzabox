@@ -20,6 +20,8 @@ class Product {
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
         return $result;
     }
+
+
     public function insertProduct ($productID, $productName, $description, $unitPrice, $category, $unitsInStock,$image){
         $sql = "INSERT INTO Products (ProductID, ProductName, Description, UnitPrice, Category, UnitsInStock, Image) VALUES (?,?,?,?,?,?,?)";
         $query = $this->db->link->prepare($sql)->execute([$productID, $productName, $description, $unitPrice, $category, $unitsInStock, $image]);
@@ -34,8 +36,7 @@ class Product {
             WHERE Category='$catergoryChoosen';";
             $query = $this->db->link->prepare($sql);
             $query->execute();
-            $query->setFetchMode(PDO::FETCH_OBJ);
-            $result = $query->fetchAll();
+            $result = $query->fetchAll(PDO::FETCH_ASSOC);
           
             return $result;
     
