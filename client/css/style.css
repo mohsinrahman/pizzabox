@@ -1,6 +1,20 @@
 body {
-<<<<<<< HEAD
-  font-family: "josefin Sans", sans-serif;
+  font-family: "josefin Sans", sans-serif !important;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+a:hover {
+  color: #ffffff;
+  text-decoration: none;
 }
 .Pizzabox-heroSection {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -25,26 +39,6 @@ body {
 }
 .Pizzabox-heroSection-menu li {
   padding: 10px 20px;
-=======
-    overflow-x: hidden;
-}
-.Pizzabox-heroSection{
-    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0,0.5)), url(/images/heroimage.jpeg);
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    background-position: center;
-    background-size:cover;  
-}
-.Pizzabox-heroSection-bg{
-    width: 100%;
-    position: absolute;
-    top: 0%;   
-}
-.Pizzabox-heroSection-email, .Pizzabox-heroSection-opening, .Pizzabox-heroSection-menu, .Pizzabox-heroSection-content {
-    color: #ffffff;
-    font-family: "josefin Sans", sans-serif;
->>>>>>> 47232f73243104cc1f4972c6627904d8b7b35954
 }
 
 .Pizzabox-heroSection-content h3 {
@@ -55,17 +49,23 @@ body {
 .Pizzabox-heroSection-content h5 {
   font-size: 48px;
 }
-.Pizzabox-heroSection-content button {
+.Pizzabox-heroSection-content button,
+.Pizzabox-menu button,
+.Pizzabox-contactUs button {
   height: 40px;
   background: #dd0808;
   color: #ffffff;
   border: 0;
 }
+
 .Pizzabox-ourStory h3 {
   font-family: "Order Pizza";
   color: #dd0808;
   text-align: center;
   margin-top: 50px;
+}
+.load-hidden {
+  visibility: hidden;
 }
 
 .Pizzabox-ourStory-content {
@@ -107,19 +107,16 @@ body {
   bottom: 30px;
   left: 0;
 }
-
 .Pizzabox-video {
   margin-top: 50px;
   height: 100vh;
   width: 80%;
   position: relative;
 }
-
 .Pizzabox-video-area {
   z-index: 0;
   transform: translate(10%, 0%);
 }
-
 .Pizzabox-video-text {
   position: absolute;
   top: 30%;
@@ -133,7 +130,24 @@ body {
 .Pizzabox-video-text h5 {
   font-size: 48px;
 }
-.Pizzabox-menu h5 {
+.Pizzabox-stunningThings {
+  background-color: #eeeeee;
+  position: relative;
+}
+.Pizzabox-stunningThings-lady img {
+  height: 400px;
+}
+.Pizzabox-stunningThings-lady {
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.Pizzabox-menu {
+  background: #eeeeee;
+}
+.Pizzabox-menu h5,
+.Pizzabox-stunningThings h5 {
   font-family: "order pizza";
   color: #dd0808;
 }
@@ -150,197 +164,180 @@ body {
   color: #ffffff;
 }
 .height-full {
-    height: 409px;
+  height: 409px;
 }
-
-.comfort h5{
-    font-family: "Order Pizza";
-    color: #DD0808;
-    text-align: center;
-    margin-top: 50px;
+.comfort h5 {
+  font-family: "Order Pizza";
+  color: #dd0808;
+  text-align: center;
+  margin-top: 50px;
 }
-.font h2{
-    font-family: "josefin Sans";
-    text-align: center; 
+.font h2 {
+  font-family: "josefin Sans";
+  text-align: center;
 }
-
 .parent {
-    border-bottom: 2px solid #f8f9fa;
+  border-bottom: 2px solid #f8f9fa;
 }
 .parent:hover {
-    border-bottom: 2px solid #f31311;
+  border-bottom: 2px solid #f31311;
 }
 .image-Hover1 {
-    width: 130px;
-    height: 62px;
-    background: url("/client/images/restaurant.svg") center no-repeat;
-    display: inline-block;
-    background-size: contain;
-    /* transition: all 0.6s ease; */
+  width: 130px;
+  height: 62px;
+  background: url("/client/images/restaurant.svg") center no-repeat;
+  display: inline-block;
+  background-size: contain;
+  /* transition: all 0.6s ease; */
 }
 .parent:hover .image-Hover1 {
-    width: 62px;
-    height: 62px;
-    background: url("/client/images/restaurant.png") no-repeat;
-    background-size: contain;
+  width: 62px;
+  height: 62px;
+  background: url("/client/images/restaurant.png") no-repeat;
+  background-size: contain;
 }
 .image-Hover2 {
-    width: 130px;
-    height: 62px;
-    background: url("/client/images/soft-drinks.svg") center no-repeat;
-    display: inline-block;
-    background-size: contain;
-    /* transition: all 0.6s ease; */
+  width: 130px;
+  height: 62px;
+  background: url("/client/images/soft-drinks.svg") center no-repeat;
+  display: inline-block;
+  background-size: contain;
+  /* transition: all 0.6s ease; */
 }
 .parent:hover .image-Hover2 {
-    width: 62px;
-    height: 62px;
-    background: url("/client/images/soft-drinks.png") no-repeat;
-    background-size: contain;
+  width: 62px;
+  height: 62px;
+  background: url("/client/images/soft-drinks.png") no-repeat;
+  background-size: contain;
 }
 .image-Hover3 {
-    width: 130px;
-    height: 62px;
-    background: url("/client/images/spoon-and-fork.svg") center no-repeat;
-    display: inline-block;
-    background-size: contain;
-    /* transition: all 0.6s ease; */
+  width: 130px;
+  height: 62px;
+  background: url("/client/images/spoon-and-fork.svg") center no-repeat;
+  display: inline-block;
+  background-size: contain;
+  /* transition: all 0.6s ease; */
 }
 .parent:hover .image-Hover3 {
-    width: 62px;
-    height: 62px;
-    background: url("/client/images/spoon-and-fork.png") no-repeat;
-    background-size: contain;
+  width: 62px;
+  height: 62px;
+  background: url("/client/images/spoon-and-fork.png") no-repeat;
+  background-size: contain;
 }
 .image-Hover4 {
-    width: 130px;
-    height: 62px;
-    background: url("/client/images/pizza.svg") center no-repeat;
-    display: inline-block;
-    background-size: contain;
-    /* transition: all 0.6s ease; */
+  width: 130px;
+  height: 62px;
+  background: url("/client/images/pizza.svg") center no-repeat;
+  display: inline-block;
+  background-size: contain;
+  /* transition: all 0.6s ease; */
 }
 .parent:hover .image-Hover4 {
-    width: 62px;
-    height: 62px;
-    background: url("/client/images/pizza.png") no-repeat;
-    background-size: contain;
+  width: 62px;
+  height: 62px;
+  background: url("/client/images/pizza.png") no-repeat;
+  background-size: contain;
 }
 .image-Hover5 {
-    width: 130px;
-    height: 62px;
-    background: url("/client/images/soup-bowl.svg") center no-repeat;
-    display: inline-block;
-    background-size: contain;
-    /* transition: all 0.6s ease; */
+  width: 130px;
+  height: 62px;
+  background: url("/client/images/soup-bowl.svg") center no-repeat;
+  display: inline-block;
+  background-size: contain;
+  /* transition: all 0.6s ease; */
 }
 .parent:hover .image-Hover5 {
-    width: 62px;
-    height: 62px;
-    background: url("/client/images/soup-bowl.png") no-repeat;
-    background-size: contain;
+  width: 62px;
+  height: 62px;
+  background: url("/client/images/soup-bowl.png") no-repeat;
+  background-size: contain;
 }
 .image-Hover6 {
-    width: 130px;
-    height: 62px;
-    background: url("/client/images/coffee-alt.svg") center no-repeat;
-    display: inline-block;
-    background-size: contain;
- 
+  width: 130px;
+  height: 62px;
+  background: url("/client/images/coffee-alt.svg") center no-repeat;
+  display: inline-block;
+  background-size: contain;
 }
 .parent:hover .image-Hover6 {
-    width: 62px;
-    height: 62px;
-    background: url("/client/images/coffee-alt.png") no-repeat;
-    background-size: contain;
+  width: 62px;
+  height: 62px;
+  background: url("/client/images/coffee-alt.png") no-repeat;
+  background-size: contain;
 }
-.Pizzabox-WeekSpecial{
-    margin-top: 70px;
-    margin-bottom: 50px;
-}
-
-.Pizzabox-WeekSpecial-content{
-    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0,0.5)), url(/images/heroimage.jpeg);
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    background-position: center;
-    background-size:cover;  
-    font-family: "josefin Sans", sans-serif;  
+.Pizzabox-WeekSpecial {
+  margin-top: 70px;
+  margin-bottom: 50px;
 }
 
-.Pizzabox-WeekSpecial-content h3{
-    font-family: "order pizza";
-    color:#DD0808;
-    font-size: 30px;
+.Pizzabox-WeekSpecial-content {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/heroimage.jpeg);
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  font-family: "josefin Sans", sans-serif;
 }
 
-.Pizzabox-WeekSpecial-content h5{
-    font-size: 30px;
-    color:rgb(255, 255, 255);
-    
+.Pizzabox-WeekSpecial-content h3 {
+  font-family: "order pizza";
+  color: #dd0808;
+  font-size: 30px;
 }
 
-.Pizzabox-WeekSpecial-content-img{
-    height: 100px;
-    width: 200px;
+.Pizzabox-WeekSpecial-content h5 {
+  font-size: 30px;
+  color: rgb(255, 255, 255);
 }
 
-.Pizzabox-WeekSpecial-content button{
-    height: 40px;
-    background: #DD0808;
-    color: #ffffff;
-    border: 0;
+.Pizzabox-WeekSpecial-content-img {
+  height: 100px;
+  width: 200px;
 }
 
-.Pizzabox-WeekSpecial-content-price{
-    background-color: #ffffff;
-    width: 200px;
-   
+.Pizzabox-WeekSpecial-content button {
+  height: 40px;
+  background: #dd0808;
+  color: #ffffff;
+  border: 0;
 }
 
-.title{
-    font-family: "Order Pizza";
-    color: #DD0808;
-    text-align: center;
-    margin-top: 60px;
-}
-.title-card{
-    font-family: "josefin Sans";
-    text-align: center;
-    margin-top: 30px;
-}
-.floating-box{
-    float: left;
-    width: 80px;
-    height:80px;
-    margin: 10px;
-
-}
-.our-menu{
-    font-family: "josefin Sans";
-    text-align: center;
-    margin-top: 10px;
-}
-.color{
-    color: #DD0808;
-    float: right;
-}
-.btn{
-    float: right;
+.Pizzabox-WeekSpecial-content-price {
+  background-color: #ffffff;
+  width: 200px;
 }
 
-.logo{
-    float: left;
-    width: 30px;
-    height:30px;
-}  
-
-
-
-
-
-
+.title {
+  font-family: "Order Pizza";
+  color: #dd0808;
+  text-align: center;
+  margin-top: 60px;
+}
+.title-card {
+  font-family: "josefin Sans";
+  text-align: left;
+  margin-top: 30px;
+}
+.floating-box {
+  float: left;
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+}
+.our-menu {
+  font-family: "josefin Sans";
+  text-align: center;
+  margin-top: 10px;
+}
+.color {
+  color: #dd0808;
+  float: right;
+}
+.btn {
+  float: right;
+}
 
 .Pizzabox-contactUs h5 {
   font-family: "order pizza";
@@ -364,7 +361,319 @@ body {
 .newsletter {
   font-weight: bold;
 }
+/* Scroll button */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 50vh;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #dd0808;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+}
 
+#myBtn:hover {
+  background-color: red;
+}
+
+/*Modal Cart */
+
+.input-group-text,
+.form-control,
+.product .remove-product {
+  border-radius: 0 !important;
+}
+/*Login */
+
+.signin {
+  background: #dd0808;
+  color: #ffffff;
+  border-radius: 0;
+  width: 100px;
+}
+.signout {
+  color: #dd0808;
+  background: #ffffff;
+  border: 1px solid #dd0808;
+  border-radius: 0;
+}
+.signin:hover {
+  color: #dd0808;
+  background: #ffffff;
+  border: 1px solid #dd0808;
+}
+.signout:hover {
+  background: #dd0808;
+  color: #ffffff;
+}
+input[type="email"],
+input[type="password"] {
+  border-radius: 0;
+}
+.signup {
+  color: #000000;
+}
+
+/* Modal CSS */
+
+/* Global settings */
+
+.modal-body-heading {
+  font-family: "order pizza";
+  color: #dd0808;
+}
+.product-image {
+  float: left;
+  width: 20%;
+}
+
+.product-details {
+  float: left;
+  width: 37%;
+}
+
+.product-price {
+  float: left;
+  width: 12%;
+}
+
+.product-quantity {
+  float: left;
+  width: 10%;
+}
+
+.product-removal {
+  float: left;
+  width: 9%;
+}
+
+.product-line-price {
+  float: left;
+  width: 12%;
+  text-align: right;
+}
+
+/* This is used as the traditional .clearfix class */
+.group:before,
+.shopping-cart:before,
+.column-labels:before,
+.product:before,
+.totals-item:before,
+.group:after,
+.shopping-cart:after,
+.column-labels:after,
+.product:after,
+.totals-item:after {
+  content: "";
+  display: table;
+}
+
+.group:after,
+.shopping-cart:after,
+.column-labels:after,
+.product:after,
+.totals-item:after {
+  clear: both;
+}
+
+.group,
+.shopping-cart,
+.column-labels,
+.product,
+.totals-item {
+  zoom: 1;
+}
+
+/* Apply clearfix in a few places */
+/* Apply dollar signs */
+.product .product-price:after,
+.product .product-line-price:after,
+.totals-value:after {
+  content: "kr";
+}
+
+/* Body/Header stuff */
+/* body {
+  padding: 0px 30px 30px 20px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+} */
+
+h1 {
+  font-weight: 100;
+}
+
+label {
+  color: #aaa;
+}
+
+.shopping-cart {
+  margin-top: -45px;
+}
+
+/* Column headers */
+.column-labels label {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+.column-labels .product-image,
+.column-labels .product-details,
+.column-labels .product-removal {
+  text-indent: -9999px;
+}
+
+/* Product entries */
+.product {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+.product .product-image {
+  text-align: center;
+}
+.product .product-image img {
+  width: 100px;
+}
+.product .product-details .product-title {
+  margin-right: 20px;
+}
+.product .product-details .product-description {
+  margin: 5px 20px 5px 0;
+  line-height: 1.4em;
+}
+.product .product-quantity input {
+  width: 40px;
+}
+.product .remove-product {
+  border: 0;
+  padding: 4px 8px;
+  background-color: #dd0808;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+}
+.product .remove-product:hover {
+  background-color: red;
+}
+
+/* Totals section */
+.totals .totals-item {
+  float: right;
+  clear: both;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.totals .totals-item label {
+  float: left;
+  clear: both;
+  width: 79%;
+  text-align: right;
+}
+.totals .totals-item .totals-value {
+  float: right;
+  width: 21%;
+  text-align: right;
+}
+.totals .totals-item-total {
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+}
+
+.checkout {
+  float: right;
+  border: 0;
+  margin-top: 20px;
+  padding: 6px 25px;
+  background-color: #7ac943;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 3px;
+}
+
+.checkout:hover {
+  background-color: #494;
+}
+
+/* Make adjustments for tablet */
+@media screen and (max-width: 650px) {
+  .shopping-cart {
+    margin: 0;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+  }
+
+  .column-labels {
+    display: none;
+  }
+
+  .product-image {
+    float: right;
+    width: auto;
+  }
+  .product-image img {
+    margin: 0 0 10px 10px;
+  }
+
+  .product-details {
+    float: none;
+    margin-bottom: 10px;
+    width: auto;
+  }
+
+  .product-price {
+    clear: both;
+    width: 70px;
+  }
+
+  .product-quantity {
+    width: 100px;
+  }
+  .product-quantity input {
+    margin-left: 20px;
+  }
+
+  .product-quantity:before {
+    content: "x";
+  }
+
+  .product-removal {
+    width: auto;
+  }
+
+  .product-line-price {
+    float: right;
+    width: 70px;
+  }
+}
+/* Make more adjustments for phone */
+@media screen and (max-width: 350px) {
+  .product-removal {
+    float: right;
+  }
+
+  .product-line-price {
+    float: right;
+    clear: left;
+    width: auto;
+    margin-top: 10px;
+  }
+
+  .product .product-line-price:before {
+    content: "Item Total: $";
+  }
+
+  .totals .totals-item label {
+    width: 60%;
+  }
+  .totals .totals-item .totals-value {
+    width: 40%;
+  }
+}
 
 /* // Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
@@ -379,9 +688,5 @@ body {
 }
 
 /* // Extra large devices (large desktops, 1200px and up) */
-<<<<<<< HEAD
 @media (min-width: 1200px) {
 }
-=======
-@media (min-width: 1200px) { }
->>>>>>> 47232f73243104cc1f4972c6627904d8b7b35954
