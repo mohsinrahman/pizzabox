@@ -13,6 +13,9 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../server/includes/functions.js"></script>
+    
     <title>Pizza Box</title>
     
 </head>
@@ -315,9 +318,10 @@
     <h3 class="text-center mt-3 headline">OUR MENU</h3>
     <div class="container" id="pizzabox-menu">
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6" >
         <h6 class="mt-5">Breakfast</h6>
-        <div class="card mt-5 p-2 card1-menu">
+        <div id="menu"><script> getTheseProducts()</script></div>
+        <!--<div class="card mt-5 p-2 card1-menu">
                     <div class="row">
                         <div class="col-lg-3">
                             <img src="images/menu-img2.jpg" width="100" alt="breakfast">
@@ -329,7 +333,7 @@
                         </div>
                     </div>
         </div> <!-- Card end -->
-        <div class="card mt-5 p-2 card2-menu">
+        <!--<div class="card mt-5 p-2 card2-menu">
                     <div class="row">
                         <div class="col-lg-3">
                             <img src="images/menu-img2.jpg" width="100" alt="breakfast">
@@ -341,7 +345,7 @@
                         </div>
                     </div>
         </div> <!-- card end -->
-
+        
         </div>  
         <div class="col-lg-6">
         <h6 class="mt-5">Lunch</h6>
