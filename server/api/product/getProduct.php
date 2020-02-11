@@ -3,7 +3,7 @@ session_start();
 include("../../includes/product.class.php");
 $method = isset($_SERVER['REQUEST_METHOD']);
 if($method){
-    if($method === 'GET') {
+    if($method == 'GET') {
         
         
         $product = new Product();
