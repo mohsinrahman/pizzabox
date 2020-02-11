@@ -34,9 +34,9 @@ class Product {
             WHERE Category='$catergoryChoosen';";
             $query = $this->db->link->prepare($sql);
             $query->execute();
-            $query->setFetchMode(PDO::FETCH_OBJ);
-            $result = $query->fetchAll();
-          
+
+            $result = $query->fetchAll(PDO::FETCH_ASSOC);
+
             return $result;
     
       
@@ -53,15 +53,6 @@ class Product {
 
 
 
-$w=new Product;
 
-$result = $w->getAllProducts();
-
-echo json_encode($result);
-
-//$w->productInsert(2,2,2,2,2,2,2);
-
-$r=$w->getAllOfThisCategory("Pizza");
-echo json_encode($r);
 ?>
 
