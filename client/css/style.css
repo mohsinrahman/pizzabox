@@ -381,12 +381,23 @@ a:hover {
   background-color: red;
 }
 
+/*History page*/
+
+.table {
+  height: 100vh;
+}
+
 /*Modal Cart */
 
 .input-group-text,
 .form-control,
 .product .remove-product {
   border-radius: 0 !important;
+}
+
+.minTime {
+  color: #dd0808;
+  font-size: bold;
 }
 /*Login */
 
