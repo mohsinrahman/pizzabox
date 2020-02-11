@@ -5,7 +5,7 @@ function getTheseProducts(){
         type: 'GET',
         //dataType:'json',
         url: '../server/api/product/getProduct.php',
-       data: {Category: Category}, 
+       //data: {Category: Category}, 
         success: data => {
             //console.log('My object: ', data);
           printOutProducts(data )
