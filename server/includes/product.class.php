@@ -34,8 +34,9 @@ class Product {
             WHERE Category='$catergoryChoosen';";
             $query = $this->db->link->prepare($sql);
             $query->execute();
+
             $result = $query->fetchAll(PDO::FETCH_ASSOC);
-          
+
             return $result;
     
       
