@@ -5,7 +5,7 @@ function getTheseProducts(){
         type: 'GET',
         //dataType:'json',
         url: '../server/api/product/getProduct.php',
-        //data: {Category: Category}, 
+       data: {Category: Category}, 
         success: data => {
             //console.log('My object: ', data);
           printOutProducts(data )
@@ -13,6 +13,7 @@ function getTheseProducts(){
         error: error => { console.log(error)}
     });
 
+    
 }
 
 //Here we print out all products
@@ -20,7 +21,7 @@ function printOutProducts(categoryInfo1) {
    var categoryInfo=JSON.parse(categoryInfo1) 
     console.log(categoryInfo1)
   var section = document.getElementById("menu");
-  section.innerHTML="TEEEEST"
+ // section.innerHTML="TEEEEST"
   for(var i = 0; i<categoryInfo.length; i++){
     var divForSingleProduct = createCard(categoryInfo[i]);
   
