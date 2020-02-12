@@ -1,3 +1,24 @@
+
+<?php
+     if($_GET){
+        if(isset($_GET['insert'])){
+            insert();
+        }elseif(isset($_GET['select'])){
+            select();
+        }
+    }
+
+    function select() {
+        echo "The select function is called.";
+        exit;
+    }
+
+    function insert() {
+        echo "The insert function is called.";
+        exit;
+    }
+?>
+
 <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
 aria-hidden="true">
 <div class="modal-dialog" role="document">
