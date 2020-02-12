@@ -4,9 +4,8 @@ function getTheseProducts() {
     type: "GET",
     dataType: "json",
     url: "../server/api/product/getProduct.php",
-    data: { Category: Category },
     success: data => {
-      console.log("My object: ", data);
+      //console.log("My object: ", data);
       printOutProducts(data);
     },
     error: error => {
@@ -16,14 +15,12 @@ function getTheseProducts() {
 }
 
 //Here we print out all products
-function printOutProducts(categoryInfo1) {
-  var categoryInfo = JSON.parse(categoryInfo1);
-  console.log(categoryInfo1);
-  var section = document.getElementById("menu");
+function printOutProducts(products) {
+  //var categoryInfo = JSON.parse(categoryInfo1);
+  /*var section = document.getElementById("menu");
   // section.innerHTML="TEEEEST"
   for (var i = 0; i < categoryInfo.length; i++) {
     var divForSingleProduct = createCard(categoryInfo[i]);
-
     section.appendChild(divForSingleProduct);
   }
 }
@@ -84,5 +81,5 @@ function createCard(selectedProduct) {
   productCard.appendChild(productTitle);
   productCard.appendChild(div1);
 
-  return productCard;
+  return productCard; */
 }

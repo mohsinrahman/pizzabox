@@ -42,7 +42,7 @@ signup.onclick = function() {
   const password = document.getElementById("password").value;
 }; */
 
-/* function displayItem() {
+function displayItem() {
   var menu = [
     [
       {
@@ -125,7 +125,7 @@ signup.onclick = function() {
       }
     ]
   ];
-  console.log(menu);
+  /*   console.log(menu);
   for (let i = 0; i < menu.length; i++) {
     console.log(menu[i]);
     const container = document.getElementById("pizzabox-menu");
@@ -143,10 +143,10 @@ signup.onclick = function() {
     let rightH6 = document.createElement("h6");
     rightH6.className = "mt-5";
 
-    console.log(row);
-  }
+    console.log(row); 
+  }*/
 }
-displayItem(); */
+displayItem();
 function updateItem() {}
 function deleteItem() {}
 

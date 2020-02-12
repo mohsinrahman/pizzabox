@@ -471,6 +471,7 @@
    
 
     <div class="footer py-2 bg-dark">
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="images/pizza-top.svg" alt="TOP" width="30"></button>
             <div class="container">
             <?php include 'partials/footer.php';?>
             </div>
