@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "root";
-$dbname = "pizzaBox";
+$dbname = "pizzbox";
 $conn = new mysqli($servername,$username,$password);
 
 if ($conn -> connect_error){
