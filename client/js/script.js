@@ -15,17 +15,24 @@ $(document).ready(function() {
     const email = $("#inputEmail").val();
     const password = $("#inputPassword").val();
     console.log(email);
+    var formData = new FormData();
+    formData.append('email','email');
+    formData.append('password','password');
+    formData.append('login','1');
     if (email == "" || password == "") {
       alert("Please fill the form");
     } else {
       $.ajax({
-        url: "login.php",
-        method: "POST",
-        data: {
+        url: "../partials/login1.php",
+        method: "POST",   
+        data: formData
+        /*data: {
           login: 1,
           email: email,
           password: password
-        },
+        }*/,  
+         processData: false,
+         contentType: false,
         success: function(data) {
           console.log(data);
         },
@@ -245,3 +252,26 @@ var menu = [
       }
     ]
   ]; */
+
+
+function validateForm() {
+  var frmvalidator = new Validator("signupForm");
+  frmvalidator.addValidation("fname","req","Please enter your First Name");
+  frmvalidator.addValidation("fname","maxlen=20",
+         "Max length for FirstName is 20");
+  
+  frmvalidator.addValidation("lname","req");
+  frmvalidator.addValidation("lname","maxlen=20");
+  
+  frmvalidator.addValidation("email","maxlen=50");
+  frmvalidator.addValidation("email","req");
+  frmvalidator.addValidation("email","email");
+  
+  frmvalidator.addValidation("phone","maxlen=50");
+  frmvalidator.addValidation("phone","numeric");
+  
+  frmvalidator.addValidation("password","maxlen=50");
+  frmvalidator.addValidation("password","req");
+  
+  }
+
