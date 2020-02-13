@@ -6,7 +6,7 @@
 <?php
 
  $host = "localhost";
-    $db_name = "pizzaBox";
+    $db_name = "pizzbox";
     $username = "root";
     $password = "root";
  
