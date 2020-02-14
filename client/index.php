@@ -13,8 +13,11 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="../server/includes/functions.js"></script>
+    
     
     <title>Pizza Box</title>
     
@@ -69,7 +72,7 @@
             <div class="row" >
                 <div class="col-lg-4 text-center">
                 <ul class="list-unstyled list-inline">
-                    <li class="list-inline-item">HOME</li>
+                    <li class="list-inline-item" ><a href="" class="disabled">ADMIN</a></li>
                     <li class="list-inline-item"><a href="#menu">MENU</a></li>
                     <li class="list-inline-item">OFFER</li>
                 </ul>
@@ -316,126 +319,8 @@
     <div id="menu" class="Pizzabox-menu pb-5 load-hidden main">
     <h5 class="text-center heading pt-5">Discover</h5>
     <h3 class="text-center mt-3 headline">OUR MENU</h3>
-    <div class="container" id="pizzabox-menu">
-    <div class="row">
-        <div class="col-lg-6" >
-        <h6 class="mt-5">Breakfast</h6>
-        <div id="menu"><script> getTheseProducts()</script></div>
-        <!--<div class="card mt-5 p-2 card1-menu">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <img src="images/menu-img2.jpg" width="100" alt="breakfast">
-                        </div>
-                        <div class="col-lg-9">
-                         <p>Western Sunrise <span>20.00kr</span></p>
-                         <p>Two fried  eggs with cheese & two breakfast meats made to perfection</p>
-                         <button class=""> <img src="images/cart-alt.svg" alt="Cart" width="30"> ADD TO CART</button>
-                        </div>
-                    </div>
-        </div> <!-- Card end -->
-        <!--<div class="card mt-5 p-2 card2-menu">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <img src="images/menu-img2.jpg" width="100" alt="breakfast">
-                        </div>
-                        <div class="col-lg-9">
-                         <p>Western Sunrise <span>20.00kr</span></p>
-                         <p>Two fried  eggs with cheese & two breakfast meats made to perfection</p>
-                         <button class=""> <img src="images/cart-alt.svg" alt="Cart" width="30"> ADD TO CART</button>
-                        </div>
-                    </div>
-        </div> <!-- card end -->
-        
-        </div>  
-        <div class="col-lg-6">
-        <h6 class="mt-5">Lunch</h6>
-        <div class="card mt-5 p-2 card3-menu">
-                    <div class="row">
-                        <div class="col-lg-3">
-                        <img src="images/menu-img2.jpg" alt="breakfast" width="100">
-                        </div>
-                        <div class="col-lg-9">
-                        <p>Western Sunrise <span>20.00kr</span></p>
-                         <p>Two fried  eggs with cheese & two breakfast meats made to perfection</p>
-                         <button class=""> <img src="images/cart-alt.svg" alt="Cart" width="30"> ADD TO CART</button>
-                        </div>
-                    </div>
-        </div> <!-- card end -->
-        <div class="card mt-5 p-2 card4-menu">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <img src="images/menu-img2.jpg" width="100" alt="breakfast">
-                        </div>
-                        <div class="col-lg-9">
-                         <p>Western Sunrise <span>30.00kr</span></p>
-                         <p>Two fried  eggs with cheese & two breakfast meats made to perfection</p>
-                         <button class=""> <img src="images/cart-alt.svg" alt="Cart" width="30"> ADD TO CART</button>
-                        </div>
-                    </div>
-        </div> <!-- card end -->
-
-        </div>  
-        </div>              
+    <div class="container Pizzabox-menu-container" id="menu-container">
    
-   <div class="row">
-        <div class="col-lg-6">
-        <h6 class="mt-5">Dinner</h6>
-        <div class="card mt-5 p-2 card5-menu">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <img src="images/menu-img2.jpg" width="100" alt="breakfast">
-                        </div>
-                        <div class="col-lg-9">
-                         <p>Western Sunrise <span>20.00kr</span></p>
-                         <p>Two fried  eggs with cheese & two breakfast meats made to perfection</p>
-                         <button class=""> <img src="images/cart-alt.svg" alt="Cart" width="30"> ADD TO CART</button>
-                        </div>
-                    </div>
-        </div> <!-- Card end -->
-        <div class="card mt-5 p-2 card6-menu">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <img src="images/menu-img2.jpg" width="100" alt="breakfast">
-                        </div>
-                        <div class="col-lg-9">
-                         <p>Western Sunrise <span>20.00kr</span></p>
-                         <p>Two fried  eggs with cheese & two breakfast meats made to perfection</p>
-                         <button class=""> <img src="images/cart-alt.svg" alt="Cart" width="30"> ADD TO CART</button>
-                        </div>
-                    </div>
-        </div> <!-- card end -->
-        </div>  
-        <div class="col-lg-6">
-        <h6 class="mt-5">Desert</h6>
-        <div class="card mt-5 p-2 card7-menu">
-                    <div class="row">
-                        <div class="col-lg-3">
-                        <img src="images/menu-img1.jpg" alt="breakfast" width="100">
-                        </div>
-                        <div class="col-lg-9">
-                        <p>Western Sunrise <span>20.00kr</span></p>
-                         <p>Two fried  eggs with cheese & two breakfast meats made to perfection</p>
-                         <button class=""> <img src="images/cart-alt.svg" alt="Cart" width="30"> ADD TO CART</button>
-                        </div>
-                    </div>
-        </div> <!-- card end -->
-        <div class="card mt-5 p-2 card8-menu">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <img src="images/menu-img1.jpg" width="100" alt="breakfast">
-                        </div>
-                        <div class="col-lg-9">
-                         <p>Western Sunrise <span>20.00kr</span></p>
-                         <p>Two fried  eggs with cheese & two breakfast meats made to perfection</p>
-                         <button class=""> <img src="images/cart-alt.svg" alt="Cart" width="30"> ADD TO CART</button>
-                        </div>
-                    </div>
-        </div> <!-- card end -->
-
-        </div>  
-        </div>              
-   </div>
-   </div>
     </div>
     </div>
 
@@ -473,10 +358,12 @@
     <div class="footer py-2 bg-dark">
     <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="images/pizza-top.svg" alt="TOP" width="30"></button>
             <div class="container">
+            <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="images/pizza-top.svg" alt="TOP" width="30"></button>
             <?php include 'partials/footer.php';?>
             </div>
         </div>
-    
+     
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -495,3 +382,6 @@
         </script>
 </body>
 </html>
+
+
+
