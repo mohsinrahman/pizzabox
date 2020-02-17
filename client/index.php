@@ -3,7 +3,7 @@ session_start();
 
 if(isset($_POST['newssubmit'])){
     	$host = "localhost";
-    	$db_name = "test";
+    	$db_name = "pizzabox";
     	$username = "root";
     	$password = "root";
  
