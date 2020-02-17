@@ -43,7 +43,7 @@ function createCard(selectedProduct) {
   div3.className = "col-lg-3";
 
   //var productImage = document.createElement("img")
-  // productImage.setAttribute('src',"./images/" + selectedProduct.Image )
+  // productImage.setAttribute('src',"./images/" + selectedProduct.Image)
   // productImage.alt=selectedProduct.Category
   //  productImage.width=100
 

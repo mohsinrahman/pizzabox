@@ -3,7 +3,7 @@
 
 Class Database {
 
-    private $dsn = 'mysql:host=localhost;dbname=pizzaBox;';
+    private $dsn = 'mysql:host=localhost;dbname=pizzabox;';
     private $user = "root";
     private $pass = "root";
     private $options = [
@@ -14,8 +14,9 @@ Class Database {
 
 
     public function __construct() {
-       $this->link = new PDO($this->dsn, $this-> user, $this->pass);
-        $this->link->exec("set names utf8");
+      $this->link = new PDO($this->dsn, $this-> user, $this->pass);
+      $this->link->exec("set names utf8");
+      error_log('DB connected!');
     }
 
 }

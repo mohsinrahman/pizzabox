@@ -18,7 +18,7 @@ a:hover {
 }
 .Pizzabox-heroSection {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/images/heroimage.jpeg);
+    url(./../images/heroimage.jpeg);
   width: 100%;
   height: 100vh;
   position: relative;
@@ -381,12 +381,23 @@ a:hover {
   background-color: red;
 }
 
+/*History page*/
+
+.table {
+  height: 100vh;
+}
+
 /*Modal Cart */
 
 .input-group-text,
 .form-control,
 .product .remove-product {
   border-radius: 0 !important;
+}
+
+.minTime {
+  color: #dd0808;
+  font-size: bold;
 }
 /*Login */
 
