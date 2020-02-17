@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,6 +56,10 @@
 
             </div> 
         </div>
+        <?php 
+echo $_SESSION['FirstName'];
+echo $_SESSION['isAdmin'];
+?>
 <!--         <div class="container-fluid">
         <div class="row">
                     <div class="col-lg-12">
@@ -72,7 +82,19 @@
                 <div class="col-lg-4 text-center">
                 <ul class="list-unstyled list-inline">
                     <li class="list-inline-item" > <a href="admin.php" id="adminLink" class="disabled">ADMIN</a> </li>
-                    <li class="list-inline-item"><a href="#menu">MENU</a></li>
+                     <li class=" list-inline-item nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Menu</a>
+                        <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#menu">Discover Menu</a>
+
+                        <div class="dropdown-divider"></div>
+                        <p class="byCategory">By Category:</p>
+                        <a class="dropdown-item" href="#">Breakfast</a>
+                        <a class="dropdown-item" href="#">Lunch</a>
+                        <a class="dropdown-item" href="#">Dinner</a>
+                        <a class="dropdown-item" href="#">Desert</a>
+                        </div>
+                    </li>
                     <li class="list-inline-item">OFFER</li>
                 </ul>
                 </div>

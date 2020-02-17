@@ -24,6 +24,10 @@ a.disabled {
 #response {
   color: #7ac943;
 }
+.byCategory {
+  color: #7ac943;
+  font-weight: bold;
+}
 .Pizzabox-heroSection {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(./../images/heroimage.jpeg);
@@ -70,7 +74,6 @@ a.disabled {
 
 .navDevice {
   display: inline-block;
-
   position: fixed;
   top: 0;
   right: 0;

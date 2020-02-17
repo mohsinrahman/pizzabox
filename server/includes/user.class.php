@@ -17,9 +17,8 @@ class User {
 
 
           $hash_password= md5($password); //Password encryption 
-          error_log($hash_password); //507f513353702b50c145d5b7d138095c
-          echo "<script>console.log('.$hash_password')</script>";
-          $q = "SELECT FirstName,isAdmin FROM user WHERE Email= '$email'  AND Password= '$hash_password' AND isAdmin = 'Yes' ";
+          //error_log($hash_password); 507f513353702b50c145d5b7d138095c
+          $q = "SELECT FirstName,isAdmin FROM user WHERE Email= 'amir@gmail.com'  AND Password= '507f513353702b50c145d5b7d138095c' AND isAdmin = 'Yes' ";
           $query = $this->db->link->prepare($q);
           error_log($query);
           //$query->bindParam("Email", 'amir@gmail.com',PDO::PARAM_STR);
@@ -28,7 +27,7 @@ class User {
           error_log($query);
           $count=$query->rowCount();
           error_log($count);
-          $data=$query->fetchAll(PDO::FETCH_OBJ);
+          $data=$query->fetch(PDO::FETCH_OBJ);
           error_log($data);
           
           if($count)

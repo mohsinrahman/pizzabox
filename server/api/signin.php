@@ -13,7 +13,7 @@ if($method){
     $isAdmin = $_POST["isAdmin"];
 
     
-    /* exit($email . '=' .  $password); */
+   /*  exit($email . '=' .  $password); */
  
         $user = new User();      
         $userLogin = $user->logInUser($email,$password,$isAdmin); 
