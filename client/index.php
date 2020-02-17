@@ -1,9 +1,46 @@
 <?php
 session_start();
 
+if(isset($_POST['newssubmit'])){
+    	$host = "localhost";
+    	$db_name = "test";
+    	$username = "root";
+    	$password = "root";
+ 
+  		$conn = null;
+ 
+        try{
+        	$conn = new PDO("mysql:host=" . $host . ";dbname=" . $db_name, $username, $password);
+            $conn->exec("set names utf8");
+			$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+        }catch(PDOException $exception){
+            echo "Connection error: " . $exception->getMessage();
+        }
 
+		if ($conn -> connect_error){
+			die("Connection failed : " . $conn -> connect_error);
+		}else{
+			echo "Connected successfully";
+		}
+				
+		echo "<br>";
+
+ 		$table_name = "newsletter";
+ 
+ 		$query = "INSERT INTO newsletter (Email) VALUES ('".$_POST[newsemail]."')";
+	
+		$stmt = $conn->prepare($query);
+	
+		if(!$stmt->execute()){
+			echo $stmt->error;
+		}
+	
+		$conn = null;
+ 									
+	}
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
