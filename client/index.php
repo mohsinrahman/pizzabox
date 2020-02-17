@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<?php
+session_start();
+include_once("../server/api/signupAPI.php");
+include_once("../server/api/loginAPI.php");
+include_once("../server/api/signoutAPI.php");
+if (!empty($_SESSION["id"])){
+    echo "logged in";
+}
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,6 +20,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="../server/includes/functions.js"></script>
+    <script src="js/script.js"></script>
     
     <title>Pizza Box</title>
     

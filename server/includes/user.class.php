@@ -1,6 +1,6 @@
 <?php
-include("database.class.php");
-class Product {
+include_once("database.class.php");
+class User {
 
       private $db;
      
@@ -33,6 +33,22 @@ class Product {
         return $result;
       }
 
+      public function logInUser($email, $password){
+        echo "<script>console.log('$email','  ','$password' );</script>";
+
+        $sql="SELECT id, firstName from personalInfo
+        JOIN  Users USING (id)
+        WHERE email='$email' AND password='$password';";
+        $query =  $this->db->link->prepare($sql);
+        $query->execute();
+        //echo "<script>console.log('query','.$query' );</script>";
+
+       
+      $result=$query->fetchAll(PDO::FETCH_ASSOC);
+
+
+      return $result;
+    }
   
 }
 
