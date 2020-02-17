@@ -10,29 +10,122 @@ signin.onclick = function() {
   }
 }; */
 
-$(document).ready(function() {
+function login() {
+  $(document).ready(function() {
+    $(".signin").on("click", function() {
+      const email = $("#inputEmail").val();
+      const password = $("#inputPassword").val();
+      const isAdmin = $("#selectAdmin").val();
+      if (email == "" || password == "") {
+        $(".loginModalInput").addClass("loginModalMessage");
+      } else {
+        $.ajax({
+          url: "../server/api/signin.php",
+          method: "POST",
+          data: {
+            login: 1,
+            email: email,
+            password: password,
+            isAdmin: isAdmin
+          },
+          dataType: "text",
+          success: function(response) {
+            console.log(response);
+            let data = JSON.parse(response);
+            console.log(data.isAdmin);
+            if (data.isAdmin === "Yes") {
+              console.log("pass");
+              $("a").removeClass("disabled");
+              $("#response").html(data.FirstName);
+              $("#modalLoginForm").modal("hide");
+            } else if (data.isAdmin === "No") {
+              console.log("Fail");
+              $("#adminLink").addClass("disabled");
+              $("#response").html(data.FirstName);
+              $("#modalLoginForm").modal("hide");
+            } else {
+              $("#adminLink").addClass("disabled");
+            }
+          }
+        });
+      }
+    });
+  });
+}
+login();
+
+function addProducts() {
+  $(document).ready(function() {
+    $(".addProduct").on("click", function() {
+      const productName = $("#productName").val();
+      const productPrice = $("#productPrice").val();
+      const productCategory = $("#productCategory").val();
+      const productDescription = $("#productDescription").val();
+      const categoryId = $("#categoryId").val();
+      const productUnitsInStock = $("#productUnitsInStock").val();
+      const productImage = $("#productImage").val();
+      console.log(productName);
+      if (
+        productName == "" ||
+        productPrice == "" ||
+        productCategory == "" ||
+        productDescription == "" ||
+        categoryId == "" ||
+        productUnitsInStock == "" ||
+        productImage == ""
+      ) {
+        //$(".loginModalInput").addClass("loginModalMessage");
+        alert("Please fill all fields");
+      } else {
+        $.ajax({
+          url: "../server/api/product/addProduct.php",
+          method: "POST",
+          data: {
+            productName: productName,
+            productPrice: productPrice,
+            productCategory: productCategory,
+            productDescription: productDescription,
+            categoryId: categoryId,
+            productUnitsInStock: productUnitsInStock,
+            productImage: productImage
+          },
+          dataType: "text",
+          success: function(response) {
+            console.log(response);
+            $("#productAddMessage").html("response");
+            /* let data = JSON.parse(response);
+          console.log(data.isAdmin); */
+          }
+        });
+      }
+    });
+  });
+}
+addProducts();
+
+/* $(document).ready(function() {
   $(".signin").on("click", function() {
     const email = $("#inputEmail").val();
     const password = $("#inputPassword").val();
     console.log(email);
     var formData = new FormData();
-    formData.append('email','email');
-    formData.append('password','password');
-    formData.append('login','1');
+    formData.append("email", "email");
+    formData.append("password", "password");
+    formData.append("login", "1");
     if (email == "" || password == "") {
       alert("Please fill the form");
     } else {
       $.ajax({
         url: "../partials/login1.php",
-        method: "POST",   
-        data: formData
-        /*data: {
+        method: "POST",
+        data: formData,
+        data: {
           login: 1,
           email: email,
           password: password
-        }*/,  
-         processData: false,
-         contentType: false,
+          } 
+        processData: false,
+        contentType: false,
         success: function(data) {
           console.log(data);
         },
@@ -40,7 +133,7 @@ $(document).ready(function() {
       });
     }
   });
-});
+}); */
 
 /* const signup = document.querySelector(".signup");
 signup.onclick = function() {
@@ -252,26 +345,3 @@ var menu = [
       }
     ]
   ]; */
-
-
-function validateForm() {
-  var frmvalidator = new Validator("signupForm");
-  frmvalidator.addValidation("fname","req","Please enter your First Name");
-  frmvalidator.addValidation("fname","maxlen=20",
-         "Max length for FirstName is 20");
-  
-  frmvalidator.addValidation("lname","req");
-  frmvalidator.addValidation("lname","maxlen=20");
-  
-  frmvalidator.addValidation("email","maxlen=50");
-  frmvalidator.addValidation("email","req");
-  frmvalidator.addValidation("email","email");
-  
-  frmvalidator.addValidation("phone","maxlen=50");
-  frmvalidator.addValidation("phone","numeric");
-  
-  frmvalidator.addValidation("password","maxlen=50");
-  frmvalidator.addValidation("password","req");
-  
-  }
-

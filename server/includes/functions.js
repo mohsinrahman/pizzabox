@@ -90,7 +90,7 @@ function printOutProducts(products) {
         cardDivCol3.className = "col-lg-3";
         cardDivRow.appendChild(cardDivCol3);
         let cardImg = document.createElement("img");
-        cardImg.src = "../../client/images/" + menu[i][j].card.Image;
+        cardImg.src = "../../client/images/" + menu[i][j].card[k].ProductImage;
         cardImg.setAttribute("alt", "breakfast");
         cardImg.setAttribute("width", "100px");
         cardDivCol3.appendChild(cardImg);
@@ -106,7 +106,7 @@ function printOutProducts(products) {
         cardPName.appendChild(cardPSpan);
 
         let cardPDescrip = document.createElement("p");
-        cardPDescrip.innerHTML = menu[i][j].card[k].Description;
+        cardPDescrip.innerHTML = menu[i][j].card[k].ProductDescription;
         cardDivCol9.appendChild(cardPDescrip);
         let cardButton = document.createElement("Button");
         cardDivCol9.appendChild(cardButton);

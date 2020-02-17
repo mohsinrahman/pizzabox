@@ -14,9 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="../server/includes/functions.js"></script>
+
     
     
     <title>Pizza Box</title>
@@ -36,16 +34,17 @@
 
     </div>
     <div class="Pizzabox-heroSection-bg">
+    <span class="navDevice"><?php include 'partials/nav.php';?></span>
         <div class="row" style="border-bottom:1px solid #2c2c2c;"> <!-- style="border-bottom:1px solid #2c2c2c;" -->
-        <div class="col-lg-6 text-center"><h6 class="Pizzabox-heroSection-email" >Email: info@pizzabox.com Phone: +46 800 000 16</h6>  </div>
-        <div class="col-lg-6 text-center">
+        <div class="col-lg-6 text-center Pizzabox-heroSection-email-section"><h6 class="Pizzabox-heroSection-email" >Email: info@pizzabox.com Phone: +46 800 000 16</h6>  </div>
+        <div class="col-lg-6 col-md-12 text-center Pizzabox-heroSection-time-section">
             <div class="Pizzabox-heroSection-opening">
                 <div class="row">
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 col-md-8">
                     Opening Hours: 8:00am - 11:30pm
                     </div>                
-                    <div class="col-lg-4"> 
-                    <img data-toggle="modal" data-target="#modalLoginForm" src="images/login.svg" width="20" alt=""> <span>0</span><img data-toggle="modal" data-target="#myModal" src="images/bag.svg" height="15"  alt="cart">
+                    <div class="col-lg-4 col-md-4"> 
+                    <span id="response"></span> <img data-toggle="modal" data-target="#modalLoginForm" src="images/login.svg" width="20" alt="">  <span>0</span><img data-toggle="modal" data-target="#myModal" src="images/bag.svg" height="15"  alt="cart"> 
                     </div>
                 </div>
 
@@ -72,7 +71,7 @@
             <div class="row" >
                 <div class="col-lg-4 text-center">
                 <ul class="list-unstyled list-inline">
-                    <li class="list-inline-item" ><a href="" class="disabled">ADMIN</a></li>
+                    <li class="list-inline-item" > <a href="admin.php" id="adminLink" class="disabled">ADMIN</a> </li>
                     <li class="list-inline-item"><a href="#menu">MENU</a></li>
                     <li class="list-inline-item">OFFER</li>
                 </ul>
@@ -106,11 +105,11 @@
          <div class="col-lg-6">
              <div class="row">
                 <div class="col-lg-6">
-                <img class="Pizzabox-ourStory-img1 img1" src="images/img6.jpg" width="100%"  alt="img">
-                <img class="Pizzabox-ourStory-img2 img2" src="images/img1.jpg" width="100%" alt="img">
+                <img class="Pizzabox-ourStory-img1 img1" src="images/img6.jpg" alt="img">
+                <img class="Pizzabox-ourStory-img2 img2" src="images/img1.jpg" alt="img">
                 </div>
                 <div class="col-lg-6">
-                <img class="Pizzabox-ourStory-img3 img3" src="images/img3.jpg" width="100%" alt="img">
+                <img class="Pizzabox-ourStory-img3 img3" src="images/img3.jpg" alt="img">
                 </div>
 
              </div>
@@ -127,10 +126,10 @@
                 </p>
                 <img  class="Pizzabox-ourStory-content-sign sign" src="images/sign.png" alt="Sign">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-4">
                     <img class="Pizzabox-ourStory-content-chef chef" src="images/chef1.jpg" alt="Chef">
                     </div>
-                    <div class="col-lg-8 Pizzabox-ourStory-content-name name">
+                    <div class="col-lg-8 col-md-8 Pizzabox-ourStory-content-name name">
                      <h4>John Conery</h4>
                      <h6>Master Chef</h6>
                     </div>
@@ -241,31 +240,31 @@
        <h3 class="text-center pt-2 headline">STUNNING THINGS</h3>
        
         <div class="d-flex justify-content-around pt-5">
-            <div class="col-lg-3 card card1">
+            <div class="col-lg-3 col-md-12 card card1">
                 <img src="images/coffee-alt.png" width="50" alt="coffee">
                 <h4>Inspiring Recipes</h4>
                 <p>Etiam feugiat eleifend est, sed luctus odio temp vitae. Vivamus maxim- us scelerisque ipsum ne</p>
             </div>
-            <div class="col-lg-3 card card2">
+        <div class="col-lg-3 col-md-6 card card2">
             <img src="images/coffee-alt.png" width="50"  alt="coffee">
                 <h4>Inspiring Recipes</h4>
                 <p>Etiam feugiat eleifend est, sed luctus odio temp vitae. Vivamus maxim- us scelerisque ipsum ne</p>
             </div>
-            <div class="col-lg-3 card card3">
+        <div class="col-lg-3  col-md-6 card card3">
             <img src="images/coffee-alt.png" width="50"  alt="coffee">
                 <h4>Inspiring Recipes</h4>
                 <p>Etiam feugiat eleifend est, sed luctus odio temp vitae. Vivamus maxim- us scelerisque ipsum ne</p>
             </div>
         </div>
         <div class="d-flex justify-content-around mt-5">
-            <div class="col-lg-3 card card4">
+            <div class="col-lg-3 col-md-6 card card4">
                 <img src="images/coffee-alt.png" width="50" alt="coffee">
                 <h4>Inspiring Recipes</h4>
                 <p>Etiam feugiat eleifend est, sed luctus odio temp vitae. Vivamus maxim- us scelerisque ipsum ne</p>
 
             </div>
 
-            <div class="col-lg-3 card card5">
+            <div class="col-lg-3 col-md-6 card card5">
             <img src="images/coffee-alt.png" width="50"  alt="coffee">
                 <h4>Inspiring Recipes</h4>
                 <p>Etiam feugiat eleifend est, sed luctus odio temp vitae. Vivamus maxim- us scelerisque ipsum ne</p>
@@ -273,14 +272,14 @@
         </div>
 
         <div class="d-flex justify-content-around mt-5">
-            <div class="col-lg-3 card card6">
+            <div class="col-lg-3 col-md-6 card card6">
                 <img src="images/coffee-alt.png" width="50" alt="coffee">
                 <h4>Inspiring Recipes</h4>
                 <p>Etiam feugiat eleifend est, sed luctus odio temp vitae. Vivamus maxim- us scelerisque ipsum ne</p>
 
             </div>
 
-            <div class="col-lg-3 card card7">
+            <div class="col-lg-3 col-md-6 card card7">
             <img src="images/coffee-alt.png" width="50"  alt="coffee">
                 <h4>Inspiring Recipes</h4>
                 <p>Etiam feugiat eleifend est, sed luctus odio temp vitae. Vivamus maxim- us scelerisque ipsum ne</p>
@@ -375,10 +374,19 @@
    
     <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
-    <script type="text/javascript">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
+ <!--     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+    <script src="../server/includes/functions.js"></script>
+   <script type="text/javascript">
             $(function () {
                 $('#datetimepicker1').datetimepicker();
             });
+
+             $(function() {
+   $(".navigation__icon").click(function() {
+     $(".navigation").toggleClass('navigation-open');
+   });
+ }); 
         </script>
 </body>
 </html>

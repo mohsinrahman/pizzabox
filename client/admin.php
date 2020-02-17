@@ -10,73 +10,80 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-
-
-
     <title>Add Menu</title>
 </head>
-<body>
-    
-        <div class="container ">
+<body>  
+     <div class="container ">
           <div class="row">        
             <div class="col-md-12">
               <div class="row"><a class="col-md-6"  href="index.php">back</a> <h2 class="col-md-6">Admin Control Panel</h2></div>
             </div>
           </div>
-          
-
-
-
-
+        
 <div class=" register">
   <div class="row">
     <div class="col-md-3 register-left">
          <img src="images/pizzagreen.svg" alt=""/>
          <h3>Add Products</h3>
-         <p>You are 30 seconds away from earning your own money!</p>
-         <input type="submit" name="" value="Login"/><br/>
+         <p id="productAddMessage"></p>
     </div>               
     <div class="col-md-9">
-      
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-default">Product ID</span>
-        </div>
-        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-    </div>
+    <form action="" method="POST">
+
 
     <div class="input-group mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-default">Product Name</span>
         </div>
-        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        <input type="text" class="form-control" id="productName" aria-label="Default" aria-describedby="inputGroup-sizing-default">
     </div>
 
     <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-default">Product Price</span>
+          <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
         </div>
-        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        <input type="text" class="form-control" id="productDescription" aria-label="Default" aria-describedby="inputGroup-sizing-default">
     </div>
 
     <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-default">Product Category</span>
+          <span class="input-group-text" id="inputGroup-sizing-default">Price</span>
         </div>
-        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        <input type="text" class="form-control" id="productPrice" aria-label="Default" aria-describedby="inputGroup-sizing-default">
     </div>
 
     <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-default">Product Description</span>
+          <span class="input-group-text" id="inputGroup-sizing-default">Category</span>
         </div>
-        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        <input type="text" class="form-control" id="productCategory" aria-label="Default" aria-describedby="inputGroup-sizing-default">
     </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Category ID</span>
+        </div>
+        <input type="text" class="form-control" id="categoryId" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Stock</span>
+        </div>
+        <input type="text" class="form-control" id="productUnitsInStock" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Image</span>
+        </div>
+        <input type="text" class="form-control" id="productImage" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+    </div>
+
 
 
     <div class="input-group mb-3 text-center">
-    <button type="button" class="btn btn-light">Add</button>
+    <input type="button" class=" addProduct btn btn-light" value="Add Product" width="50">
+    </div>
     </div>
 
    </div>
@@ -84,34 +91,7 @@
   </div>
 
  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </div> <!-- container  End -->
+</div> <!-- container  End -->
             
             
   
@@ -122,25 +102,8 @@
         </div>
       
                 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
-      <script>
-      $(document).ready(function(){
-$("#mytable #checkall").click(function () {
-        if ($("#mytable #checkall").is(':checked')) {
-            $("#mytable input[type=checkbox]").each(function () {
-                $(this).prop("checked", true);
-            });
-
-        } else {
-            $("#mytable input[type=checkbox]").each(function () {
-                $(this).prop("checked", false);
-            });
-        }
-    });
-    
-    $("[data-toggle=tooltip]").tooltip();
-});
-
-      </script>
+<!-- <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>-->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

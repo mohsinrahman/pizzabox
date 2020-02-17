@@ -7,7 +7,7 @@ if($method){
         
         
         $product = new Product();
-        
+
      /*   if(isset($_GET['Category'])) {
                  
                 $catergoryChoosen = $_GET['Category'];

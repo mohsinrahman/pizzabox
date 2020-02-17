@@ -14,19 +14,28 @@ class Product {
   
 
     public function getAllProducts() {
-        $sql="SELECT * FROM Products ;";
+        $sql="SELECT * FROM Products ";
         $query = $this->db->link->prepare($sql);
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
         return $result;
+    }                         
+    public function addProduct($productCategoryId,$productName,$productDescription,$productPrice,$productCategory, $productUnitInStock, $productImage){
+        try{
+        $this->db->link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $sql = "INSERT INTO Products (CategoryID, ProductName, ProductDescription, UnitPrice, Category, UnitsInStock, ProductImage) 
+                            VALUES ('$productCategoryId','$productName','$productDescription','$productPrice','$productCategory', '$productUnitInStock', '$productImage')";
+        /* $query = $this->db->link->prepare($sql) */
+        $this->db->link->exec($sql);
+        
+        
+        return "New record created successfully";
+        }
+        catch(PDOException $e)
+    {
+    echo $sql . "<br>" . $e->getMessage();
     }
-    public function insertProduct ($productID, $productName, $description, $unitPrice, $category, $unitsInStock,$image){
-        $sql = "INSERT INTO Products (ProductID, ProductName, Description, UnitPrice, Category, UnitsInStock, Image) VALUES (?,?,?,?,?,?,?)";
-        $query = $this->db->link->prepare($sql)->execute([$productID, $productName, $description, $unitPrice, $category, $unitsInStock, $image]);
-        $result=$query;
-
-        return $result;
-     
+    $this->db->link = null;
     }
 
     public function getAllOfThisCategory($catergoryChoosen) {
