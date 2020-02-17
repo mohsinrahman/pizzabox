@@ -398,16 +398,21 @@ echo $_SESSION['isAdmin'];
     <div class="Pizzabox-contactUs-map load-hidden main">
         <div class="row">
             <div class="col-lg-6">
+	    <form name="newsletterform" method="POST" action="">
                         <h5 class="heading">Contact Us</h5>
                         <p class="headline">Pizza Box, Götgatan 143</p>
                         <p class="headline">+46 705 5055 00</p>
                         <p class="headline">info@pizzabox.se</p>
                         <p class="newsletter mt-4 heading">Newsletter</p>
-                        <input class="headline" type="email">
+                        <input class="headline" name="newsemail" type="email">
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+      	    <input class="btn btn-deep-orange" name="newssubmit" type="submit" value="Submit">
             </div>
             <div class="col-lg-6">
             <div id="googleMap" style="width:100%;height:400px;"></div>
             </div>
+	  </form>
         </div>
     </div>
        
