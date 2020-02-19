@@ -53,7 +53,7 @@
     <input type="button" class="signin btn btn-default" value="Sign in" width="50">
   </div>
   <div class="col-sm-5">
-    <button type="submit" class=" signout btn btn-default">Sign out</button>
+    <button type="button" class="signout btn btn-default">Sign out</button>
   </div>
 </div>
 </form>

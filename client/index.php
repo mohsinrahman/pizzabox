@@ -19,10 +19,6 @@ session_start();
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-
-    
-    
     <title>Pizza Box</title>
     
 </head>
@@ -50,15 +46,14 @@ session_start();
                     Opening Hours: 8:00am - 11:30pm
                     </div>                
                     <div class="col-lg-4 col-md-4"> 
-                    <span id="response"></span> <img data-toggle="modal" data-target="#modalLoginForm" src="images/login.svg" width="20" alt="">  <span>0</span><img data-toggle="modal" data-target="#myModal" src="images/bag.svg" height="15"  alt="cart"> 
+                    <span id="responseLogin"><?php echo $_SESSION["FirstName"] ?></span> <img data-toggle="modal" data-target="#modalLoginForm" src="images/login.svg" width="20" alt="">  <span>0</span><img data-toggle="modal" data-target="#myModal" src="images/bag.svg" height="15"  alt="cart"> 
                     </div>
                 </div>
 
             </div> 
         </div>
         <?php 
-echo $_SESSION['FirstName'];
-echo $_SESSION['isAdmin'];
+
 ?>
 <!--         <div class="container-fluid">
         <div class="row">
@@ -83,23 +78,22 @@ echo $_SESSION['isAdmin'];
                 <ul class="list-unstyled list-inline">
                     <li class="list-inline-item" > <a href="admin.php" id="adminLink" class="disabled">ADMIN</a> </li>
                      <li class=" list-inline-item nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Menu</a>
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">MENU</a>
                         <div class="dropdown-menu">
                         <a class="dropdown-item" href="#menu">Discover Menu</a>
 
                         <div class="dropdown-divider"></div>
-                        <p class="byCategory">By Category:</p>
-                        <a class="dropdown-item" href="#">Breakfast</a>
-                        <a class="dropdown-item" href="#">Lunch</a>
-                        <a class="dropdown-item" href="#">Dinner</a>
-                        <a class="dropdown-item" href="#">Desert</a>
+                        <p class="byCategory">Categories:</p>
+                        <div id="categoryList">
+                        
+                        </div>  
                         </div>
                     </li>
                     <li class="list-inline-item">OFFER</li>
                 </ul>
                 </div>
                 <div class="col-lg-4 text-center">
-                <img class ="animated  pulse delay-2s" src="images/logo7.svg" width="100" alt="LOGO">
+                <img class ="animated  pulse delay-5s" src="images/logo7.svg" width="100" alt="LOGO">
                 </div>
                 <div class="col-lg-4 text-center">
                 <ul class="list-unstyled list-inline">
@@ -112,8 +106,8 @@ echo $_SESSION['isAdmin'];
         </div>
         <div class="row Pizzabox-heroSection-content">
             <div class="col-lg-12 text-center mt-5">
-                <h3  class="animated slideInLeft delay-1s pt-5">TASTY & SPICY</h3>
-                <h5 class="animated slideInRight delay-1s pt-5">World's Delicious Cuisine</h5>
+                <h3  class="animated slideInLeft delay-4s pt-5">TASTY & SPICY</h3>
+                <h5 class="animated slideInRight delay-4s pt-5">World's Delicious Cuisine</h5>
                 <button class="mt-5"> <a href="#menu">ORDER NOW</a> </button>
             </div>
         </div>
@@ -166,144 +160,54 @@ echo $_SESSION['isAdmin'];
     </div>
 
 
-                                    <!-- </div>
-                                    <div class="title-box">
-                                        <b> High Quality Foods</b>
-                                    </div>
-                                    <div class="description text-justify">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum.
-                                    </div>
-                                </div>
-                                <div class="parent bg-white text-center p-3 my-3">
-                                    <div class="image-Hover6">
-                                        <img src="images/coffee-alt.svg" width="80" height="30" class="img-fluid" alt=""> -->
-                                   <!--  </div>
-                                    <div class="title-box">
-                                        <b> High Quality Coffee</b>
-                                    </div>
-                                    <div class="description text-justify">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum.
-                                    </div>
-                                </div>
-                                <div class="parent bg-white text-center p-3">
-                                    <div class="image-Hover5"> -->
-                                        <!-- <img src="images/soup-bowl.svg" width="80" height="30" class="img-fluid" alt=""> -->
-                                   <!--  </div>
-                                    <div class="title-box">
-                                        <b> BestSoap</b>
-                                    </div>
-                                    <div class="description text-justify">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div>
-                                <div class="parent bg-white text-center p-3 mb-3">
-                                    <div class="image-Hover4">
-                                         <img src="images/pizza.svg" width="80" height="30" class="img-fluid" alt=""> -->
-                              <!--       </div>
-                                    <div class="title-box">
-                                        <b>Inspiring Recipes</b>
-                                    </div>
-                                    <div class="description text-justify">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum.
-                                    </div>
-                                </div>
-                                <div class="img-box">
-                                    <img src="images/lady2.png" class="img-fluid height-full" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div>
-                                <div class="parent bg-white text-center p-3">
-                                    <div class="image-Hover2"> -->
-                                        <!-- <img src="images/soft-drinks.svg" width="80" height="30" class="img-fluid" alt=""> -->
-
-                                 <!--    </div>
-                                    <div class="title-box">
-                                        <b> High Quality Foods</b>
-                                    </div>
-                                    <div class="description text-justify">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum.
-                                    </div>
-                                </div>
-                                <div class="parent bg-white text-center p-3 my-3">
-                                    <div class="image-Hover1"> -->
-                                        <!-- <img src="images/restaurant.svg" width="80" height="30" class="img-fluid" alt=""> -->
-                                   <!--  </div>
-                                    <div class="title-box">
-                                        <b>salutary Meals</b>
-                                    </div>
-                                    <div class="description text-justify">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum.
-                                    </div>
-                                </div>
-                                <div class="parent bg-white text-center p-3">
-                                    <div class="image-Hover3"> -->
-                                        <!-- <img src="images/spoon-and-fork.svg" width="80" height="30" class="img-fluid" alt=""> -->
-                    <!--                 </div>
-                                    <div class="title-box">
-                                        <b> Express Delivery</b>
-                                    </div>
-                                    <div class="description text-justify">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque illum.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
- -->
-    
+                                    
    <div  class="Pizzabox-stunningThings pb-5 main load-hidden">
        <h5 class="text-center pt-5 heading">For Your Comfort</h5>
        <h3 class="text-center pt-2 headline">STUNNING THINGS</h3>
        
         <div class="d-flex justify-content-around pt-5">
             <div class="col-lg-3 col-md-12 card card1">
-                <img src="images/coffee-alt.png" width="50" alt="coffee">
-                <h4>Inspiring Recipes</h4>
+                <img  src="images/spoon-and-fork.svg" width="50" alt="spoon-and-fork">
+                <h4 class="mt-3">Inspiring Recipes</h4>
                 <p>Etiam feugiat eleifend est, sed luctus odio temp vitae. Vivamus maxim- us scelerisque ipsum ne</p>
             </div>
         <div class="col-lg-3 col-md-6 card card2">
-            <img src="images/coffee-alt.png" width="50"  alt="coffee">
-                <h4>Inspiring Recipes</h4>
+            <img src="images/coffee-alt.svg" width="50"  alt="coffee">
+                <h4 class="mt-3">Inspiring Recipes</h4>
                 <p>Etiam feugiat eleifend est, sed luctus odio temp vitae. Vivamus maxim- us scelerisque ipsum ne</p>
             </div>
         <div class="col-lg-3  col-md-6 card card3">
-            <img src="images/coffee-alt.png" width="50"  alt="coffee">
-                <h4>Inspiring Recipes</h4>
+            <img src="images/soft-drinks.svg" width="50"  alt="soft-drinks">
+                <h4 class="mt-3">Inspiring Recipes</h4>
                 <p>Etiam feugiat eleifend est, sed luctus odio temp vitae. Vivamus maxim- us scelerisque ipsum ne</p>
             </div>
         </div>
         <div class="d-flex justify-content-around mt-5">
             <div class="col-lg-3 col-md-6 card card4">
-                <img src="images/coffee-alt.png" width="50" alt="coffee">
-                <h4>Inspiring Recipes</h4>
+                <img src="images/coffee-alt.svg" width="50" alt="coffee">
+                <h4 class="mt-3">Inspiring Recipes</h4>
                 <p>Etiam feugiat eleifend est, sed luctus odio temp vitae. Vivamus maxim- us scelerisque ipsum ne</p>
 
             </div>
 
             <div class="col-lg-3 col-md-6 card card5">
-            <img src="images/coffee-alt.png" width="50"  alt="coffee">
-                <h4>Inspiring Recipes</h4>
+            <img src="images/soup-bowl.svg" width="50"  alt="soup-bowl">
+                <h4 class="mt-3"> Inspiring Recipes</h4>
                 <p>Etiam feugiat eleifend est, sed luctus odio temp vitae. Vivamus maxim- us scelerisque ipsum ne</p>
             </div>
         </div>
 
         <div class="d-flex justify-content-around mt-5">
             <div class="col-lg-3 col-md-6 card card6">
-                <img src="images/coffee-alt.png" width="50" alt="coffee">
-                <h4>Inspiring Recipes</h4>
+                <img src="images/coffee-alt.svg" width="50" alt="coffee">
+                <h4 class="mt-3">Inspiring Recipes</h4>
                 <p>Etiam feugiat eleifend est, sed luctus odio temp vitae. Vivamus maxim- us scelerisque ipsum ne</p>
 
             </div>
 
             <div class="col-lg-3 col-md-6 card card7">
-            <img src="images/coffee-alt.png" width="50"  alt="coffee">
-                <h4>Inspiring Recipes</h4>
+            <img src="images/spoon-and-fork.svg" width="50"  alt="spoon-and-fork">
+                <h4 class="mt-3">Inspiring Recipes</h4>
                 <p>Etiam feugiat eleifend est, sed luctus odio temp vitae. Vivamus maxim- us scelerisque ipsum ne</p>
             </div>
         </div>
@@ -348,27 +252,33 @@ echo $_SESSION['isAdmin'];
 
     <div id="contact" class="Pizzabox-contactUs load-hidden main">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-12 text-center">
                         <h5 class="heading">We deliver on correct time</h5>
                         <p class="mt-3 headline">Come & Experience Our Best of</p>
                         <p class="headline">World Class Cousine.</p>
-            </div>
-            <div class="col-lg-4">
-                        <button>CONTACT US</button>
             </div>
         </div>
     </div>
     <div class="Pizzabox-contactUs-map load-hidden main">
         <div class="row">
-            <div class="col-lg-6">
-                        <h5 class="heading">Contact Us</h5>
+            <div class="col-lg-6 col-md-12">
+                         
+                         <h5 class="heading">Contact Us</h5>
                         <p class="headline">Pizza Box, Götgatan 143</p>
                         <p class="headline">+46 705 5055 00</p>
                         <p class="headline">info@pizzabox.se</p>
+                         
                         <p class="newsletter mt-4 heading">Newsletter</p>
-                        <input class="headline" type="email">
+                        <input class="headline input-newsletter " name="newsLetterName" id="newsletter-email" type="email">
+                        <input class="headline input-newsletter " name="newsemail" id="newsletter-email" type="email">
+                        <!-- <input class="btn btn-deep-orange" name="newssubmit" type="submit" value="Submit"> -->
+                        <div class="row">
+                        <button type="button" class=" btn-newsletter btn btn-default"><img src="images/location-arrow.svg" alt="newsletter" width="10"></button>
+                        </div>
+                        
+                      
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-12">
             <div id="googleMap" style="width:100%;height:400px;"></div>
             </div>
         </div>
@@ -379,8 +289,8 @@ echo $_SESSION['isAdmin'];
     <div class="footer py-2 bg-dark">
     <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="images/pizza-top.svg" alt="TOP" width="30"></button>
             <div class="container">
-            <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="images/pizza-top.svg" alt="TOP" width="30"></button>
-            <?php include 'partials/footer.php';?>
+<!--             <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="images/pizza-top.svg" alt="TOP" width="30"></button>
+ -->            <?php include 'partials/footer.php';?>
             </div>
         </div>
      
@@ -397,7 +307,8 @@ echo $_SESSION['isAdmin'];
     <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
- <!--     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.6/dist/loadingoverlay.min.js"></script>
+
     <script src="../server/includes/functions.js"></script>
    <script type="text/javascript">
             $(function () {
@@ -409,6 +320,30 @@ echo $_SESSION['isAdmin'];
      $(".navigation").toggleClass('navigation-open');
    });
  }); 
+
+ $('.dropdown-toggle').click(function() {
+  $(this).next('.dropdown-menu').slideToggle(500);
+});
+
+$.LoadingOverlaySetup({
+    background      : "#dd0808",
+    image           : "images/pizzagreen.svg",
+    imageAnimation  : "1.5s fadein",
+    imageColor      : "[#7ac943, ##dd0808]"/* ,
+    text                    : "😋" */
+});
+// Show full page LoadingOverlay
+$.LoadingOverlay("show"/* ,
+{
+    background              : "rgba(0, 0, 0, 1)",
+    image       : "images/pizza.png"
+
+} */);
+
+// Hide it after 3 seconds
+setTimeout(function(){
+    $.LoadingOverlay("hide");
+}, 4000);
         </script>
 </body>
 </html>

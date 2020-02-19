@@ -16,13 +16,14 @@ class User {
         try{
 
 
-          $hash_password= md5($password); //Password encryption 
-          //error_log($hash_password); 507f513353702b50c145d5b7d138095c
-          $q = "SELECT FirstName,isAdmin FROM user WHERE Email= 'amir@gmail.com'  AND Password= '507f513353702b50c145d5b7d138095c' AND isAdmin = 'Yes' ";
+          $hash_password= md5($password); //Password encryption
+          $q = "SELECT FirstName,isAdmin FROM user WHERE Email= :email  AND Password= :password AND isAdmin = :isAdmin ";
           $query = $this->db->link->prepare($q);
           error_log($query);
-          //$query->bindParam("Email", 'amir@gmail.com',PDO::PARAM_STR);
-          //$query->bindParam("password",hash_password ,PDO::PARAM_STR);  //,PDO::PARAM_STR  */
+          $query->bindParam(":email", $email);
+          $query->bindParam(":password", $hash_password);
+          $query->bindParam(":isAdmin", $isAdmin);
+          
           $query->execute();
           error_log($query);
           $count=$query->rowCount();
@@ -69,6 +70,16 @@ class User {
         $query2 = $this->db->link->prepare($sql2)->execute([$id, $isAdmin]);
        
       }
+
+      public function newsLetterEmail($email) {
+
+        $querysqlNewsLetter = "INSERT INTO newsletter(Email) VALUES ('$email')";
+        $this->db->link->exec($querysqlNewsLetter);
+
+        return("Sent successfully");
+        
+ 
+      } 
 
   
 }

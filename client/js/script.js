@@ -12,6 +12,15 @@ signin.onclick = function() {
 
 function login() {
   $(document).ready(function() {
+    initLoggedInProps();
+
+    function initLoggedInProps() {
+      // Collect the logged in user from server (unserialize($_SESSION["loggedInUser"]))
+      // If the user is logged in, example show log out button
+      // If user is admin, show dashboard button
+      // If not logged in, show log in button
+    }
+
     $(".signin").on("click", function() {
       const email = $("#inputEmail").val();
       const password = $("#inputPassword").val();
@@ -36,12 +45,12 @@ function login() {
             if (data.isAdmin === "Yes") {
               console.log("pass");
               $("a").removeClass("disabled");
-              $("#response").html(data.FirstName);
+              $("#responseLogin").html(data.FirstName);
               $("#modalLoginForm").modal("hide");
             } else if (data.isAdmin === "No") {
               console.log("Fail");
               $("#adminLink").addClass("disabled");
-              $("#response").html(data.FirstName);
+              $("#responseLogin").html(data.FirstName);
               $("#modalLoginForm").modal("hide");
             } else {
               $("#adminLink").addClass("disabled");
@@ -54,6 +63,26 @@ function login() {
 }
 login();
 
+function logout() {
+  $(document).ready(function() {
+    $(".signout").on("click", function() {
+      $.ajax({
+        url: "../client/partials/logout.php",
+        type: "GET",
+        success: function(response) {
+          console.log(response);
+          $("#responseLogin")
+            .slideUp(2000)
+            .html("");
+          $("#modalLoginForm").modal("hide");
+          $("#adminLink").addClass("disabled");
+        }
+      });
+    });
+  });
+}
+logout();
+
 function addProducts() {
   $(document).ready(function() {
     $(".addProduct").on("click", function() {
@@ -64,7 +93,15 @@ function addProducts() {
       const categoryId = $("#categoryId").val();
       const productUnitsInStock = $("#productUnitsInStock").val();
       const productImage = $("#productImage").val();
-      console.log(productName);
+      /* Empty input Fields */
+      $("#productName").val("");
+      $("#productPrice").val("");
+      $("#productCategory").val("");
+      $("#productDescription").val("");
+      $("#categoryId").val("");
+      $("#productUnitsInStock").val("");
+      $("#productImage").val("");
+      //console.log(productName);
       if (
         productName == "" ||
         productPrice == "" ||
@@ -92,7 +129,7 @@ function addProducts() {
           dataType: "text",
           success: function(response) {
             console.log(response);
-            $("#productAddMessage").html("response");
+            $("#productAddMessage").html(response);
             /* let data = JSON.parse(response);
           console.log(data.isAdmin); */
           }
@@ -103,245 +140,32 @@ function addProducts() {
 }
 addProducts();
 
-/* $(document).ready(function() {
-  $(".signin").on("click", function() {
-    const email = $("#inputEmail").val();
-    const password = $("#inputPassword").val();
-    console.log(email);
-    var formData = new FormData();
-    formData.append("email", "email");
-    formData.append("password", "password");
-    formData.append("login", "1");
-    if (email == "" || password == "") {
-      alert("Please fill the form");
-    } else {
-      $.ajax({
-        url: "../partials/login1.php",
-        method: "POST",
-        data: formData,
-        data: {
-          login: 1,
-          email: email,
-          password: password
-          } 
-        processData: false,
-        contentType: false,
-        success: function(data) {
-          console.log(data);
-        },
-        dataType: "text"
-      });
-    }
+function newsletter() {
+  $(document).ready(function() {
+    $(".btn-newsletter").on("click", function() {
+      let newsletter_email = $("#newsletter-email").val();
+      $("#newsletter-email").val("");
+      if (newsletter_email == "") {
+        alert("Please enter email");
+      } else {
+        $.ajax({
+          url: "../server/api/newsletter.php",
+          method: "POST",
+          data: {
+            newsletter_email
+          },
+          dataType: "text",
+          success: function(response) {
+            console.log(response);
+            let data = JSON.parse(response);
+            console.log(data);
+          }
+        });
+      }
+    });
   });
-}); */
-
-/* const signup = document.querySelector(".signup");
-signup.onclick = function() {
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-}; */
-
-function displayItem() {
-  var menu = [
-    [
-      {
-        category: "Breakfast",
-        card: [
-          {
-            name: "Western Sunrise",
-            price: "20.00",
-            description:
-              "Two fried  eggs with cheese & two breakfast meats made to perfection",
-            image: "menu-img2.jpg"
-          },
-          {
-            name: "Western Sunrise",
-            price: "20.00",
-            description:
-              "Two fried  eggs with cheese & two breakfast meats made to perfection",
-            image: "menu-img2.jpg"
-          }
-        ]
-      },
-      {
-        category: "Lunch",
-        card: [
-          {
-            name: "Esteren Sunrise",
-            price: "20.00",
-            description:
-              "Two fried  eggs with cheese & two breakfast meats made to perfection",
-            image: "menu-img2.jpg"
-          },
-          {
-            name: "Esteren Sunrise",
-            price: "20.00",
-            description:
-              "Two fried  eggs with cheese & two breakfast meats made to perfection",
-            image: "menu-img2.jpg"
-          }
-        ]
-      }
-    ],
-    [
-      {
-        category: "Dinner",
-        card: [
-          {
-            name: "Spaggatti",
-            price: "50.00",
-            description:
-              "Two fried  eggs with cheese & two breakfast meats made to perfection",
-            image: "menu-img2.jpg"
-          },
-          {
-            name: "Spaggatti",
-            price: "50.00",
-            description:
-              "Two fried  eggs with cheese & two breakfast meats made to perfection",
-            image: "menu-img2.jpg"
-          }
-        ]
-      },
-      {
-        category: "Desert",
-        card: [
-          {
-            name: "Festies",
-            price: "10.00",
-            description:
-              "Two fried  eggs with cheese & two breakfast meats made to perfection",
-            image: "menu-img2.jpg"
-          },
-          {
-            name: "Festies",
-            price: "10.00",
-            description:
-              "Two fried  eggs with cheese & two breakfast meats made to perfection",
-            image: "menu-img2.jpg"
-          }
-        ]
-      }
-    ]
-  ];
-  /*   console.log(menu);
-  for (let i = 0; i < menu.length; i++) {
-    console.log(menu[i]);
-    const container = document.getElementById("pizzabox-menu");
-    let rowDiv = document.createElement("div");
-    rowDiv.className = "row";
-    let leftColDiv = document.createElement("div");
-    leftColDiv.className = "col-lg-6";
-    let rightColDiv = document.createElement("div");
-    rightColDiv.className = "col-lg-6";
-    container.innerHTML = rowDiv;
-    rowDiv.innerHTML = leftColDiv;
-    rowDiv.innerHTML = rightColDiv;
-    let leftH6 = document.createElement("h6");
-    leftH6.className = "mt-5";
-    let rightH6 = document.createElement("h6");
-    rightH6.className = "mt-5";
-
-    console.log(row); 
-  }*/
 }
-displayItem();
+newsletter();
+
 function updateItem() {}
 function deleteItem() {}
-
-/* 
-var menu = [
-    [
-      {
-        catgoryBreakfast: [
-          {
-            card1: {
-              name: "Western Sunrise",
-              price: "20.00",
-              description:
-                "Two fried  eggs with cheese & two breakfast meats made to perfection",
-              image: "menu-img2.jpg"
-            }
-          },
-          {
-            card2: {
-              name: "Esteren Sunrise",
-              price: "20.00",
-              description:
-                "Two fried  eggs with cheese & two breakfast meats made to perfection",
-              image: "menu-img2.jpg"
-            }
-          }
-        ]
-      },
-      {
-        Lunch: [
-          {
-            card1: {
-              name: "Amarican Pizza",
-              price: "40.00",
-              description:
-                "Two fried  eggs with cheese & two breakfast meats made to perfection",
-              image: "menu-img2.jpg"
-            }
-          },
-          {
-            card2: {
-              name: "Kabab Pizza",
-              price: "30.00",
-              description:
-                "Two fried  eggs with cheese & two breakfast meats made to perfection",
-              image: "menu-img2.jpg"
-            }
-          }
-        ]
-      }
-    ],
-    [
-      {
-        Dinner: [
-          {
-            card1: {
-              name: "Spaggatti",
-              price: "50.00",
-              description:
-                "Two fried  eggs with cheese & two breakfast meats made to perfection",
-              image: "menu-img2.jpg"
-            }
-          },
-          {
-            card2: {
-              name: "Tikka Masala",
-              price: "50.00",
-              description:
-                "Two fried  eggs with cheese & two breakfast meats made to perfection",
-              image: "menu-img2.jpg"
-            }
-          }
-        ]
-      },
-      {
-        Desert: [
-          {
-            card1: {
-              name: "Festies",
-              price: "10.00",
-              description:
-                "Two fried  eggs with cheese & two breakfast meats made to perfection",
-              image: "menu-img2.jpg"
-            }
-          },
-          {
-            card2: {
-              name: "Donut",
-              price: "20.00",
-              description:
-                "Two fried  eggs with cheese & two breakfast meats made to perfection",
-              image: "menu-img2.jpg"
-            }
-          }
-        ]
-      }
-    ]
-  ]; */

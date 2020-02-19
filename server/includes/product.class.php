@@ -29,7 +29,7 @@ class Product {
         $this->db->link->exec($sql);
         
         
-        return "New record created successfully";
+        return "New product created successfully";
         }
         catch(PDOException $e)
     {

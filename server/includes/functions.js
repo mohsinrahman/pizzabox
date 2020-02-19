@@ -29,7 +29,16 @@ function printOutProducts(products) {
     if (a.indexOf(b) < 0) a.push(b);
     return a;
   }, []);
+
   for (let i = 0; i < category.length; i++) {
+    let categoryList = document.getElementById("categoryList");
+    let anchor = document.createElement("a");
+    anchor.innerHTML = category[i];
+    anchor.className = "dropdown-item";
+    anchor.id = category[i];
+    anchor.setAttribute("href", "#menu");
+    categoryList.appendChild(anchor);
+
     var obj = {
       category: category[i]
     };
@@ -47,7 +56,70 @@ function printOutProducts(products) {
     menuitems.push(obj);
   }
 
+  for (let index = 0; index < category.length; index++) {
+    let cat = document.getElementById(category[index]).innerHTML;
+    for (let item = 0; item < menuitems.length; item++) {
+      if (cat == menuitems[item].category) {
+        let categoryId = document.getElementById(category[index]);
+        categoryId.onclick = function() {
+          console.log(categoryId);
+          let container = document.getElementById("menu-container");
+          container.innerHTML = "";
+          let catRow = document.createElement("div");
+          catRow.className = "row";
+          container.appendChild(catRow);
+          let catCol = document.createElement("div");
+          catCol.className = "col-lg-12 col-md-12";
+          catRow.appendChild(catCol);
+          let cath6 = document.createElement("h6");
+          cath6.innerHTML = menuitems[item].category;
+          catCol.appendChild(cath6);
+          for (let i = 0; i < menuitems[item].card.length; i++) {
+            let catCard = menuitems[item].card[i];
+            let cardDiv = document.createElement("div");
+            cardDiv.className = "card mt-5 p-2 card1-menu";
+            catCol.appendChild(cardDiv);
+            let cardDivRow = document.createElement("div");
+            cardDivRow.className = "row";
+            cardDiv.appendChild(cardDivRow);
+            let cardDivCol3 = document.createElement("div");
+            cardDivCol3.className = "col-lg-3";
+            cardDivRow.appendChild(cardDivCol3);
+            let cardImg = document.createElement("img");
+            cardImg.src = "../../client/images/" + catCard.ProductImage;
+            cardImg.setAttribute("alt", "breakfast");
+            cardImg.setAttribute("width", "100px");
+            cardDivCol3.appendChild(cardImg);
+
+            let cardDivCol9 = document.createElement("div");
+            cardDivCol9.className = "col-lg-9";
+            cardDivRow.appendChild(cardDivCol9);
+            let cardPName = document.createElement("p");
+            cardPName.innerHTML = catCard.ProductName;
+            cardDivCol9.appendChild(cardPName);
+            let cardPSpan = document.createElement("span");
+            cardPSpan.innerHTML = " " + catCard.UnitPrice + "kr";
+            cardPSpan.style.color = "#dd0808";
+            cardPName.appendChild(cardPSpan);
+
+            let cardPDescrip = document.createElement("p");
+            cardPDescrip.innerHTML = catCard.ProductDescription;
+            cardDivCol9.appendChild(cardPDescrip);
+            let cardButton = document.createElement("Button");
+            cardDivCol9.appendChild(cardButton);
+            cardButton.innerHTML = "Add To Cart";
+            let cardButtonImg = document.createElement("img");
+            cardButtonImg.src = "../../client/images/cart-alt.svg";
+            cardButtonImg.setAttribute("alt", "image");
+            cardButtonImg.setAttribute("width", "30px");
+            cardButton.appendChild(cardButtonImg);
+          }
+        };
+      }
+    }
+  }
   console.log(menuitems);
+
   var menu = _.chunk(menuitems, 2);
 
   console.log(menu);
@@ -60,7 +132,7 @@ function printOutProducts(products) {
       console.log(menu[i][j].category);
       let colDiv = document.createElement("div");
       colDiv.className = "col-lg-6";
-      console.log(container);
+      //console.log(container);
       rowDiv.appendChild(colDiv);
       let categoryH6 = document.createElement("h6");
       categoryH6.className = "mt-5";
@@ -120,73 +192,5 @@ function printOutProducts(products) {
     }
   }
 }
-
-/* var categoryInfo = JSON.parse(categoryInfo1);
-  console.log(categoryInfo1);
-  var section = document.getElementById("menu");
-  // section.innerHTML="TEEEEST"
-  for (var i = 0; i < categoryInfo.length; i++) {
-    var divForSingleProduct = createCard(categoryInfo[i]);
-    section.appendChild(divForSingleProduct);
-  }
-}
-
-// Here is the function that adds styles to card
-function createCard(selectedProduct) {
-  var productCard = document.createElement("div");
-  productCard.className = "col-lg-6";
-
-  var productTitle = document.createElement("h6");
-  productTitle.className = "mt-5";
-
-  var div1 = document.createElement("div");
-  div1.className = "card mt-5 p-2 card3-menu";
-
-  var div2 = document.createElement("div");
-  div2.className = "row";
-
-  var div3 = document.createElement("div");
-  div3.className = "col-lg-3";
-
-  //var productImage = document.createElement("img")
-  // productImage.setAttribute('src',"./images/" + selectedProduct.Image)
-  // productImage.alt=selectedProduct.Category
-  //  productImage.width=100
-
-  //  div3.appendChild(productImage)
-
-  var div4 = document.createElement("div");
-  div4.className = "col-lg-9";
-
-  var productName = document.createElement("p");
-  productName.innerHTML = selectedProduct.ProductName;
-
-  var productPrice = document.createElement("p");
-  productPrice.innerHTML = selectedProduct.UnitPrice + " " + "kr";
-
-  //productName.appendChild(productPrice)
-
-  var productDescription = document.createElement("p");
-  productDescription.innerHTML = selectedProduct.Description;
-
-  var addToCartBtn = document.createElement("button");
-  // addToCartBtn('src',"images/cart-alt.svg")
-  addToCartBtn.alt = "Cart";
-  addToCartBtn.width = "30";
-  addToCartBtn.innerText = "ADD TO CART";
-
-  div4.appendChild(productName);
-  div4.appendChild(productDescription);
-  div4.appendChild(addToCartBtn);
-
-  div2.appendChild(div3);
-  div2.appendChild(div4);
-
-  div1.appendChild(div2);
-
-  productCard.appendChild(productTitle);
-  productCard.appendChild(div1);
-
-  return productCard; */
 
 getTheseProducts();
