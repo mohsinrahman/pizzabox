@@ -49,7 +49,6 @@ class User {
           }
     
       }
-      
   
 
     public function getAllUsers() {
@@ -60,14 +59,12 @@ class User {
 
         return $result;
     }
-    public function insertNewUser($id, $firstName, $lastName, $phone, $email, $password, $isAdmin){
-        $sql1="INSERT INTO PersonalInfo (ID, FirstName, LastName, Phone, Email, Password)
-              VALUES(?,?,?,?,?,?);";
-        $query1 = $this->db->link->prepare($sql1)->execute([$id, $firstName, $lastName, $phone, $email, $password]);
-
-        $sql2="INSERT INTO Users (ID, IsAdmin)
-                VALUES (?,?);";
-        $query2 = $this->db->link->prepare($sql2)->execute([$id, $isAdmin]);
+    public function insertNewUser( $isAdmin, $firstName, $lastName, $email, $password){
+      $hash_password= md5($password);
+        $sql1="INSERT INTO user (IsAdmin, FirstName, LastName, Email, Password)
+              VALUES(?,?,?,?,?);";
+        $query1 = $this->db->link->prepare($sql1)->execute([ $isAdmin, $firstName, $lastName, $email, $hash_password]);
+      
        
       }
 

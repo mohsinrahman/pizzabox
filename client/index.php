@@ -45,7 +45,7 @@ session_start();
                     Opening Hours: 8:00am - 11:30pm
                     </div>                
                     <div class="col-lg-4 col-md-4"> 
-                    <span id="responseLogin"><?php echo $_SESSION["FirstName"] ?></span> <img data-toggle="modal" data-target="#modalLoginForm" src="images/login.svg" width="20" alt="">  <span>0</span><img data-toggle="modal" data-target="#myModal" src="images/bag.svg" height="15"  alt="cart"> 
+                    <span id="responseLogin"><?php echo $_SESSION["FirstName"] ?></span> <img data-toggle="modal" data-target="#modalLoginForm" src="images/login.svg" width="20" alt="">  <span id="pizzaCounter" >0</span><img data-toggle="modal" data-target="#myModal" onclick="printCart()" src="images/bag.svg" height="15"  alt="cart"> 
                     </div>
                 </div>
 

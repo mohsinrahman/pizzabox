@@ -19,8 +19,8 @@ if($method){
         //else
          $isAdmin="No";
 
-    $id=9090;
-    $user->insertNewUser($id, $firstName, $lastName, $phone, $email, $password, $isAdmin);
+    
+    $user->insertNewUser( $isAdmin, $firstName, $lastName, $email, $password);
    echo "done";
     header('Location: ' . $_SERVER['HTTP_REFERER']);
     exit;

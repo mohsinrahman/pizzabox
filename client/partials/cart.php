@@ -1,4 +1,4 @@
-<div class="modal fade" id="myModal" role="dialog">
+<div class="modal fade" id="myModal" role="dialog"  >
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
@@ -8,7 +8,7 @@
         <div class="modal-body">
         <p class="modal-body-heading">Shopping Cart</p>
  
- <div class="shopping-cart">
+ <div class="shopping-cart" id="shopping-cart">
   
    <div class="column-labels">
      <label class="product-image">Image</label>
@@ -18,63 +18,28 @@
      <label class="product-removal">Remove</label>
      <label class="product-line-price">Total</label>
    </div>
+   <div id=cartTop>
+</div>
+   
   
-   <div class="product">
-     <div class="product-image">
-       <img src="images/offer-img4.jpg">
-     </div>
-     <div class="product-details">
-       <div class="product-title">Kabab Pizza</div>
-       <p class="product-description"> Extra Saus, Kabab and spices.</p>
-     </div>
-     <div class="product-price">80</div>
-     <div class="product-quantity">
-       <input type="number" value="1" min="1">
-     </div>
-     <div class="product-removal">
-       <button class="remove-product">
-         Remove
-       </button>
-     </div>
-     <div class="product-line-price">80</div>
-   </div>
-  
-   <div class="product">
-     <div class="product-image">
-       <img src="images/menu-img3.jpg">
-     </div>
-     <div class="product-details">
-       <div class="product-title">Italian Pizza</div>
-       <p class="product-description">No Meat, Extra Salad.</p>
-     </div>
-     <div class="product-price">80</div>
-     <div class="product-quantity">
-       <input type="number" value="1" min="1">
-     </div>
-     <div class="product-removal">
-       <button class="remove-product">
-         Remove
-       </button>
-     </div>
-     <div class="product-line-price">80</div>
-   </div>
+
   
    <div class="totals">
      <div class="totals-item">
        <label>Subtotal</label>
-       <div class="totals-value" id="cart-subtotal">160</div>
+       <div class="totals-value" id="cart-subtotal"></div>
      </div>
      <div class="totals-item">
        <label>Tax (5%)</label>
-       <div class="totals-value" id="cart-tax">3.00</div>
+       <div class="totals-value" id="cart-tax"></div>
      </div>
      <div class="totals-item">
        <label>Shipping</label>
-       <div class="totals-value" id="cart-shipping">15.00</div>
+       <div class="totals-value" id="cart-shipping"></div>
      </div>
      <div class="totals-item totals-item-total">
        <label>Grand Total</label>
-       <div class="totals-value" id="cart-total">178</div>
+       <div class="totals-value" id="cart-total"></div>
      </div>
    </div>
         
@@ -87,25 +52,25 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-default">Street</span>
                             </div>
-                            <input type="text" class="form-control" placeholder="e.g Götgatan 2" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                            <input type="text" class="form-control" placeholder="e.g Götgatan 2" aria-label="Default" id="street" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3 mt-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-default">Postal Code</span>
                             </div>
-                            <input type="text" class="form-control" placeholder="e.g 199 00" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                            <input type="text" class="form-control" placeholder="e.g 199 00" aria-label="Default" id="postcode" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3 mt-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-default">City</span>
                             </div>
-                            <input type="text" class="form-control" placeholder="e.g Göteborg" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                            <input type="text" class="form-control" placeholder="e.g Göteborg" aria-label="Default" id="city" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3 mt-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-default">Mobile</span>
                             </div>
-                            <input type="telephone" class="form-control" placeholder="e.g 079 454 55 66" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                            <input type="telephone" class="form-control" placeholder="e.g 079 454 55 66" aria-label="Default" id="mobile" aria-describedby="inputGroup-sizing-default">
                     </div>
                 </div>
         </div>
@@ -122,7 +87,7 @@
         <div class="col-sm-6">
             <div class="form-group">
                 <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
-                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1"/>
+                    <input type="text" id="datetimepicker" class="form-control datetimepicker-input" data-target="#datetimepicker1"/>
                     <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                     </div>
@@ -181,7 +146,7 @@
                         </div>
                         <input type="text" placeholder="Last 3 digits at the backside of card" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                   </div>
-                  <button class="checkout">Pay Now</button>
+                  <button  class="checkout">Pay Now</button>
             </div>
             <div class="col-lg-6">
                    <img class="img-thumbnail img-fluid" src="images/swish.png" alt="swish" width="100">
