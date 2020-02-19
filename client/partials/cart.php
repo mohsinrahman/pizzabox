@@ -137,17 +137,37 @@
                 </div>
         </div>
       </div>
+      <p class="modal-body-heading product pt-4">Delivery Method</p>
+      <div class="container">
+        <div class="row">
+        <div class="col-sm-12">
+          <select class="form-control" id="selectAdmin">
+          <option>Foodora</option>
+          <option>Uber Eats</option>
+          </select>
+        </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
        <p class="modal-body-heading product pt-4">Payment Method</p>
       <div class="container">
-
         <div class="row">
             <div class="col-lg-6 ">
                   <img class="img-thumbnail img-fluid" src="images/bank.svg" alt="card" width="100">
                   <div class="input-group mb-3 mt-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Card Number</span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="e.g 2345 6768 9898 4326" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Card Number</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="e.g 2345 6768 9898 4326" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                   </div>
                   <div class="input-group mb-3 mt-3">
                         <div class="input-group-prepend">

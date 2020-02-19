@@ -71,9 +71,9 @@ class User {
        
       }
 
-      public function newsLetterEmail($email) {
+      public function newsLetterEmail($email,$name) {
 
-        $querysqlNewsLetter = "INSERT INTO newsletter(Email) VALUES ('$email')";
+        $querysqlNewsLetter = "INSERT INTO newsletter(FullName,Email) VALUES ('$name','$email')";
         $this->db->link->exec($querysqlNewsLetter);
 
         return("Sent successfully");

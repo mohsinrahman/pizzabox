@@ -253,32 +253,39 @@ session_start();
         <div class="row">
             <div class="col-lg-12 text-center">
                         <h5 class="heading">We deliver on correct time</h5>
-                        <p class="mt-3 headline">Come & Experience Our Best of</p>
-                        <p class="headline">World Class Cousine.</p>
+                        <p class="mt-5 headline">Come & Experience Our Best of</p>
+                        <p class="heading">World Class Cousine.</p>
             </div>
         </div>
     </div>
     <div class="Pizzabox-contactUs-map load-hidden main">
         <div class="row">
             <div class="col-lg-6 col-md-12">
-                         
-                         <h5 class="heading">Contact Us</h5>
+                    <div class="row">
+                    <div class="col-lg-6">
+                        <h5 class="heading">Contact Us</h5>
                         <p class="headline">Pizza Box, Götgatan 143</p>
                         <p class="headline">+46 705 5055 00</p>
                         <p class="headline">info@pizzabox.se</p>
-                         
-                        <p class="newsletter mt-4 heading">Newsletter</p>
-                        <input class="headline input-newsletter " name="newsLetterName" id="newsletter-email" type="email">
-                        <input class="headline input-newsletter " name="newsemail" id="newsletter-email" type="email">
-                        <!-- <input class="btn btn-deep-orange" name="newssubmit" type="submit" value="Submit"> -->
+                    </div> 
+                    <div class="col-lg-6">
+                        <p class="newsletter heading">Newsletter</p>
+                        <div class="row">
+                        <input class="headline input-newsletter input-newsletter-name " name="newsLetterName" id="newsletter-name" type="text" placeholder="Name">
+                        </div>
+                        <div class="row">
+                        <input class="headline input-newsletter input-newsletter-email " name="newsemail" id="newsletter-email" type="email" placeholder="Email">
+                        </div>
                         <div class="row">
                         <button type="button" class=" btn-newsletter btn btn-default"><img src="images/location-arrow.svg" alt="newsletter" width="10"></button>
                         </div>
-                        
+                    </div> 
+                    </div> 
+                                       
                       
             </div>
             <div class="col-lg-6 col-md-12">
-            <div id="googleMap" style="width:100%;height:400px;"></div>
+            <div id="googleMap" style="width:100%;height:100%;"></div>
             </div>
 	  </form>
         </div>
@@ -289,14 +296,12 @@ session_start();
     <div class="footer py-2 bg-dark">
     <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="images/pizza-top.svg" alt="TOP" width="30"></button>
             <div class="container">
-<!--             <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="images/pizza-top.svg" alt="TOP" width="30"></button>
- -->            <?php include 'partials/footer.php';?>
+            <?php include 'partials/footer.php';?>
             </div>
         </div>
      
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!--     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -308,7 +313,6 @@ session_start();
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.6/dist/loadingoverlay.min.js"></script>
-
     <script src="../server/includes/functions.js"></script>
    <script type="text/javascript">
             $(function () {
@@ -329,8 +333,7 @@ $.LoadingOverlaySetup({
     background      : "#dd0808",
     image           : "images/pizzagreen.svg",
     imageAnimation  : "1.5s fadein",
-    imageColor      : "[#7ac943, ##dd0808]"/* ,
-    text                    : "😋" */
+    imageColor      : "[#7ac943, ##dd0808]"
 });
 // Show full page LoadingOverlay
 $.LoadingOverlay("show"/* ,
@@ -343,7 +346,7 @@ $.LoadingOverlay("show"/* ,
 // Hide it after 3 seconds
 setTimeout(function(){
     $.LoadingOverlay("hide");
-}, 4000);
+}, 1000);
         </script>
 </body>
 </html>

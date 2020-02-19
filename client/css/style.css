@@ -225,7 +225,7 @@ a.disabled {
   background-attachment: fixed;
   background-position: 50% 10%;
   background-repeat: no-repeat;
-  height: 50vh;
+  height: 40vh;
   color: #ffffff;
 }
 .height-full {
@@ -415,10 +415,7 @@ a.disabled {
   margin-left: 10%;
   font-size: 24px;
 }
-.Pizzabox-contactUs:first-child {
-  margin-top: 120px !important;
-  color: #dd0808;
-}
+
 .Pizzabox-contactUs-map h5 {
   font-family: "order pizza";
   color: #dd0808;
@@ -431,15 +428,24 @@ a.disabled {
 }
 .newsletter {
   font-weight: bold;
+  color: #dd0808;
+  margin-top: 50px;
 }
 .input-newsletter {
   width: 200px;
   height: 35px;
 }
+.input-newsletter-name {
+  margin-top: -10px;
+}
+.input-newsletter-email {
+  margin-top: 10px;
+}
+
 .btn-newsletter {
   width: 200px;
   height: 35px;
-  margin-left: 12%;
+  margin-left: 10%;
   margin-top: 20px;
   margin-bottom: 10px;
 }

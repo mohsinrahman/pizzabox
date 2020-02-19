@@ -144,14 +144,17 @@ function newsletter() {
   $(document).ready(function() {
     $(".btn-newsletter").on("click", function() {
       let newsletter_email = $("#newsletter-email").val();
+      let newsletter_name = $("#newsletter-name").val();
       $("#newsletter-email").val("");
-      if (newsletter_email == "") {
-        alert("Please enter email");
+      $("#newsletter-name").val("");
+      if (newsletter_email == "" || newsletter_name == "") {
+        alert("Please enter email & name");
       } else {
         $.ajax({
           url: "../server/api/newsletter.php",
           method: "POST",
           data: {
+            newsletter_name,
             newsletter_email
           },
           dataType: "text",
