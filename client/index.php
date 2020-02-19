@@ -1,9 +1,8 @@
 <?php
 session_start();
 
-
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -281,6 +280,7 @@ session_start();
             <div class="col-lg-6 col-md-12">
             <div id="googleMap" style="width:100%;height:400px;"></div>
             </div>
+	  </form>
         </div>
     </div>
        
