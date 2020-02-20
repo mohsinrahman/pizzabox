@@ -317,6 +317,7 @@ function bagCard(product){
   let btnDel=document.createElement("button")
   btnDel.className="remove-product"
   btnDel.innerHTML="Remove"
+  divDel.appendChild(btnDel)
   btnDel.addEventListener("click", function() {
     var i=product.ProductID;
     $.ajax({
@@ -325,14 +326,14 @@ function bagCard(product){
       url: "../server/api/deleteFromCart.php",
       data: {delete: i },
        success: 
-       {printCart()}
+       printCart()
         //location.reload()//data => {  
      
     });
 })
   
   
-  divDel.appendChild(btnDel)
+  
 
   divProd.appendChild(divDel)
 
