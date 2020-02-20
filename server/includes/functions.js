@@ -237,7 +237,7 @@ function printCart() {
     dataType: "json",
     url: "../server/api/printInCart.php",
      success: data => {  
-     console.log(data.length),
+     //console.log(data.length),
     storeCart(data)
     
    },
@@ -325,7 +325,8 @@ function bagCard(product){
       url: "../server/api/deleteFromCart.php",
       data: {delete: i },
        success: 
-        location.reload()//data => {  
+       {printCart()}
+        //location.reload()//data => {  
      
     });
 })
@@ -375,7 +376,7 @@ function makeOrder() {
           url: "../server/api/order.php",
           method: "POST",
           data: {
-            order:1,
+            order: 1,
             street:street,
             postcode:postcode,
             city:city,

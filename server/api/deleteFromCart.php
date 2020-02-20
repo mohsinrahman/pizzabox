@@ -4,7 +4,7 @@ if ( isset($_GET["delete"]) )
 {
     
 $i = $_GET["delete"];
-echo $i;
+//echo $i;
 $_SESSION["qty"][$i]=0;
 
 

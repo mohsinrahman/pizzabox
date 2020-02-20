@@ -315,10 +315,12 @@ session_start();
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.6/dist/loadingoverlay.min.js"></script>
     <script src="../server/includes/functions.js"></script>
    <script type="text/javascript">
+          
             $(function () {
-                $('#datetimepicker1').datetimepicker();
+                $('#datetimepicker1').datetimepicker({
+                    locale: 'ru'
+              });
             });
-
              $(function() {
    $(".navigation__icon").click(function() {
      $(".navigation").toggleClass('navigation-open');
