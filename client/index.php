@@ -45,7 +45,7 @@ session_start();
                     Opening Hours: 8:00am - 11:30pm
                     </div>                
                     <div class="col-lg-4 col-md-4"> 
-                    <span id="responseLogin"><?php echo $_SESSION["FirstName"] ?></span> <img data-toggle="modal" data-target="#modalLoginForm" src="images/login.svg" width="20" alt="">  <span>0</span><img data-toggle="modal" data-target="#myModal" src="images/bag.svg" height="15"  alt="cart"> 
+                    <span id="responseLogin"><?php echo $_SESSION["FirstName"] ?></span> <img data-toggle="modal" data-target="#modalLoginForm" src="images/login.svg" width="20" alt="">  <span id="pizzaCounter" >0</span><img data-toggle="modal" data-target="#myModal" onclick="printCart()" src="images/bag.svg" height="15"  alt="cart"> 
                     </div>
                 </div>
 
@@ -355,11 +355,20 @@ session_start();
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHndWQc8CEtL0itRV03I2jeE1xc9xP0V4&callback=myMap"></script>
     <script src="../server/includes/functions.js"></script>
    <script type="text/javascript">
+<<<<<<< HEAD
           /*  $(function () {
                 $('#datetimepicker1').datetimepicker({
                     locale: 'ru'
                 });
             }); */
+=======
+          
+            $(function () {
+                $('#datetimepicker1').datetimepicker({
+                    locale: 'ru'
+              });
+            });
+>>>>>>> 396d5974dffd7e9b63fcc644546df084cd017ede
              $(function() {
    $(".navigation__icon").click(function() {
      $(".navigation").toggleClass('navigation-open');

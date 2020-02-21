@@ -21,9 +21,9 @@ class Order {
 
         return $result;
     }
-    public function orderInsert ($orderID, $id, $shippingfType, $date){
+    public function orderInsert ($orderID, $id, $shippingType, $date){
         $sql = "INSERT INTO Orders OrderID, ID, ShippingType, Date VALUES (?,?,?,?,?)";
-        $query = $this->db->link->prepare($sql)->execute([$orderID, $id, $shippingfType, $date]);;
+        $query = $this->db->link->prepare($sql)->execute([$orderID, $id, $shippingType, $date]);;
      
     }
 
@@ -41,11 +41,27 @@ class Order {
     
    
     }
+
+    public function newOrder($id,$selectAdmin,$date,$products){
+       
+        $sql1="INSERT INTO orders (ID,ShippingType,Date) VALUES ('$id','$selectAdmin','$date')
+      ;";
+        $query = $this->db->link->prepare($sql1);
+        $query->execute();
+        $last=$this->db->link->lastInsertId();
+       //print_r($products);
+       $sql2="INSERT INTO orderdetails (OrderID,ProductID,Quantity) VALUES (?,?,?)
+      ;";
+       for($i=0;$i<count($products);$i++){
+        $query = $this->db->link->prepare($sql2);
+        $query->execute([$last,(int)($products[$i]['ProductID']),(int)($products[$i]['qty'])]);
+    }
+       
+    }
 }
 
 
-$o=new Order();
-$result = $o->getAllOrders();
 
-echo json_encode($result);
+
+
 ?>
