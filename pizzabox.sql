@@ -1,17 +1,17 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.9.3
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Generation Time: Feb 17, 2020 at 09:30 AM
+-- Host: localhost:3316
+-- Generation Time: Feb 21, 2020 at 09:18 PM
 -- Server version: 5.7.26
--- PHP Version: 7.3.8
+-- PHP Version: 7.4.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
--- Database: `pizzabox`
+-- Database: `pizzaBox`
 --
 
 -- --------------------------------------------------------
@@ -32,7 +32,7 @@ CREATE TABLE `address` (
 --
 
 INSERT INTO `address` (`ID`, `Street`, `Apartment`, `City`) VALUES
-(0, 'st ', NULL, 'G');
+(8, 'm', ',', '.');
 
 -- --------------------------------------------------------
 
@@ -61,7 +61,7 @@ INSERT INTO `category` (`CategoryID`, `Name`, `Description`) VALUES
 --
 
 CREATE TABLE `newsletter` (
-  `ID` int(11) DEFAULT NULL,
+  `FullName` varchar(40) DEFAULT NULL,
   `Email` varchar(25) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -87,23 +87,15 @@ CREATE TABLE `orders` (
   `OrderID` int(11) NOT NULL,
   `ID` int(11) NOT NULL,
   `ShippingType` varchar(10) NOT NULL,
-  `Date` date NOT NULL
+  `Date` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `personalinfo`
+-- Dumping data for table `orders`
 --
 
-CREATE TABLE `personalinfo` (
-  `ID` int(11) NOT NULL,
-  `FirstName` varchar(15) NOT NULL,
-  `LastName` varchar(20) NOT NULL,
-  `Phone` varchar(10) NOT NULL,
-  `Email` varchar(25) NOT NULL,
-  `Password` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `orders` (`OrderID`, `ID`, `ShippingType`, `Date`) VALUES
+(69, 8, 'Foodora', '02/21/2020 9:08 PM');
 
 -- --------------------------------------------------------
 
@@ -127,18 +119,15 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`ProductID`, `CategoryID`, `ProductName`, `ProductDescription`, `UnitPrice`, `Category`, `UnitsInStock`, `ProductImage`) VALUES
-(1, 1, 'Margherita', 'Typical Neapolitan pizza, made with San Marzano tomatoes, mozzarella cheese, fresh basil, salt and extra-virgin olive oil.', 100, 'Breakfast', 100, 'menu-img2.jpg'),
-(2, 1, 'California', 'It is made with mustard, ricotta, pate, and red pepper', 120, 'Breakfast', 100, 'menu-img2.jpg'),
-(3, 2, 'Detroit', 'Detroit pizza is first topped with pepperoni, followed by brick cheese which is spread to the very edges of the pan, yielding a caramelized cheese perimeter.', 80, 'Lunch', 100, 'menu-img2.jpg'),
+(1, 1, 'Margherita', 'Typical Neapolitan pizza, made with San Marzano tomatoes, mozzarella cheese, fresh basil, salt and extra-virgin olive oil.', 100, 'Breakfast', 100, 'pizza-1-600x600.png'),
+(2, 1, 'California', 'It is made with mustard, ricotta, pate, and red pepper', 120, 'Breakfast', 100, 'pizza-2-600x600.png'),
+(3, 2, 'Detroit', 'Detroit pizza is first topped with pepperoni, followed by brick cheese which is spread to the very edges of the pan, yielding a caramelized cheese perimeter.', 80, 'Lunch', 100, 'pizza-3-600x600.png'),
 (4, 4, 'Cola', 'Bottle and cans drinks, and Zero Cola.', 90, 'Desert', 100, 'menu-img1.jpg'),
-(5, 3, 'Sicilian Pizza', 'It is a cut of pizza with pillowy dough, a crunchy crust, and robust tomato sauce. ', 20, 'Dinner', 200, 'menu-img2.jpg'),
-(6, 4, 'Pepsi', 'Bottle an cans of drinks.', 20, 'Desert', 200, 'menu-img1.jpg'),
-(7, 2, 'Italian Pizza', 'Two fried eggs with cheese & two breakfast meats made to perfection', 40, 'Lunch', 2, 'menu-img2.jpg'),
-(8, 5, 'Veg Pizza', 'Two fried eggs with cheese & two breakfast meats made to perfection', 50, 'Vegetable', 100, 'menu-img2.jpg'),
-(11, 3, 'Kabak ', 'bnjm,', 22, 'Dinner', 22, 'menu-img2.jpg'),
-(12, 5, 'Pizza Jalapino', 'Extra spicy and hot Pizza Without Kabab', 88, 'Vegetable', 300, 'menu-img2.jpg'),
-(13, 3, 'ghj', 'fghjklö', 678, 'Dinner', 67, 'a.jpg'),
-(14, 2, 'rtyu', 'dfrtgyhu', 4588, 'Lunch', 5678, 'd.jpg');
+(5, 3, 'Sicilian Pizza', 'It is a cut of pizza with pillowy dough, a crunchy crust, and robust tomato sauce. ', 20, 'Dinner', 200, 'pizza-4-600x600.png'),
+(6, 4, 'Pepsi', 'Bottle an cans of drinks.', 20, 'Desert', 200, 'pepsi.png'),
+(7, 2, 'Italian Pizza', 'Two fried eggs with cheese & two breakfast meats made to perfection', 40, 'Lunch', 2, 'pizza-5-600x600.png'),
+(8, 5, 'Veg Pizza', 'Two fried eggs with cheese & two breakfast meats made to perfection', 50, 'Vegetable', 100, 'pizza-4-600x600.png'),
+(12, 5, 'Pizza Jalapino', 'Extra spicy and hot Pizza Without Kabab', 88, 'Vegetable', 300, 'menu-img2.jpg');
 
 -- --------------------------------------------------------
 
@@ -190,12 +179,6 @@ ALTER TABLE `orders`
   ADD PRIMARY KEY (`OrderID`);
 
 --
--- Indexes for table `personalinfo`
---
-ALTER TABLE `personalinfo`
-  ADD PRIMARY KEY (`ID`);
-
---
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
@@ -218,6 +201,12 @@ ALTER TABLE `category`
   MODIFY `CategoryID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `OrderID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+
+--
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
@@ -227,4 +216,4 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
