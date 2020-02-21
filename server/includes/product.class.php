@@ -27,8 +27,7 @@ class Product {
                             VALUES ('$productCategoryId','$productName','$productDescription','$productPrice','$productCategory', '$productUnitInStock', '$productImage')";
         /* $query = $this->db->link->prepare($sql) */
         $this->db->link->exec($sql);
-        
-        
+            
         return "New product created successfully";
         }
         catch(PDOException $e)

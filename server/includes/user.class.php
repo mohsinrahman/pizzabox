@@ -79,7 +79,15 @@ class User {
         return("Sent successfully");
         
  
-      } 
+      }
+      
+      public function getListNewsletter() {
+        $sqlnewsletter="SELECT * FROM newsletter ";
+        $querynewsletter = $this->db->link->prepare($sqlnewsletter);
+        $querynewsletter->execute();
+        $resultnewsletter = $querynewsletter->fetchAll(PDO::FETCH_ASSOC);
+        return $resultnewsletter;
+    } 
 
   
 }

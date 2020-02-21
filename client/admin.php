@@ -26,84 +26,147 @@
          <img src="images/pizzagreen.svg" alt=""/>
          <h3>Add Products</h3>
          <p id="productAddMessage"></p>
-    </div>               
+    </div> 
+
     <div class="col-md-9">
-    <form action="" method="POST">
+      <div class="row">
+        <div class="col-md-12">
+        <form action="" method="POST">
 
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Product Name</span>
+    </div>
+    <input type="text" class="form-control" id="productName" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+</div>
 
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-default">Product Name</span>
-        </div>
-        <input type="text" class="form-control" id="productName" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
     </div>
+    <input type="text" class="form-control" id="productDescription" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+</div>
 
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
-        </div>
-        <input type="text" class="form-control" id="productDescription" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Price</span>
     </div>
+    <input type="text" class="form-control" id="productPrice" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+</div>
 
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-default">Price</span>
-        </div>
-        <input type="text" class="form-control" id="productPrice" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-    </div>
+  <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Category</span>
+      </div>
+      <input type="text" class="form-control" id="productCategory" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+  </div>
+  <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Category ID</span>
+      </div>
+      <input type="text" class="form-control" id="categoryId" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+  </div>
 
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-default">Category</span>
-        </div>
-        <input type="text" class="form-control" id="productCategory" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-    </div>
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-default">Category ID</span>
-        </div>
-        <input type="text" class="form-control" id="categoryId" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-    </div>
+  <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Stock</span>
+      </div>
+      <input type="text" class="form-control" id="productUnitsInStock" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+  </div>
 
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-default">Stock</span>
-        </div>
-        <input type="text" class="form-control" id="productUnitsInStock" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-    </div>
-
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-default">Image</span>
-        </div>
-        <input type="text" class="form-control" id="productImage" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-    </div>
+  <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Image</span>
+      </div>
+      <input type="text" class="form-control" id="productImage" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+  </div>
 
 
 
     <div class="input-group mb-3 text-center">
-    <input type="button" class=" addProduct btn btn-light" value="Add Product" width="50">
-    </div>
+         <input type="button" class=" addProduct btn btn-light" value="Add Product" width="50">
     </div>
 
-   </div>
+</form>
+
+<div class="row">
+    <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="newsletterinfo" class="mt-5">
+                      <h3>Newsletter Information</h3>
+                      <div class="table-responsive table">
+                      <table class="table table-bordred table-striped">
+                          <thead>
+                            <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">Email</th>
+                            </tr>
+                          </thead>
+                          <tbody id="newsletterTableBody">       
+                          </tbody>
+                      </table>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="totalOrdersInfo" class="mt-5">
+                      <h3>Order's Information</h3>
+                      <div class="table-responsive table">
+                      <table class="table table-bordred table-striped">
+                          <thead>
+                            <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">Email</th>
+                              <th scope="col">Address</th>
+                              <th scope="col">Orders</th>
+                              <th scope="col">Date</th>
+                            </tr>
+                          </thead>
+                          <tbody id="ordersTableBody">       
+                          </tbody>
+                      </table>
+                      </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+        </div>
+      </div>
+      
+
+    </div> <!-- col-md-9 CLOSE -->
     
+
+   </div>
+
   </div>
 
  </div>
+</form>
+
 </div> <!-- container  End -->
-            
-            
+     
+ <!-- <div class="footer py-2 container bg-dark"> -->
+             <?php /* include 'partials/footer.php'; */?> 
+        <!-- </div> -->  
+
   
-                <div class="footer py-2 ">
-            <div class="container bg-dark">
-            <?php include 'partials/footer.php';?>
-            </div>
-        </div>
+       
       
                 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <!-- <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>-->
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

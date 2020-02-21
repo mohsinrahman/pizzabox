@@ -15,7 +15,7 @@ if($method){
     $productCategoryId = $_POST["categoryId"];
     $productUnitInStock = $_POST["productUnitsInStock"];
     $productImage = $_POST["productImage"];
-    echo json_encode($productName);
+    //echo json_encode($productName);
         
     //exit($productId . '=' .  $productName . '=' .  $productPrice . '=' .  $productCategory . '=' .  $productDescription); 
  

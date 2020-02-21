@@ -162,6 +162,11 @@ function newsletter() {
             console.log(response);
             let data = JSON.parse(response);
             console.log(data);
+            /*             document.getElementById("")
+             */ $("#message-newsletter").html(data);
+            $("#message-newsletter")
+              .delay(2000)
+              .fadeOut("slow");
           }
         });
       }
@@ -170,5 +175,33 @@ function newsletter() {
 }
 newsletter();
 
+function displayNewsletter() {
+  $.ajax({
+    type: "GET",
+    dataType: "json",
+    url: "../server/api/getNewsletter.php",
+    success: data => {
+      console.log(data);
+      let newsletterTableBody = document.getElementById("newsletterTableBody");
+      for (let i = 0; i < data.length; i++) {
+        let tr = document.createElement("tr");
+        let td1 = document.createElement("td");
+        let td2 = document.createElement("td");
+        let td3 = document.createElement("td");
+        newsletterTableBody.append(tr);
+        tr.append(td1);
+        tr.append(td2);
+        tr.append(td3);
+        td1.innerHTML = i;
+        td2.innerHTML = data[i].FullName;
+        td3.innerHTML = data[i].Email;
+      }
+    },
+    error: error => {
+      console.log(error);
+    }
+  });
+}
+displayNewsletter();
 function updateItem() {}
 function deleteItem() {}
