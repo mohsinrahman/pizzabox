@@ -1,23 +1,8 @@
-/* const signin = document.querySelector(".signin");
-signin.onclick = function() {
-  const email = document.getElementById("inputEmail").value;
-  const password = document.getElementById("inputPassword").value;
-  if (email == "Mohsin@gmail.com" && password == "12345") {
-    document.getElementById("message").innerHTML = "Welcome";
-  } else {
-    document.getElementById("message").innerHTML =
-      "ERROR: Please confirm your email and password.";
-  }
-}; */
 
 
-function initLoggedInProps() {
-  // Collect the logged in user from server (unserialize($_SESSION["loggedInUser"]))
-  // If the user is logged in, example show log out button
-  // If user is admin, show dashboard button
-  // If not logged in, show log in button
-}
 
+
+function login() {
 $(".signin").on("click", function() {
   const email = $("#inputEmail").val();
   const password = $("#inputPassword").val();
@@ -34,30 +19,32 @@ $(".signin").on("click", function() {
         password: password,
         isAdmin: isAdmin
       },
-      dataType: "text",
+      dataType: "json",
       success: function(response) {
-        console.log(response);
-        let data = JSON.parse(response);
-        console.log(data.isAdmin);
-        if (data.isAdmin === "Yes") {
-          console.log("pass");
-          $("a").removeClass("disabled");
+        let data =response;
+        if (data.isAdmin =="Yes") {
+          $("#adminLink").removeClass("disabled");
           $("#responseLogin").html(data.FirstName);
           $("#modalLoginForm").modal("hide");
+  
         } else if (data.isAdmin === "No") {
-          console.log("Fail");
           $("#adminLink").addClass("disabled");
           $("#responseLogin").html(data.FirstName);
           $("#modalLoginForm").modal("hide");
         } else {
           $("#adminLink").addClass("disabled");
         }
+    
       }
+     
     });
   }
+  
 });
 
+}
 
+login();
 
 function logout() {
   $(document).ready(function() {
@@ -66,18 +53,59 @@ function logout() {
         url: "../client/partials/logout.php",
         type: "GET",
         success: function(response) {
-          console.log(response);
-          $("#responseLogin")
-            .slideUp(2000)
-            .html("");
+         $("#responseLogin")
+           
+           .html("Not logged in");
           $("#modalLoginForm").modal("hide");
-          $("#adminLink").addClass("disabled");
+        
         }
       });
     });
   });
 }
 logout();
+
+
+function signup() {
+  
+  $("#signup").on("click", function() {
+    const fname = $("#fname").val();
+    const lname = $("#lname").val();
+    const admin = $("#CheckboxAdmin").prop("checked");
+    const email = $("#email").val();
+    const password = $("#password").val();
+    const phone = $("#phone").val();
+    if(fname=="" ||
+    lname=="" ||
+    email=="" ||
+    password=="" 
+    ){
+      alert("All fields must be filled!");
+    }
+   else{
+    $.ajax({
+        url: "../server/api/signup.php",
+        method: "POST",
+        data: {
+          signup: 1,
+            fname:fname,
+            lname:lname,
+            email:email,
+            password:password,
+            admin:admin,
+            phone:phone
+            
+        },
+        dataType: "json",
+        success: function() { }
+       
+      });
+      window.location.reload();
+   }
+  });
+  
+  }
+  signup();
 
 function addProducts() {
   $(document).ready(function() {
@@ -97,7 +125,7 @@ function addProducts() {
       $("#categoryId").val("");
       $("#productUnitsInStock").val("");
       $("#productImage").val("");
-      //console.log(productName);
+      
       if (
         productName == "" ||
         productPrice == "" ||
@@ -107,7 +135,6 @@ function addProducts() {
         productUnitsInStock == "" ||
         productImage == ""
       ) {
-        //$(".loginModalInput").addClass("loginModalMessage");
         alert("Please fill all fields");
       } else {
         $.ajax({
@@ -124,10 +151,8 @@ function addProducts() {
           },
           dataType: "text",
           success: function(response) {
-            console.log(response);
             $("#productAddMessage").html(response);
-            /* let data = JSON.parse(response);
-          console.log(data.isAdmin); */
+           
           }
         });
       }
@@ -155,11 +180,8 @@ function newsletter() {
           },
           dataType: "text",
           success: function(response) {
-            console.log(response);
             let data = JSON.parse(response);
-            console.log(data);
-            /*             document.getElementById("")
-             */ $("#message-newsletter").html(data);
+             $("#message-newsletter").html(data);
             $("#message-newsletter")
               .delay(2000)
               .fadeOut("slow");
@@ -171,33 +193,33 @@ function newsletter() {
 }
 newsletter();
 
-function displayNewsletter() {
-  $.ajax({
-    type: "GET",
-    dataType: "json",
-    url: "../server/api/getNewsletter.php",
-    success: data => {
-      console.log(data);
-      let newsletterTableBody = document.getElementById("newsletterTableBody");
-      for (let i = 0; i < data.length; i++) {
-        let tr = document.createElement("tr");
-        let td1 = document.createElement("td");
-        let td2 = document.createElement("td");
-        let td3 = document.createElement("td");
-        newsletterTableBody.append(tr);
-        tr.append(td1);
-        tr.append(td2);
-        tr.append(td3);
-        td1.innerHTML = i;
-        td2.innerHTML = data[i].FullName;
-        td3.innerHTML = data[i].Email;
-      }
-    },
-    error: error => {
-      console.log(error);
-    }
-  });
-}
-displayNewsletter();
+// function displayNewsletter() {
+//   $.ajax({
+//     type: "GET",
+//     dataType: "json",
+//     url: "../server/api/getNewsletter.php",
+//     success: data => {
+//       let newsletterTableBody = document.getElementById("newsletterTableBody");
+//       for (let i = 0; i < data.length; i++) {
+//         let tr = document.createElement("tr");
+//         let td1 = document.createElement("td");
+//         let td2 = document.createElement("td");
+//         let td3 = document.createElement("td");
+//         newsletterTableBody.append(tr);
+//         tr.append(td1);
+//         tr.appendChild(td1);
+//         tr.append(td2);
+//         tr.append(td3);
+//         td1.innerHTML = i;
+//         td2.innerHTML = data[i].FullName;
+//         td3.innerHTML = data[i].Email;
+//       }
+//     },
+//     error: error => {
+      
+//     }
+//   });
+// }
+//displayNewsletter();
 function updateItem() {}
 function deleteItem() {}

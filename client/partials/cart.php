@@ -27,22 +27,10 @@
   
    <div class="totals">
      <div class="totals-item">
-       <label>Subtotal</label>
+       <label>Total</label>
        <div class="totals-value" id="cart-subtotal"></div>
      </div>
-     <div class="totals-item">
-       <label>Tax (5%)</label>
-       <div class="totals-value" id="cart-tax"></div>
-     </div>
-     <div class="totals-item">
-       <label>Shipping</label>
-       <div class="totals-value" id="cart-shipping"></div>
-     </div>
-     <div class="totals-item totals-item-total">
-       <label>Grand Total</label>
-       <div class="totals-value" id="cart-total"></div>
-     </div>
-   </div>
+     
         
        <!-- <button class="checkout">Checkout</button> -->
        <p class="modal-body-heading product">Address</p>
@@ -117,7 +105,7 @@
       <div class="container">
         <div class="row">
         <div class="col-sm-12">
-          <select class="form-control" id="selectDeliveryMethod">
+          <select class="form-control" id="selectShipping">
           <option>Foodora</option>
           <option>Uber Eats</option>
           </select>
@@ -157,7 +145,7 @@
                         </div>
                         <input type="text" placeholder="Last 3 digits at the backside of card" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                   </div>
-                  <button  class="checkout">Pay Now</button>
+                  <button  id="checkout" class="checkout">Pay Now</button>
             </div>
             <div class="col-lg-6">
                    <img class="img-thumbnail img-fluid" src="images/swish.png" alt="swish" width="100">

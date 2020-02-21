@@ -21,8 +21,7 @@
 <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
 aria-hidden="true">
 <div class="modal-dialog" role="document">
-<form name="signupForm" method="POST" action="../../server/api/signup.php"
- >
+<form action="" method="POST" >
   <div class="modal-content">
     <div class="modal-header text-center">
       <h4 class="modal-title w-100 font-weight-bold">Registration</h4>
@@ -69,14 +68,15 @@ aria-hidden="true">
       <div class=" form-group row"> 
               <label for="admin" class=" col-sm-3 col-form-label" >Admin</label>
               <div class="col-sm-9"> 
-                  <input type="checkbox" name="admin" class="form-control " id="CheckboxAdmin">        
+                  <input type="checkbox" name="admin" class="form-control " checked="Yes" id="CheckboxAdmin">        
               </div>        
       </div>
 
 
     </div>
     <div class="modal-footer d-flex justify-content-center">
-      <button class="btn btn-deep-orange signup" id="submit" type="submit" value="Submit">Sign up</button>
+    <input type="button" class="signup btn btn-default" id="signup" value="Sign up" width="50">
+      <!-- <button class="btn btn-deep-orange signup" id="signup" >Sign up</button> -->
     </div>
   </div>
   </form>

@@ -1,8 +1,36 @@
 <?php
-session_start();
+session_start(); 
+include_once("../server/includes/product.class.php");
+$pr=new Product;
+
+$prodRows=$pr->getAllProducts();
+
+unset($_SESSION["total"]);
+
+    if (!isset($_SESSION["total"]) ) {
+        $_SESSION["total"] = 0;
+        $c=count($prodRows);
+        for ($id=0; $id<$c; $id++) {
+         $_SESSION["qty"][$id] = 0;
+         
+       }
+      }
 
 ?>
+  <?php 
+  if(isset($_SESSION['FirstName']) && isset($_SESSION['isAdmin']) && $_SESSION['isAdmin']=="Yes"){
+                    $disabled=""; 
+                  
+                }
+                    else{ $disabled="disabled";
+                  }?>
 
+<?php if(isset($_SESSION['FirstName']) ){
+                    $name=$_SESSION['FirstName']; 
+                  
+                }
+                    else{ $name="Not logged in";
+                  }?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +50,7 @@ session_start();
     
 </head>
 <body>
+    
 <!-- Modal Cart -->
 <?php include 'partials/cart.php';?>
 <!-- Login Modal-->
@@ -36,7 +65,7 @@ session_start();
     </div>
     <div class="Pizzabox-heroSection-bg">
     <span class="navDevice"><?php include 'partials/nav.php';?></span>
-        <div class="row" style="border-bottom:1px solid #2c2c2c;"> <!-- style="border-bottom:1px solid #2c2c2c;" -->
+        <div class="row" style="border-bottom:1px solid #2c2c2c;"> 
         <div class="col-lg-6 text-center Pizzabox-heroSection-email-section"><h6 class="Pizzabox-heroSection-email" >Email: info@pizzabox.com Phone: +46 800 000 16</h6>  </div>
         <div class="col-lg-6 col-md-12 text-center Pizzabox-heroSection-time-section">
             <div class="Pizzabox-heroSection-opening">
@@ -45,7 +74,7 @@ session_start();
                     Opening Hours: 8:00am - 11:30pm
                     </div>                
                     <div class="col-lg-4 col-md-4"> 
-                    <span id="responseLogin"><?php echo $_SESSION["FirstName"] ?></span> <img data-toggle="modal" data-target="#modalLoginForm" src="images/login.svg" width="20" alt="">  <span id="pizzaCounter" >0</span><img data-toggle="modal" data-target="#myModal" onclick="printCart()" src="images/bag.svg" height="15"  alt="cart"> 
+                    <span id="responseLogin"><?=$name?></span> <img data-toggle="modal" data-target="#modalLoginForm" src="images/login.svg" width="20" alt="">  <span id="pizzaCounter" ></span><img data-toggle="modal" data-target="#myModal" onclick="printCart()" src="images/bag.svg" height="15"  alt="cart"> 
                     </div>
                 </div>
 
@@ -54,28 +83,14 @@ session_start();
         <?php 
 
 ?>
-<!--         <div class="container-fluid">
-        <div class="row">
-                    <div class="col-lg-12">
-                    <div class="login" id="loginForm">
-                     <div class="innerLoginDiv ">
-                            <form name="login">
-                                <input class="username" type="text" placeholder="Username" name="userid"/>
-                                <input class="pass" type="password" placeholder="Password" name="pswrd"/>
-                                <input type="button" value="Login" class="loginBtn"/>
-                            </form>
-                            <div><p class="message"></p></div>  
-                        </div>  
-                    </div>
-                    </div>
-        </div>  login row Close 
-        </div> -->
+
     </div>  <!-- Pizzabox-heroSection-bg --> 
         <div class="Pizzabox-heroSection-menu">
             <div class="row" >
                 <div class="col-lg-4 text-center">
                 <ul class="list-unstyled list-inline">
-                    <li class="list-inline-item" > <a href="admin.php" id="adminLink" class="disabled">ADMIN</a> </li>
+              
+                    <li class="list-inline-item" > <a href="admin.php" id="adminLink" class=<?=$disabled?> >ADMIN</a> </li>
                      <li class=" list-inline-item nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">MENU</a>
                         <div class="dropdown-menu">
@@ -97,7 +112,7 @@ session_start();
                 <div class="col-lg-4 text-center">
                 <ul class="list-unstyled list-inline">
                     <li class="list-inline-item"><a href="#contact">CONTACT</a></li>
-                    <li class="list-inline-item"><a href=http://localhost:8888/pizzabox/client/history.php>HISTORY</a></li>
+                    <li class="list-inline-item"><a href="history.php">HISTORY</a></li>
                     <li class="list-inline-item"><a href="#about">ABOUT US</a></li>
                 </ul>
                 </div>
@@ -333,7 +348,6 @@ session_start();
         </div>
      
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
-<!--     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>--> 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -342,33 +356,22 @@ session_start();
    
     <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
-<!--     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
  -->    
     
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.6/dist/loadingoverlay.min.js"></script>
     
-<!--     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.min.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script> -->
+
     <script src="js/script.js"></script>
     <script src="js/utility.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHndWQc8CEtL0itRV03I2jeE1xc9xP0V4&callback=myMap"></script>
     <script src="../server/includes/functions.js"></script>
    <script type="text/javascript">
-<<<<<<< HEAD
-          /*  $(function () {
-                $('#datetimepicker1').datetimepicker({
-                    locale: 'ru'
-                });
-            }); */
-=======
           
             $(function () {
                 $('#datetimepicker1').datetimepicker({
                     locale: 'ru'
               });
             });
->>>>>>> 396d5974dffd7e9b63fcc644546df084cd017ede
              $(function() {
    $(".navigation__icon").click(function() {
      $(".navigation").toggleClass('navigation-open');
@@ -385,12 +388,9 @@ $.LoadingOverlaySetup({
     imageAnimation  : "1.5s fadein",
     imageColor      : "[#7ac943, ##dd0808]"
 });
-// Show full page LoadingOverlay
 $.LoadingOverlay("show");
-// Hide it after 2 seconds
 setTimeout(function(){
     $.LoadingOverlay("hide");
-    console.log("runfun")
 }, 2000);
         </script>
 </body>

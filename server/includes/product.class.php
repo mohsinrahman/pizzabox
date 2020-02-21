@@ -25,7 +25,6 @@ class Product {
         $this->db->link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $sql = "INSERT INTO Products (CategoryID, ProductName, ProductDescription, UnitPrice, Category, UnitsInStock, ProductImage) 
                             VALUES ('$productCategoryId','$productName','$productDescription','$productPrice','$productCategory', '$productUnitInStock', '$productImage')";
-        /* $query = $this->db->link->prepare($sql) */
         $this->db->link->exec($sql);
             
         return "New product created successfully";

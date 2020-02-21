@@ -1,6 +1,5 @@
 <?php
 session_start();
-//echo  var_dump($_POST["add"]);
 
 if ( isset($_POST["add"]) )
 {
@@ -11,8 +10,7 @@ $qty = $_SESSION["qty"][$id] + 1;
 
 $_SESSION["qty"][$id] = $qty;
 
-
+echo true;
 }
 
-//echo var_dump($_SESSION["qty"]);
 ?>
