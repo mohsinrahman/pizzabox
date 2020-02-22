@@ -17,7 +17,7 @@ class User {
 
 
           $hash_password= md5($password); //Password encryption
-          $q = "SELECT FirstName,isAdmin FROM user WHERE Email= :email  AND Password= :password AND isAdmin = :isAdmin ";
+          $q = "SELECT FirstName,isAdmin,Id FROM user WHERE Email= :email  AND Password= :password AND isAdmin = :isAdmin ";
           $query = $this->db->link->prepare($q);
           error_log($query);
           $query->bindParam(":email", $email);
@@ -25,16 +25,17 @@ class User {
           $query->bindParam(":isAdmin", $isAdmin);
           
           $query->execute();
-          error_log($query);
+          error_log(json_encode($query));
           $count=$query->rowCount();
-          error_log($count);
+          error_log(json_encode($count));
           $data=$query->fetch(PDO::FETCH_OBJ);
-          error_log($data);
+          error_log(json_encode($data->Id));
           
           if($count)
           {
            $_SESSION['FirstName']=  $data->FirstName; 
-           $_SESSION['isAdmin']=  $data->isAdmin; 
+           $_SESSION['isAdmin']=  $data->isAdmin;
+           $_SESSION['uId']=  $data->Id; 
                
              // Storing user session value
           return ($data) ;
@@ -49,6 +50,7 @@ class User {
           }
     
       }
+      
   
 
     public function getAllUsers() {
@@ -59,12 +61,14 @@ class User {
 
         return $result;
     }
-    public function insertNewUser( $isAdmin, $firstName, $lastName, $email, $password){
-      $hash_password= md5($password);
-        $sql1="INSERT INTO user (IsAdmin, FirstName, LastName, Email, Password)
-              VALUES(?,?,?,?,?);";
-        $query1 = $this->db->link->prepare($sql1)->execute([ $isAdmin, $firstName, $lastName, $email, $hash_password]);
-      
+    public function insertNewUser($id, $firstName, $lastName, $phone, $email, $password, $isAdmin){
+        $sql1="INSERT INTO PersonalInfo (ID, FirstName, LastName, Phone, Email, Password)
+              VALUES(?,?,?,?,?,?);";
+        $query1 = $this->db->link->prepare($sql1)->execute([$id, $firstName, $lastName, $phone, $email, $password]);
+
+        $sql2="INSERT INTO Users (ID, IsAdmin)
+                VALUES (?,?);";
+        $query2 = $this->db->link->prepare($sql2)->execute([$id, $isAdmin]);
        
       }
 
@@ -86,6 +90,15 @@ class User {
         return $resultnewsletter;
     } 
 
+
+    public function singleCustomer() {
+        $uid = $_SESSION['uId'];
+      $sqlSingleCustomer="SELECT * FROM order where id = $uid ";
+      $querySingleCustomer = $this->db->link->prepare($sqlSingleCustomer);
+      $querySingleCustomer->execute();
+      $resultSingleCustomer = $querySingleCustomer->fetchAll(PDO::FETCH_ASSOC);
+      return $resultSingleCustomer;
+  } 
   
 }
 

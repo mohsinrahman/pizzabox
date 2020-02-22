@@ -163,8 +163,15 @@ a.disabled {
 .Pizzabox-stunningThings img:hover:after {
   width: 100%;
 }
+.card {
+  transition: transform 0.2s;
+}
+
 .card:hover svg {
   fill: #dd0808;
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
 }
 .soup,
 .spoon,

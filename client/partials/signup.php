@@ -21,8 +21,7 @@
 <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
 aria-hidden="true">
 <div class="modal-dialog" role="document">
-<form name="signupForm" method="POST" action="../../server/api/signup.php"
- >
+<form name="signupForm" method="POST" action="../                                               server/api/signup.php">
   <div class="modal-content">
     <div class="modal-header text-center">
       <h4 class="modal-title w-100 font-weight-bold">Registration</h4>

@@ -10,7 +10,6 @@ signin.onclick = function() {
   }
 }; */
 
-
 function initLoggedInProps() {
   // Collect the logged in user from server (unserialize($_SESSION["loggedInUser"]))
   // If the user is logged in, example show log out button
@@ -36,7 +35,7 @@ $(".signin").on("click", function() {
       },
       dataType: "text",
       success: function(response) {
-        console.log(response);
+        /* console.log(response); */
         let data = JSON.parse(response);
         console.log(data.isAdmin);
         if (data.isAdmin === "Yes") {
@@ -57,8 +56,6 @@ $(".signin").on("click", function() {
   }
 });
 
-
-
 function logout() {
   $(document).ready(function() {
     $(".signout").on("click", function() {
@@ -69,7 +66,7 @@ function logout() {
           console.log(response);
           $("#responseLogin")
             .slideUp(2000)
-            .html("");
+            .html(" ");
           $("#modalLoginForm").modal("hide");
           $("#adminLink").addClass("disabled");
         }

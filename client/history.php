@@ -1,3 +1,14 @@
+<?php
+session_start();
+	if(isset($_SESSION['Id'])){
+        
+      echo "passwerty";
+  }
+  else{
+    echo "No";
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

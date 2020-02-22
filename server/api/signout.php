@@ -11,7 +11,7 @@ session_start();
         echo true;
     }
     else{
-        echo "5false";
+        echo "false";
     }
    
    ?>   

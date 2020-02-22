@@ -1,6 +1,8 @@
 <?php
 session_start();
-
+if(isset($_SESSION['FirstName'])){
+    $disabled="disabled"; }
+    else $disabled=""
 ?>
 
 <!DOCTYPE html>
@@ -54,28 +56,13 @@ session_start();
         <?php 
 
 ?>
-<!--         <div class="container-fluid">
-        <div class="row">
-                    <div class="col-lg-12">
-                    <div class="login" id="loginForm">
-                     <div class="innerLoginDiv ">
-                            <form name="login">
-                                <input class="username" type="text" placeholder="Username" name="userid"/>
-                                <input class="pass" type="password" placeholder="Password" name="pswrd"/>
-                                <input type="button" value="Login" class="loginBtn"/>
-                            </form>
-                            <div><p class="message"></p></div>  
-                        </div>  
-                    </div>
-                    </div>
-        </div>  login row Close 
-        </div> -->
+
     </div>  <!-- Pizzabox-heroSection-bg --> 
         <div class="Pizzabox-heroSection-menu">
             <div class="row" >
                 <div class="col-lg-4 text-center">
                 <ul class="list-unstyled list-inline">
-                    <li class="list-inline-item" > <a href="admin.php" id="adminLink" class="disabled">ADMIN</a> </li>
+                    <li class="list-inline-item" > <a href="admin.php" id="adminLink" class<?=$disabled?>>ADMIN</a> </li>
                      <li class=" list-inline-item nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">MENU</a>
                         <div class="dropdown-menu">
@@ -97,7 +84,7 @@ session_start();
                 <div class="col-lg-4 text-center">
                 <ul class="list-unstyled list-inline">
                     <li class="list-inline-item"><a href="#contact">CONTACT</a></li>
-                    <li class="list-inline-item"><a href=http://localhost:8888/pizzabox/client/history.php>HISTORY</a></li>
+                    <li class="list-inline-item"><a href="http://localhost:8888/pizzabox/client/history.php">HISTORY</a></li>
                     <li class="list-inline-item"><a href="#about">ABOUT US</a></li>
                 </ul>
                 </div>
@@ -166,7 +153,7 @@ session_start();
        
         <div class="d-flex justify-content-around pt-5">
             <div class="col-lg-3 col-md-12 card card1">
-                <div class="soup" >
+                <div class="soup grow" >
                 <svg width="100%" viewBox="-140 150 1800 1000" preserveAspectRatio="xMidYMid meet">
                     <path d="M926.1 523.5h-852.4c-6.900000000000048 0-12.000000000000043 5.600000000000023-11.200000000000045 12.5 0.7999999999999972 6.7000000000000455 1.7999999999999972 13.200000000000045 2.799999999999997 19.799999999999955 1.1000000000000085 6.800000000000068 7.799999999999997 12.400000000000091 14.700000000000003 12.400000000000091h839.5c6.899999999999977 0 13.600000000000023-5.5 14.799999999999955-12.300000000000068 1.1000000000000227-6.5 2.1000000000000227-13.100000000000023 3-19.799999999999955 0.900000000000091-7-4.2999999999999545-12.600000000000023-11.199999999999932-12.600000000000023z m-431.8-52.89999999999998c95.80000000000001-125.60000000000002-40.30000000000001-198 0-322.3-74.80000000000001 142.89999999999998 57.99999999999994 164.7 0 322.3z m67.90000000000003-44.900000000000034c68.89999999999998-90.5-29.100000000000023-142.8 0-232.29999999999998-54.10000000000002 102.99999999999997 41.59999999999991 118.49999999999997 0 232.29999999999998z m-132.50000000000006 0c69-90.5-29-142.8 0-232.29999999999998-54 102.99999999999997 41.80000000000001 118.49999999999997 0 232.29999999999998z m483.40000000000003 170.00000000000006h-826.3000000000001c-6.899999999999949 0-11.099999999999952 5.399999999999977-9.099999999999952 12.099999999999909 18.299999999999997 61.200000000000045 49.89999999999999 116.80000000000007 91.2 163.60000000000002 4.599999999999994 5.2000000000000455 14 9.300000000000068 21 9.300000000000068h619.8000000000001c6.899999999999977 0 16.399999999999977-4.100000000000023 21-9.300000000000068 41.39999999999998-46.799999999999955 72.89999999999998-102.5 91.5-163.60000000000002 2-6.699999999999932-2.1000000000000227-12.099999999999909-9.100000000000023-12.099999999999909z m-695 212.39999999999998c-6.900000000000034 0-8.400000000000034 3.7999999999999545-3.1000000000000227 8.199999999999932 12.300000000000011 10.400000000000091 25.30000000000001 20.200000000000045 38.80000000000001 29.100000000000023 5.800000000000011 3.800000000000068 16.19999999999999 6.7000000000000455 23.19999999999999 6.7000000000000455h446.70000000000005c6.899999999999977 0 17.299999999999955-3 23.09999999999991-6.800000000000068 13.300000000000068-8.899999999999977 26-18.59999999999991 38.200000000000045-28.899999999999977 5.2999999999999545-4.5 3.8999999999999773-8.199999999999932-3.1000000000000227-8.199999999999932l-563.8-0.10000000000002274z"/>
                 </svg>
@@ -355,20 +342,12 @@ session_start();
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHndWQc8CEtL0itRV03I2jeE1xc9xP0V4&callback=myMap"></script>
     <script src="../server/includes/functions.js"></script>
    <script type="text/javascript">
-<<<<<<< HEAD
-          /*  $(function () {
-                $('#datetimepicker1').datetimepicker({
-                    locale: 'ru'
-                });
-            }); */
-=======
           
             $(function () {
                 $('#datetimepicker1').datetimepicker({
                     locale: 'ru'
               });
             });
->>>>>>> 396d5974dffd7e9b63fcc644546df084cd017ede
              $(function() {
    $(".navigation__icon").click(function() {
      $(".navigation").toggleClass('navigation-open');

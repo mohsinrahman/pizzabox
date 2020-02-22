@@ -11,10 +11,6 @@ if($method){
                     $listNewsletter = $userNewsletter->getListNewsletter();
                     echo json_encode($listNewsletter);
                 }
-
-        
-        
-
         }
          else {
             echo json_encode("No List.");
