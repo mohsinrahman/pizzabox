@@ -15,19 +15,15 @@ if($method){
 
           if ($_SESSION["qty"][$i]!=0){
               $a=["qty"=>($_SESSION["qty"][$i])];
-              //var_dump($prArr[$i]);
+              
               $v=$prArr[$i-1];
-            // array_unshift( $v,["qty"=>($_SESSION["qty"][$i])]);
             $v=["qty"=>($_SESSION["qty"][$i])]+$v;
-              //$cartArr.array_merge($v);
               array_push($cartArr, $v);
-              //print_r($cartArr);
 
             }
         }
         $_SESSION["cart"]=$cartArr;
        echo json_encode( $cartArr);
-       // json_encode( $_SESSION["cart"]);
    }
 }
 ?>

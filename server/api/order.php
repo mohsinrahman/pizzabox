@@ -2,6 +2,10 @@
 session_start();
 include("../includes/order.class.php");
 $order = new Order();
+if(isset($_SESSION["ID"])){
+    $id=$_SESSION["ID"];
+
+$id=$_SESSION["ID"];
 $method = isset($_SERVER['REQUEST_METHOD']);
 if(isset($_POST["order"])){
     $street=$_POST['street'];
@@ -9,15 +13,19 @@ if(isset($_POST["order"])){
     $city=$_POST['city'];
     $mobile=$_POST['mobile'];
     $datetimepicker= $_POST['datetimepicker'];  
-    $selectAdmin=$_POST['selectAdmin'] ;
+    $selectShipping=$_POST['selectShipping'] ;
  
-    //$ID=$_SESSION["ID"]
+    $id=$_SESSION["ID"];
+    
 
     $products=$_SESSION["cart"];
-    // print_r($datetimepicker);
-    $order->newOrder(1,$selectAdmin,$datetimepicker,$products);
+    
+    $order->newOrder($id,$selectShipping,$datetimepicker,$products,$street,$postcode,$city,$mobile);
 
    unset($_SESSION['cart']);
+   unset($_SESSION["qty"]);
+   unset($_SESSION["total"]);
 
-}
+}}
+else echo false;
 ?>

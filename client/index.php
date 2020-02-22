@@ -3,8 +3,38 @@ session_start();
 if(isset($_SESSION['FirstName'])){
     $disabled="disabled"; }
     else $disabled=""
-?>
 
+include_once("../server/includes/product.class.php");
+$pr=new Product;
+
+$prodRows=$pr->getAllProducts();
+
+unset($_SESSION["total"]);
+
+    if (!isset($_SESSION["total"]) ) {
+        $_SESSION["total"] = 0;
+        $c=count($prodRows);
+        for ($id=0; $id<$c; $id++) {
+         $_SESSION["qty"][$id] = 0;
+         
+       }
+      }
+
+?>
+  <?php 
+  if(isset($_SESSION['FirstName']) && isset($_SESSION['isAdmin']) && $_SESSION['isAdmin']=="Yes"){
+                    $disabled=""; 
+                  
+                }
+                    else{ $disabled="disabled";
+                  }?>
+
+<?php if(isset($_SESSION['FirstName']) ){
+                    $name=$_SESSION['FirstName']; 
+                  
+                }
+                    else{ $name="Not logged in";
+                  }?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +54,7 @@ if(isset($_SESSION['FirstName'])){
     
 </head>
 <body>
+    
 <!-- Modal Cart -->
 <?php include 'partials/cart.php';?>
 <!-- Login Modal-->
@@ -38,7 +69,7 @@ if(isset($_SESSION['FirstName'])){
     </div>
     <div class="Pizzabox-heroSection-bg">
     <span class="navDevice"><?php include 'partials/nav.php';?></span>
-        <div class="row" style="border-bottom:1px solid #2c2c2c;"> <!-- style="border-bottom:1px solid #2c2c2c;" -->
+        <div class="row" style="border-bottom:1px solid #2c2c2c;"> 
         <div class="col-lg-6 text-center Pizzabox-heroSection-email-section"><h6 class="Pizzabox-heroSection-email" >Email: info@pizzabox.com Phone: +46 800 000 16</h6>  </div>
         <div class="col-lg-6 col-md-12 text-center Pizzabox-heroSection-time-section">
             <div class="Pizzabox-heroSection-opening">
@@ -47,7 +78,7 @@ if(isset($_SESSION['FirstName'])){
                     Opening Hours: 8:00am - 11:30pm
                     </div>                
                     <div class="col-lg-4 col-md-4"> 
-                    <span id="responseLogin"><?php echo $_SESSION["FirstName"] ?></span> <img data-toggle="modal" data-target="#modalLoginForm" src="images/login.svg" width="20" alt="">  <span id="pizzaCounter" >0</span><img data-toggle="modal" data-target="#myModal" onclick="printCart()" src="images/bag.svg" height="15"  alt="cart"> 
+                    <span id="responseLogin"><?=$name?></span> <img data-toggle="modal" data-target="#modalLoginForm" src="images/login.svg" width="20" alt="">  <span id="pizzaCounter" ></span><img data-toggle="modal" data-target="#myModal" onclick="printCart()" src="images/bag.svg" height="15"  alt="cart"> 
                     </div>
                 </div>
 
@@ -320,7 +351,6 @@ if(isset($_SESSION['FirstName'])){
         </div>
      
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
-<!--     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>--> 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -329,14 +359,11 @@ if(isset($_SESSION['FirstName'])){
    
     <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
-<!--     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
  -->    
     
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.6/dist/loadingoverlay.min.js"></script>
     
-<!--     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.min.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script> -->
+
     <script src="js/script.js"></script>
     <script src="js/utility.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHndWQc8CEtL0itRV03I2jeE1xc9xP0V4&callback=myMap"></script>
@@ -364,12 +391,9 @@ $.LoadingOverlaySetup({
     imageAnimation  : "1.5s fadein",
     imageColor      : "[#7ac943, ##dd0808]"
 });
-// Show full page LoadingOverlay
 $.LoadingOverlay("show");
-// Hide it after 2 seconds
 setTimeout(function(){
     $.LoadingOverlay("hide");
-    console.log("runfun")
 }, 2000);
         </script>
 </body>

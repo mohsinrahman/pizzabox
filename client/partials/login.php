@@ -21,8 +21,8 @@
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
-    <div class="modal-body mx-3">
-    <form action="" method="POST">
+    <div class="modal-body mx-3" id="loginForm" display="block">
+<form action="" method="POST">
 <div class="form-group row">
   <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
   <div class="col-sm-10">

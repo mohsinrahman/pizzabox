@@ -8,14 +8,7 @@ if($method){
         
         $product = new Product();
 
-     /*   if(isset($_GET['Category'])) {
-                 
-                $catergoryChoosen = $_GET['Category'];
-                if($catergoryChoosen == "Pizza" || $catergoryChoosen == "Side dish" || $catergoryChoosen == "Dessert" || $catergoryChoosen == "Drink"){
-
-                    $products = $product->getAllOfThisCategory($catergoryChoosen);
-                    echo json_encode($products);
-                }else */{
+     {
                     $allProducts = $product->getAllProducts();
                     echo json_encode($allProducts);
                 }
@@ -28,6 +21,6 @@ if($method){
             echo json_encode("No category.");
         }
     }
-//}
+
 
 ?>

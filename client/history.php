@@ -35,8 +35,7 @@ session_start();
                     
                     
                     <div class="col-md-12">
-<!--                     <div style="display:inline-block; background: red; width: 100%;"><a style="display:inline-block;" href="">back</a> <h2 style="display:inline-block; " class="text-center pt-5">My Orders</h2></div>
- -->                    <div class="row"><a class="col-md-6"  href="index.php">back</a> <h2 class="col-md-6">My Orders</h2></div>
+                    <div class="row"><a class="col-md-6"  href="index.php">back</a> <h2 class="col-md-6">My Orders</h2></div>
 
                     <div class="table-responsive pt-5 table">
             

@@ -154,17 +154,14 @@
  </div>
 </form>
 
-</div> <!-- container  End -->
+</div> 
      
- <!-- <div class="footer py-2 container bg-dark"> -->
-             <?php /* include 'partials/footer.php'; */?> 
-        <!-- </div> -->  
+        
 
   
        
       
                 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<!-- <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>-->
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="js/script.js"></script>
