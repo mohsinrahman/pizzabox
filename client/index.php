@@ -2,7 +2,7 @@
 session_start();
 if(isset($_SESSION['FirstName'])){
     $disabled="disabled"; }
-    else $disabled=""
+    else $disabled="";
 
 include_once("../server/includes/product.class.php");
 $pr=new Product;
