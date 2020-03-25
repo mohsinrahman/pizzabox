@@ -96,12 +96,14 @@ class User {
     } 
 
 
-    public function singleCustomer() {
+    public function getSingleCustomerOrders() {
         $uid = $_SESSION['uId'];
-      $sqlSingleCustomer="SELECT * FROM order where id = $uid ";
+        error_log(json_encode($uid));
+      $sqlSingleCustomer="SELECT DISTINCT * FROM orders INNER JOIN orderdetails where orders.ID = $uid AND orders.OrderID = orderdetails.OrderID ";
       $querySingleCustomer = $this->db->link->prepare($sqlSingleCustomer);
       $querySingleCustomer->execute();
       $resultSingleCustomer = $querySingleCustomer->fetchAll(PDO::FETCH_ASSOC);
+      error_log(json_encode($resultSingleCustomer));
       return $resultSingleCustomer;
   } 
   

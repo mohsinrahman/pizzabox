@@ -23,9 +23,10 @@ function login() {
           isAdmin: isAdmin
         },
         dataType: "json",
-        success: function(response) {
-          /* console.log(response); */
-          let data = JSON.parse(response);
+        success: function(data) {
+          /* console.log(response);
+          let data = JSON.parse(response); */
+          console.log(data);
           console.log(data.isAdmin);
           if (data.isAdmin === "Yes") {
             console.log("pass");
@@ -45,6 +46,7 @@ function login() {
         }
       });
     }
+    /* window.location.reload(); */
   });
 }
 
@@ -65,7 +67,8 @@ function logout() {
         }
       });
     });
-  });
+/*     window.location.reload();
+ */  });
 }
 logout();
 
@@ -200,7 +203,6 @@ function displayNewsletter() {
         let td3 = document.createElement("td");
         newsletterTableBody.append(tr);
         tr.append(td1);
-        tr.appendChild(td1);
         tr.append(td2);
         tr.append(td3);
         td1.innerHTML = i;
@@ -212,5 +214,155 @@ function displayNewsletter() {
   });
 }
 displayNewsletter();
+
+function displaySingleCustomerHistory() {
+  $.ajax({
+    type: "GET",
+    dataType: "json",
+    url: "../server/api/getSingleCustomerHistory.php",
+    success: data => {
+      console.log(data);
+      let singleCustomerHistoryTableBody = document.getElementById(
+        "singleCustomerHistoryTableBody"
+      );
+      for (let i = 0; i < data.length; i++) {
+        let tr = document.createElement("tr");
+
+        let td1 = document.createElement("td");
+        let input = document.createElement("input");
+        input.setAttribute("type", "checkbox");
+        input.setAttribute("id", "check" + i);
+        let td2 = document.createElement("td");
+        let td3 = document.createElement("td");
+        let td4 = document.createElement("td");
+        let td5 = document.createElement("td");
+        let td6 = document.createElement("td");
+        let td7 = document.createElement("td");
+        let td8 = document.createElement("td");
+        let td9 = document.createElement("td");
+        singleCustomerHistoryTableBody.append(tr);
+
+        tr.append(td1);
+        td1.append(input);
+        tr.append(td2);
+        tr.append(td3);
+        tr.append(td4);
+        tr.append(td5);
+        tr.append(td6);
+        tr.append(td7);
+        tr.append(td8);
+        tr.append(td9);
+
+        td2.innerHTML = data[i].ID;
+        td3.innerHTML = data[i].OrderID;
+        td4.innerHTML = data[i].ShippingType;
+        td5.innerHTML = data[i].Date;
+        td6.innerHTML = data[i].ProductID;
+        td7.innerHTML = data[i].Quantity;
+        td8.innerHTML = "Edit";
+        td9.innerHTML = "Delete";
+      }
+    },
+    error: error => {}
+  });
+}
+displaySingleCustomerHistory();
+
+function displayAllCustomerOrders() {
+  $.ajax({
+    type: "GET",
+    dataType: "json",
+    url: "../server/api/getAllCustomerOrders.php",
+    success: data => {
+      console.log(data);
+      let allCustomerHistoryTableBody = document.getElementById(
+        "AllCustomerOrdersTableBody"
+      );
+      for (let i = 0; i < data.length; i++) {
+        let tr = document.createElement("tr");
+
+        let td1 = document.createElement("td");
+        let td2 = document.createElement("td");
+        let td3 = document.createElement("td");
+        let td4 = document.createElement("td");
+        let td5 = document.createElement("td");
+        let td6 = document.createElement("td");
+
+        let buttonDelete = document.createElement("button");
+        buttonDelete.innerHTML = "Delete";
+        buttonDelete.setAttribute("width", "75px");
+        buttonDelete.setAttribute("height", "25px");
+        buttonDelete.setAttribute("background", "red");
+        buttonDelete.setAttribute("class", "btn-danger");
+
+        var array = ["pending", "accept"];
+
+        //Create and append select list
+        let buttonSelect = document.createElement("select");
+        buttonSelect.id = "orderAccept";
+        td5.appendChild(buttonSelect);
+        buttonSelect.setAttribute("class", "form-control");
+        buttonSelect.setAttribute("width", "75px");
+
+        //Create and append the options
+        for (let i = 0; i < array.length; i++) {
+          let option = document.createElement("option");
+          option.value = array[i];
+          option.text = array[i];
+          buttonSelect.appendChild(option);
+        }
+
+        buttonDelete.setAttribute("width", "75px");
+        buttonDelete.setAttribute("height", "25px");
+        buttonDelete.setAttribute("background", "red");
+        buttonDelete.setAttribute("class", "btn-danger");
+
+        allCustomerHistoryTableBody.append(tr);
+
+        tr.append(td1);
+        tr.append(td2);
+        tr.append(td3);
+        tr.append(td4);
+        tr.append(td5);
+        tr.append(td6);
+        tr.setAttribute("id", data[i].OrderID);
+
+        td1.innerHTML = data[i].OrderID;
+        td2.innerHTML = data[i].ID;
+        td3.innerHTML = data[i].ShippingType;
+        td4.innerHTML = data[i].Date;
+        /*         td5.append(buttonSelect);
+         */ td6.append(buttonDelete);
+      }
+    },
+    error: error => {}
+  });
+}
+displayAllCustomerOrders();
+
+function acceptOrder() {
+  $(document).ready(function($) {
+    $(document.body).on("change", function() {
+      let selectedOption = $("select option:selected").val();
+      let id = event.target.parentNode.parentNode.childNodes[0].innerHTML;
+      console.log(selectedOption);
+      $.ajax({
+        type: "POST",
+        dataType: "json",
+        url: "../server/api/orderAcceptAction.php",
+        data: {
+          selectedOption,
+          id
+        },
+        success: data => {
+          console.log(data);
+        }
+      });
+    });
+  });
+}
+
+acceptOrder();
+
 function updateItem() {}
 function deleteItem() {}

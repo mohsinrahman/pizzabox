@@ -1,0 +1,32 @@
+
+<?php
+$pr=new Product;
+
+$prodRows=$pr->getAllProducts();
+
+unset($_SESSION["total"]);
+
+    if (!isset($_SESSION["total"]) ) {
+        $_SESSION["total"] = 0;
+        $c=count($prodRows);
+        for ($id=0; $id<$c; $id++) {
+         $_SESSION["qty"][$id] = 0;
+         
+       }
+      }
+
+?>
+  <?php 
+  if(isset($_SESSION['FirstName']) && isset($_SESSION['isAdmin']) && $_SESSION['isAdmin']=="Yes"){
+                    $disabled=""; 
+                  
+                }
+                    else{ $disabled="disabled";
+                  }?>
+
+<?php if(isset($_SESSION['FirstName']) ){
+                    $name=$_SESSION['FirstName']; 
+                  
+                }
+                    else{ $name="Not logged in";
+                  }?> 

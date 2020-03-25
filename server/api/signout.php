@@ -8,6 +8,7 @@ session_start();
        
         unset($_SESSION['FirstName']);
         unset($_SESSION['isAdmin']);
+        unset($_SESSION['uId']);
         echo true;
     }
     else{

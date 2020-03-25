@@ -164,13 +164,15 @@ function printOutProducts(products) {
         let cardButton = document.createElement("Button");
         cardDivCol9.appendChild(cardButton);
         cardButton.innerHTML = "Add To Cart";
-
+        var CountItem = 0;
         cardButton.setAttribute("id", menu[i][j].card[k].ProductID);
         cardButton.addEventListener("click", function() {
           //let prCount=document.number(getElementById("pizzaCounter").innerText);
           //prCount++;
           /// document.number(getElementById("pizzaCounter").innerText)=prCount;
           addToCart(cardButton.id);
+          CountItem++;
+          document.getElementById("pizzaCounter").innerHTML = CountItem;
         });
 
         /*  console.log(cardButton.id);

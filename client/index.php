@@ -1,40 +1,15 @@
 <?php
+include_once("../server/includes/product.class.php");
 session_start();
 if(isset($_SESSION['FirstName'])){
-    $disabled="disabled"; }
-    else $disabled=""
-
-include_once("../server/includes/product.class.php");
-$pr=new Product;
-
-$prodRows=$pr->getAllProducts();
-
-unset($_SESSION["total"]);
-
-    if (!isset($_SESSION["total"]) ) {
-        $_SESSION["total"] = 0;
-        $c=count($prodRows);
-        for ($id=0; $id<$c; $id++) {
-         $_SESSION["qty"][$id] = 0;
-         
-       }
-      }
+    $disabled="disabled"; 
+}else 
+    
+    {$disabled="";}
 
 ?>
-  <?php 
-  if(isset($_SESSION['FirstName']) && isset($_SESSION['isAdmin']) && $_SESSION['isAdmin']=="Yes"){
-                    $disabled=""; 
-                  
-                }
-                    else{ $disabled="disabled";
-                  }?>
 
-<?php if(isset($_SESSION['FirstName']) ){
-                    $name=$_SESSION['FirstName']; 
-                  
-                }
-                    else{ $name="Not logged in";
-                  }?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,7 +53,7 @@ unset($_SESSION["total"]);
                     Opening Hours: 8:00am - 11:30pm
                     </div>                
                     <div class="col-lg-4 col-md-4"> 
-                    <span id="responseLogin"><?=$name?></span> <img data-toggle="modal" data-target="#modalLoginForm" src="images/login.svg" width="20" alt="">  <span id="pizzaCounter" ></span><img data-toggle="modal" data-target="#myModal" onclick="printCart()" src="images/bag.svg" height="15"  alt="cart"> 
+                    <span id="responseLogin"><?=$name?></span> <img data-toggle="modal" data-target="#modalLoginForm" src="images/login.svg" width="20" alt="">  <span id="pizzaCounter" >0</span><img data-toggle="modal" data-target="#myModal" onclick="printCart()" src="images/bag.svg" height="15"  alt="cart"> 
                     </div>
                 </div>
 
@@ -93,7 +68,7 @@ unset($_SESSION["total"]);
             <div class="row" >
                 <div class="col-lg-4 text-center">
                 <ul class="list-unstyled list-inline">
-                    <li class="list-inline-item" > <a href="admin.php" id="adminLink" class<?=$disabled?>>ADMIN</a> </li>
+                    <li class="list-inline-item" > <a href="admin.php" id="adminLink" class=<?=$disabled?>>ADMIN</a> </li>
                      <li class=" list-inline-item nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">MENU</a>
                         <div class="dropdown-menu">
@@ -123,8 +98,8 @@ unset($_SESSION["total"]);
         </div>
         <div class="row Pizzabox-heroSection-content">
             <div class="col-lg-12 text-center mt-5">
-                <h3  class="animated slideInLeft delay-3s pt-5">TASTY & SPICY</h3>
-                <h5 class="animated slideInRight delay-3s pt-5">World's Delicious Cuisine</h5>
+                <h3  class="animated slideInLeft delay-3s pt-lg-5 pt-md-5">TASTY & SPICY</h3>
+                <h5 class="animated slideInRight delay-3s pt-lg-5 pt-md-5">World's Delicious Cuisine</h5>
                 <button class="mt-5"> <a href="#menu">ORDER NOW</a> </button>
             </div>
         </div>
@@ -358,8 +333,7 @@ unset($_SESSION["total"]);
    
    
     <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
- -->    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>    
     
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.6/dist/loadingoverlay.min.js"></script>
     

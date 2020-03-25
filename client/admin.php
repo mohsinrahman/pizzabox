@@ -13,7 +13,7 @@
     <title>Add Menu</title>
 </head>
 <body>  
-     <div class="container ">
+     <div class="container">
           <div class="row">        
             <div class="col-md-12">
               <div class="row"><a class="col-md-6"  href="index.php">back</a> <h2 class="col-md-6">Admin Control Panel</h2></div>
@@ -123,15 +123,16 @@
                       <table class="table table-bordred table-striped">
                           <thead>
                             <tr>
-                              <th scope="col">#</th>
-                              <th scope="col">Name</th>
-                              <th scope="col">Email</th>
-                              <th scope="col">Address</th>
-                              <th scope="col">Orders</th>
+                              <th scope="col">Order Id</th>
+                              <th scope="col">Id</th>
+                              <th scope="col">Shipping Type</th>
                               <th scope="col">Date</th>
+                              <th scope="col">Status</th>
+                              <th scope="col">Remove</th>
                             </tr>
                           </thead>
-                          <tbody id="ordersTableBody">       
+                          <tbody id="AllCustomerOrdersTableBody">  
+
                           </tbody>
                       </table>
                       </div>
@@ -164,6 +165,6 @@
                 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="https://d3js.org/d3.v5.min.js"></script>
-<script src="js/script.js"></script>
+<script src="js/script.js" defer></script>
 </body>
 </html>

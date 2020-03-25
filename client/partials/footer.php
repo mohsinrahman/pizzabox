@@ -10,8 +10,8 @@
                                 <img src="images/pizzagreen.svg" width="50" height="50" alt="">
                             </div>
                             <div>
-                                <span class="text-white mx-2 text-danger">Terms & Conditions</span>
-                                <span class="text-white">Privcy Policy</span>
+                                <span class="text-white mx-2 text-danger terms">Terms & Conditions</span>
+                                <span class="text-white privacy">Privcy Policy</span>
                             </div>
                         </div>
                     </div>

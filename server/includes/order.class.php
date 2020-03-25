@@ -59,7 +59,36 @@ class Order {
     $query = $this->db->link->prepare($sql3);
     $query->execute();
     }
+    
+    public function getAllCustomerOrders() {
+       
+      $sqlAllCustomer="SELECT * FROM orders";
+      $queryAllCustomer = $this->db->link->prepare($sqlAllCustomer);
+      $queryAllCustomer->execute();
+      error_log(json_encode($queryAllCustomer));
+      $resultAllCustomer = $queryAllCustomer->fetchAll(PDO::FETCH_ASSOC);
+      error_log(json_encode($resultAllCustomer));
+      return $resultAllCustomer;
+  } 
+
+  public function orderStatus($action, $actionId) {
+    error_log(json_encode($actionId));
+    $sqlSingleOrder="UPDATE orders
+    SET OrderStatus = '$action'
+    WHERE OrderID = '$actionId' ;";
+    $querySingleOrder = $this->db->link->prepare($sqlSingleOrder);
+    $querySingleOrder->execute();
+    $resultSingleOrder = $querySingleOrder->fetchAll(PDO::FETCH_ASSOC);
+    error_log(json_encode($resultSingleOrder));
+    return $resultSingleOrder;
+} 
+
+
+
+
 }
+
+
 
 
 
