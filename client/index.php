@@ -5,7 +5,14 @@ if(isset($_SESSION['FirstName'])){
     $disabled="disabled"; 
 }else 
     
-    {$disabled="";}
+    /* {$disabled="";}
+    $disabled="disabled"; }
+    else $disabled="";
+
+include_once("../server/includes/product.class.php");
+$pr=new Product;
+
+$prodRows=$pr->getAllProducts(); */
 
 ?>
 
